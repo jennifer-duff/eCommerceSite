@@ -1,0 +1,39 @@
+@import url('Stylesheets/generalStylesheet.css');
+
+/* --------- FOOTER ---------*/
+footer{
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* border-top: 1px solid var(--brandPurple); */
+    background-color: var(--brandPurple)
+}
+
+#footerLogo{
+    width: 150px;
+}
+
+#footerNav{
+    display: flex; 
+    justify-content: space-between;
+    width: 500px;
+    font-family: var(--sansSerifFonts);
+    font-weight: 500;
+    font-size: 12pt;
+    margin-left: 200px;
+}
+
+footer nav a{
+    color: var(--brandWhite);
+    text-decoration: underline solid var(--brandPurple) 2px;
+    transition: text-decoration-color 0.3s ease-in-out;
+}
+
+footer nav a:hover{
+    text-decoration: underline solid var(--brandWhite) 2px;
+    
+}

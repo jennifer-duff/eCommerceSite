@@ -1,0 +1,22 @@
+/* --------- GENERAL ---------*/
+:root{
+    --serifFonts: operetta-18;
+    --sansSerifFonts: synthese;
+    --brandPurple: #8C5074;
+    --brandWhite: #FFF5FA;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--serifFonts);
+}
+
+a{
+    cursor: pointer;
+}
