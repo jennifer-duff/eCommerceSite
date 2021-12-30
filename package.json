@@ -1,0 +1,24 @@
+{
+  "name": "ecommercesite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennifer-duff/eCommerceSite.git"
+  },
+  "keywords": [],
+  "author": "Jennifer Bowser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennifer-duff/eCommerceSite/issues"
+  },
+  "homepage": "https://github.com/jennifer-duff/eCommerceSite#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}
