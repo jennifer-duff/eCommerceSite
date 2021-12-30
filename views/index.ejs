@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/onz0fng.css">
-    <link rel = 'stylesheet' href = '/indexStylesheet.css'>
-    <title>eCommerce Site</title>
-</head>
+<%- include('partials/head')%>
 
 <body>
-    <header>
-        <a><div id = 'headerLogoContainter'>
-            <div id = 'logoPlaceholder'></div>
-            <div id = 'shopName'>Shop Name</div>
-        </div></a>
-        
-        <nav>
-            <a>Tops</a>
-            <a>Bottoms</a>
-            <a>Outerwear</a>
-            <div id = 'searchContainer'>
-                <label for = 'searchBar' id = 'searchBarLabel'>Search:</label>
-                <input type = 'text' id = 'searchBar' name = 'serachBar'>
-            </div>
-            <a><div id = 'bagPlaceholder'></div></a>
-        </nav>
-    </header>
+    
+    <%- include('partials/header')%>
 
     <main>
         <h1>Call to Action</h1>
@@ -44,17 +20,7 @@
         </section>
     </main>
 
-    <footer>
-        <a><div id = 'footerLogoContainter'>
-            <div id = 'logoPlaceholder'></div>
-            <div id = 'shopName'>Shop Name</div>
-        </div></a>
-        <nav id = 'footerNav'>
-            <a>About</a>
-            <a>FAQ's</a>
-            <a>Contact</a>   
-        </nav>
-        
-    </footer>
+    <%- include('partials/footer')%>
+    
 </body>
 </html>
