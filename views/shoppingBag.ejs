@@ -2,16 +2,41 @@
 <html lang="en">
 <head>
     <%- include('partials/head')%>
-    <link rel = 'stylesheet' href = 'Stylesheets/productPageStylesheet.css'>
+    <link rel = 'stylesheet' href = 'Stylesheets/shoppingBagStylesheet.css'>
 </head>
+
 <body>
-    
     <%- include('partials/header')%>
-
     <main>
-    </main>
+        <h1>Your Bag</h1>
 
-    <%- include('partials/footer')%>
-    
+        <div class = 'bagProductTile'>
+            <div class = 'productImg'></div>
+
+            <h2 class = 'productTitle'>The Product Name</h2>
+
+            <div class = 'info'>
+                <label class = 'infoLabel'>Size: <span class = 'infoSelected'>XS</span></label>
+                <div class = 'qtyGroup'>
+                    <label class = 'infoLabel'>Quantity: </label>
+                    <select name = 'qtySelector'>
+                        <option value = '1'>1</option>
+                        <option value = '2'>2</option>
+                        <option value = '3'>3</option>
+                        <option value = '4'>4</option>
+                        <option value = '5'>5</option>
+                    </select>
+                    
+                    <!-- <div class = 'qtyInput'>22</div>
+                    <div class = 'arrowBox'>
+                        <img src = 'Assets/roundedArrow.svg' class = 'arrow'>
+                        <img src = 'Assets/roundedArrow.svg' class = 'arrow'> 
+                    </div> -->
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer')%> 
 </body>
 </html>
