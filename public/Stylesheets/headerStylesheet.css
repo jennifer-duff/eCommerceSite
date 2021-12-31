@@ -36,6 +36,7 @@ header nav{
 header nav a{
     text-decoration: underline solid white 2px;
     transition: text-decoration-color 0.3s ease-in-out;
+    color: black;
 }
 
 header nav a:hover{

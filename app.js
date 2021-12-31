@@ -17,12 +17,17 @@ app.listen(8080, () => {
 })
 
 // routes
-app.get('/', (req, res) => {
+app.get('/index.ejs', (req, res) => {
     console.log('Home page request');
     res.render('index.ejs');
+})
+
+app.get('/shoppingBag.ejs', (req, res) => {
+    res.render('shoppingBag.ejs');
 })
 
 app.get('/:product', (req, res) => {
     const product = req.params.product;
     res.render('productPage.ejs', {product});
 })
+
