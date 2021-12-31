@@ -3,6 +3,7 @@
     --serifFonts: operetta-18;
     --sansSerifFonts: synthese;
     --brandPurple: #8C5074;
+    --brandLightPurple: #af7096;
     --brandWhite: #FFF5FA;
 }
 
@@ -15,6 +16,10 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: var(--serifFonts);
+}
+
+main{
+    box-sizing: border-box;
 }
 
 a{

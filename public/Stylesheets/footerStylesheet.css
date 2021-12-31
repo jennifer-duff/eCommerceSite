@@ -9,7 +9,6 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* border-top: 1px solid var(--brandPurple); */
     background-color: var(--brandPurple)
 }
 
@@ -34,6 +33,5 @@ footer nav a{
 }
 
 footer nav a:hover{
-    text-decoration: underline solid var(--brandWhite) 2px;
-    
+    text-decoration: underline solid var(--brandWhite) 2px;   
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = 'Stylesheets/productPageStylesheet.css'>
+</head>
+<body>
+    
+    <%- include('partials/header')%>
+
+    <main>
+        <h1> <%= product %> </h1>
+        <div id = 'productBox'>
+
+            <div id = 'productImg'></div>
+
+            <div id = 'colorSelectionBox' class = 'selectionBox'>
+                <p id = 'colorLabel' class = 'productLabel'>Color: <span id = 'currColor'>blue</span></p>
+            </div>
+
+            <!-- <div id = 'sizeSelectionBox' class = 'selectionBox'>
+                <p id = 'sizeLabel' class = 'productLabel'>Size: </p>
+                <button class = 'sizeBtn'><span class = 'sizeLabels'>XS</span></button>
+                <button class = 'sizeBtn'><span class = 'sizeLabels'>S</span></button>
+                <button class = 'sizeBtn'><span class = 'sizeLabels'>M</span></button>
+                <button class = 'sizeBtn'><span class = 'sizeLabels'>L</span></button>
+                <button class = 'sizeBtn'><span class = 'sizeLabels'>XL</span></button>
+            </div> -->
+
+            <div id = 'sizeSelectionBox' class = 'selectionBox'>
+                <p id = 'sizeLabel' class = 'productLabel'>Size: </p>
+                <label class = 'sizeLabels' for = 'XS'>XS</label>
+                <input type = 'radio' id = 'XS' value = 'XS' name = 'size' class = 'sizeBtn'>
+                
+                <label class = 'sizeLabels' for = 'S'>S</label>
+                <input type = 'radio' id = 'S' value = 'S' name = 'size' class = 'sizeBtn'>
+                
+                <label class = 'sizeLabels' for = 'M'>M</label>
+                <input type = 'radio' id = 'M' value = 'M' name = 'size' class = 'sizeBtn'>
+                
+                <label class = 'sizeLabels' for = 'L'>L</label>
+                <input type = 'radio' id = 'L' value = 'L' name = 'size' class = 'sizeBtn'>
+                
+                <label class = 'sizeLabels' for = 'XL'>XL</label>
+                <input type = 'radio' id = 'XL' value = 'XL' name = 'size' class = 'sizeBtn'>
+                
+            </div>
+            
+            <button id = 'addToBag'>Add to Bag</button>
+
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>
+    
+</body>
+</html>

@@ -16,7 +16,13 @@ app.listen(8080, () => {
     console.log("Listening on port 8080!")
 })
 
+// routes
 app.get('/', (req, res) => {
     console.log('Home page request');
     res.render('index.ejs');
+})
+
+app.get('/:product', (req, res) => {
+    const product = req.params.product;
+    res.render('productPage.ejs', {product});
 })

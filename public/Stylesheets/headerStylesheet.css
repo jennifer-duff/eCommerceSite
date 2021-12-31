@@ -9,7 +9,6 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    /* box-shadow: 5px 5px 20px rgb(219, 219, 219); */
     box-shadow: -20px -20px 40px var(--brandPurple);
     margin: 0;
     position: fixed;
@@ -44,7 +43,6 @@ header nav a:hover{
     
 }
 
-
 #searchContainer{
     display: flex;
     align-items: center;
@@ -65,8 +63,6 @@ header nav a:hover{
 #searchBar:focus{
     outline: 1.75px solid var(--brandPurple);
 }
-
-
 
 #shoppingBagLink{
     width: 30px;
@@ -104,4 +100,5 @@ header nav a:hover{
     position: relative;
     top: 12px;
     font-size: 10pt;
+    font-weight: 600;
 }

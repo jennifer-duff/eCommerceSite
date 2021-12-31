@@ -1,0 +1,114 @@
+@import url('Stylesheets/generalStylesheet.css');
+
+main{
+    padding: 0 20vw;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 75px 0 20px 0;
+    font-size: 65pt;
+    margin: 75px 0 0 0;
+}
+
+#productBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    margin: 0 auto;
+}
+
+#productImg{
+    height: 550px;
+    width: 550px;
+    background-color: var(--brandPurple);
+    margin-bottom: 10px;
+}
+
+.selectionBox{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.productLabel{
+    font-family: var(--sansSerifFonts);
+    font-size: 14pt;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 20px 0;
+}
+
+#currColor{
+    font-weight: 400;
+}
+
+.sizeBtn{
+    appearance: none;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    margin-left: -20px;
+}
+
+/* .sizeBtn:first-of-type{
+    margin-left: 20px;
+} */
+
+.sizeBtn:hover,
+.sizeBtn:focus,
+.sizeBtn:active,
+.sizeBtn:checked
+{
+    background-color: rgb(158, 157, 157);
+}
+
+.sizeLabels{
+    margin: 0;
+    text-align: center;
+    line-height: 100%;
+    width: 40px;
+    font-family: var(--sansSerifFonts);
+    color: black;
+    font-size: 10pt;
+    position: relative;
+    left: 20px;
+    top: 1px;
+    pointer-events: none;
+}
+
+
+/* .sizeBtn{
+    appearance: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(221, 221, 221);
+} */
+
+#addToBag{
+    cursor: pointer;
+    margin: 20px 0 40px 0;
+    padding: 7px 15px 9px 15px;
+    font-family: var(--sansSerifFonts);
+    font-weight: 500;
+    font-size: 14pt;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--brandLightPurple);
+    color: var(--brandWhite);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#addToBag:hover
+{
+    background-color: var(--brandPurple);
+}
