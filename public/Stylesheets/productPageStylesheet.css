@@ -23,7 +23,7 @@ h1{
     height: 550px;
     width: 550px;
     background-color: var(--brandPurple);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .selectionBox{
@@ -40,10 +40,6 @@ h1{
     font-weight: 600;
     line-height: 100%;
     margin: 20px 0;
-}
-
-#currColor{
-    font-weight: 400;
 }
 
 .sizeBtn{
@@ -104,7 +100,7 @@ h1{
     border: none;
     border-radius: 10px;
     background-color: var(--brandLightPurple);
-    color: var(--brandWhite);
+    color: var(--brandLightPink);
     transition: background-color 0.2s ease-in-out;
 }
 

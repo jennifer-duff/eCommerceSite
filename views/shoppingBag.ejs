@@ -13,27 +13,37 @@
         <div class = 'bagProductTile'>
             <div class = 'productImg'></div>
 
-            <h2 class = 'productTitle'>The Product Name</h2>
+            <h2 class = 'productTitle'><a href = '#'>The Product Name</a></h2>
 
             <div class = 'info'>
-                <label class = 'infoLabel'>Size: <span class = 'infoSelected'>XS</span></label>
+                <!-- <label class = 'infoLabel'>Size: <span class = 'infoSelected'>XS</span></label> -->
+                <div class = 'sizeGroup'>
+                    <label class = 'infoLabel'>Size: </label>
+                    <select name = 'selector'>
+                        <option value = 'XS'>XS</option>
+                        <option value = 'S'>S</option>
+                        <option value = 'M'>M</option>
+                        <option value = 'L'>L</option>
+                        <option value = 'XL'>XL</option>
+                    </select>
+                </div>
+
                 <div class = 'qtyGroup'>
                     <label class = 'infoLabel'>Quantity: </label>
-                    <select name = 'qtySelector'>
+                    <select name = 'selector'>
                         <option value = '1'>1</option>
                         <option value = '2'>2</option>
                         <option value = '3'>3</option>
                         <option value = '4'>4</option>
                         <option value = '5'>5</option>
                     </select>
-                    
-                    <!-- <div class = 'qtyInput'>22</div>
-                    <div class = 'arrowBox'>
-                        <img src = 'Assets/roundedArrow.svg' class = 'arrow'>
-                        <img src = 'Assets/roundedArrow.svg' class = 'arrow'> 
-                    </div> -->
-                    
                 </div>
+                
+            </div>
+
+            <div class = 'priceAndTrash'>
+                <p class = 'price'>$25.99</p>
+                <img src = 'Assets/trashcanIcon.svg' class = 'trashcanIcon'>
             </div>
         </div>
     </main>

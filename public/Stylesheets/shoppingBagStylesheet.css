@@ -1,5 +1,10 @@
+@import url('Stylesheets/generalStylesheet.css');
+
 main{
     padding: 0 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 h1{
@@ -12,17 +17,19 @@ h1{
 
 .bagProductTile{
     box-sizing: border-box;
-    width: 100%;
-    height: 200px;
-    background-color: var(--brandWhite);
+    width: 800px;
+    height: 210px;
+    background-color: var(--brandDarkPink);
     border-radius: 30px;
     padding: 30px;
     display: grid;
     grid-template-areas:
         'pic title'
-        'pic info';
+        'pic info'
+        'pic price';
     grid-template-columns: 200px 1fr;
     grid-column-gap: 40px;
+    box-shadow: 5px 5px 10px rgb(192, 192, 192);
 }
 
 
@@ -37,14 +44,22 @@ h1{
 .productTitle{
     grid-area: title;
     font-size: 25pt;
+    font-weight: 600;
     margin: 0;
     font-family: var(--sansSerifFonts);
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.productTitle a{
+    color: black;
+    text-decoration: none;
 }
 
 .info{
     grid-area: info;
     display: flex;
+    align-items: flex-start;
 }
 
 .info *{
@@ -54,7 +69,7 @@ h1{
 
 .infoLabel{
     font-size: 12pt;
-    margin: 0;
+    margin: 0 5px 0 0 ;
     font-family: var(--sansSerifFonts);
     font-weight: 500;
 }
@@ -64,12 +79,11 @@ h1{
     font-size: 12pt
 }
 
-.qtyGroup{
+/* .qtyGroup{
     display: grid;
-    /* grid-template-columns: 80px 35px 15px; */
     grid-template-columns: 80px 60px;
     grid-template-rows: 25px;
-}
+} */
 
 select{
     /* appearance: none; */
@@ -81,31 +95,33 @@ select{
     font-weight: 300;
     font-size: 10pt;
     padding: 0px 1px 3px 3px;
-}
-
-/* .qtyInput{
-    appearance: none;
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 1px solid var(--brandPurple);
-    border-radius: 10px;    
-    padding: 3px;
-    font-family: var(--sansSerifFonts);
-    line-height: 100%;
-    font-weight: 300;
-    font-size: 10pt;
-}
-
-.arrow{
-    width: 13px;
+    background-color: var(--brandLightPink);
     cursor: pointer;
 }
 
-.arrow:last-of-type{
-    transform: rotate(180deg);
-} */
+option{
+    appearance: none;
+    background-color: var(--brandLightPink);
+}
+
+.priceAndTrash{
+    grid-area: price;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.price{
+    line-height: 100%;
+    margin: 0 13px 0 0;
+    font-family: var(--sansSerifFonts);
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+.trashcanIcon{
+    position: relative;
+    bottom: 2px;
+    width: 17px;
+    cursor: pointer;
+}

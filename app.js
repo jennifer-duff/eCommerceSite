@@ -17,6 +17,11 @@ app.listen(8080, () => {
 })
 
 // routes
+app.get('/', (req, res) => {
+    console.log('Home page request');
+    res.render('index.ejs');
+})
+
 app.get('/index.ejs', (req, res) => {
     console.log('Home page request');
     res.render('index.ejs');
