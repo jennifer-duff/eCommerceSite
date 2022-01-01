@@ -1,18 +1,19 @@
-@import url('Stylesheets/generalStylesheet.css');
-
 main{
     padding: 0 20vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 75px;
+    min-height: calc(100vh - 175px - 75px);
 }
 
 h1{
-    display: flex;
-    justify-content: center;
-    padding: 75px 0 20px 0;
+    padding: 0;
     font-size: 65pt;
-    margin: 75px 0 0 0;
+    margin: 75px 0 30px 0;
+    height: 65pt;
 }
 
 .bagProductTile{
@@ -30,12 +31,13 @@ h1{
     grid-template-columns: 200px 1fr;
     grid-column-gap: 40px;
     box-shadow: 5px 5px 10px rgb(192, 192, 192);
+    margin: 0 0 40px 0;
 }
 
 
 .productImg{
     grid-area: pic;
-    height: 100%;
+    height: calc(210px - 60px);
     width: 200px;
     background-color: var(--brandPurple);
     margin: auto;
@@ -79,14 +81,7 @@ h1{
     font-size: 12pt
 }
 
-/* .qtyGroup{
-    display: grid;
-    grid-template-columns: 80px 60px;
-    grid-template-rows: 25px;
-} */
-
 select{
-    /* appearance: none; */
     box-sizing: border-box;
     border: 1px solid var(--brandPurple);
     border-radius: 5px;    
