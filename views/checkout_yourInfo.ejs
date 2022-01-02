@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = 'Stylesheets/checkout_yourInfoStylesheet.css'>
+</head>
+
+<body>
+    <%- include('partials/header')%>
+
+    <main>
+        <h1>Checkout</h1>
+        <section id = 'checkoutRoadMap'>
+                <p id = 'yourInfoLabel'>Your Info</p>
+
+                <div class = 'fillerDiv'></div>
+
+                <p id = 'shippingLabel'>Shipping</p>
+
+                <div class = 'fillerDiv'></div>
+
+                <p id = 'paymentLabel'>Payment</p>
+
+                <div class = 'fillerDiv'></div>
+
+                <p id = 'confirmationLabel'>Confirmation</p>
+
+
+
+                <div id = 'yourInfoDot' class = 'dotLine'>
+                    <div class = 'circle'></div>
+                    <div class = 'shortLine'></div>
+                </div>
+
+                <div id = 'longLine1' class = 'longLineBox'>
+                    <div class = 'longLine'></div>
+                </div>
+
+                <div id = 'shippingDot' class = 'dotLine'>
+                    <div class = 'shortLine'></div>
+                    <div class = 'circle'></div>
+                    <div class = 'shortLine'></div>
+                </div>
+
+                <div id = 'longLine2' class = 'longLineBox'>
+                    <div class = 'longLine'></div>
+                </div>
+
+                <div id = 'paymentDot' class = 'dotLine'>
+                    <div class = 'shortLine'></div>
+                    <div class = 'circle'></div>
+                    <div class = 'shortLine'></div>
+                </div>
+
+                <div id = 'longLine3' class = 'longLineBox'>
+                    <div class = 'longLine'></div>
+                </div>
+
+                <div id = 'confirmationDot' class = 'dotLine'>
+                    <div class = 'shortLine'></div>
+                    <div class = 'circle'></div>
+                </div>
+                
+        </section>
+
+        <form>
+            <h2> Your Info</h2>
+            <div class = 'formDiv'>
+                <label for = 'firstName'>First Name: </label>
+                <input type = 'text' name = 'firstName' id = 'firstName' required>
+            </div>
+            
+            <div class = 'formDiv'>
+                <label for = 'lastName'>Last Name: </label>
+                <input type = 'text' name = 'lastName' id = 'lastName' required>
+            </div>
+            
+            <div class = 'formDiv'>
+                <label for = 'email'>Email: </label>
+                <input type = 'email' name = 'email' id = 'email' required>
+            </div>
+            
+            <div class = 'formDiv'>
+                <label for = 'phone'>Phone Number: </label>
+                <input type = 'tel' name = 'phone' id = 'phone' required>  
+            </div>
+
+            <div id = 'submitDiv'>
+                <submit>Next<img src = 'Assets/roundedArrow.svg' id = 'arrow'></submit>
+            </div>
+            
+        </form>
+
+    </main>
+
+    <%- include('partials/footer')%> 
+</body>
+</html>

@@ -1,0 +1,227 @@
+main{
+    margin-top: 75px;
+    min-height: calc(100vh - 175px - 75px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--brandLightPink);
+}
+
+h1{
+    padding: 0;
+    font-size: 65pt;
+    margin: 75px 0 30px 0;
+    height: 65pt;
+}
+
+
+/* ------ Checkout Road Map -------*/
+
+#checkoutRoadMap{
+    display: grid;
+    grid-template-areas:
+        "yourInfo fillerDiv1 shipping fillerDiv2 payment fillerDiv3 confirmation"
+        'dotLine1 longLine1 dotLine2 longLine2 dotLine3 longLine3 dotLine4';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+    width: 50%;
+}
+
+#checkoutRoadMap p{
+    font-family: var(--sansSerifFonts);
+    font-size: 12pt;
+    line-height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#checkoutRoadMap p:nth-of-type(1){
+    font-weight: 600;
+}
+
+#yourInfoLabel{
+    grid-area: 'yourInfo';
+}
+
+.fillerDiv:nth-of-type(1){
+    grid-area: 'fillerDiv1';
+}
+
+#shippingLabel{
+    grid-area: 'shipping';
+}
+
+.fillerDiv:nth-of-type(2){
+    grid-area: 'fillerDiv2';
+}
+
+#paymentLabel{
+    grid-area: 'payment';
+}
+
+.fillerDiv:nth-of-type(3){
+    grid-area: 'fillerDiv3';
+}
+
+#confirmationLabel{
+    grid-area: 'confirmation';
+}
+
+#yourInfoDot{
+    grid-area: 'dotLine1';
+    /* position: relative;
+    left: 18px; */
+    justify-content: flex-end;
+}
+
+#longLine1{
+    grid-area: 'line1';
+}
+
+#shippingDot{
+    grid-area: 'dotLine2';
+}
+
+#longLine2{
+    grid-area: 'line2';
+}
+
+#paymentDot{
+    grid-area: 'dotLine3';
+}
+
+#longLine3{
+    grid-area: 'line3';
+}
+
+#confirmationDot{
+    grid-area: 'dotLine4';
+    justify-content: flex-start;
+
+}
+
+.dotLine{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+
+.circle{
+    box-sizing: border-box;
+    border: 5px solid var(--brandPurple);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.circle:nth-of-type(1){
+    background-color: var(--brandPurple);
+}
+
+.shortLine{
+    background-color: var(--brandPurple);
+    width: 50%;
+    height: 5px;
+    margin: 0;
+}
+
+.longLineBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.longLine{
+    background-color: var(--brandPurple);
+    width: 100%;
+    height: 5px;
+}
+
+/* ------ form -------*/
+form{
+    box-sizing: border-box;
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    /* border: 2px solid var(--brandPurple); */
+    border-radius: 10px;
+    margin: 50px 0 75px 0;
+    font-family: var(--sansSerifFonts);
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    box-shadow: 0px 0px 20px var(--brandDarkPink);
+}
+
+h2{
+    margin: 0 0 40px 0;
+    line-height: 100%;
+    font-size: 26pt;
+    width: 100%;
+    /* color: var(--brandPurple); */
+}
+
+.formDiv{
+    display: flex;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+form label{
+    color: rgb(77, 76, 76);
+}
+
+form input{
+    appearance: none;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-family: var(--sansSerifFonts);
+    font-size: 10pt;
+    border: 1.5px solid gray;
+    border-radius: 7px;
+    padding: 2px 5px 4px 5px;
+    line-height: 100%;
+    /* background-color: var(--brandLightPink); */
+    margin-left: 7px;
+    flex: 1 1 auto;
+}
+
+#submitDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: right;
+}
+
+submit{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16pt;
+    color: var(--brandLightPink);
+    line-height: 100%;
+    transition: background-color 0.2s ease-in-out;
+    background-color: var(--brandLightPurple);
+    box-sizing: border-box;
+    padding: 6px 7px 9px 10px;
+    border-radius: 7px;
+}
+
+submit:hover{
+    background-color: var(--brandPurple)
+}
+
+#arrow{
+    transform: rotate(90deg);
+    height: 8px;
+    position: relative;
+    bottom: 3px;
+    margin-left: 6px;
+}

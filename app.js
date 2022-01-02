@@ -31,6 +31,10 @@ app.get('/shoppingBag', (req, res) => {
     res.render('shoppingBag');
 })
 
+app.get('/checkout_yourInfo', (req, res) => {
+    res.render('checkout_yourInfo');
+})
+
 app.get('/:product', (req, res) => {
     const product = req.params.product;
     console.log(product);

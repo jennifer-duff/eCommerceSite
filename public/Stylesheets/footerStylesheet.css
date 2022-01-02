@@ -10,7 +10,7 @@ footer{
     align-items: center;
     padding: 20px;
     background-color: var(--brandPurple);
-    margin-top: 75px;
+    /* margin-top: 75px; */
 }
 
 #footerLogo{
