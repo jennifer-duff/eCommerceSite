@@ -2,66 +2,14 @@
 <html lang="en">
 <head>
     <%- include('partials/head')%>
-    <link rel = 'stylesheet' href = 'Stylesheets/checkout_yourInfoStylesheet.css'>
+    <link rel = 'stylesheet' href = 'Stylesheets/checkoutStylesheet.css'>
 </head>
 
 <body>
     <%- include('partials/header')%>
 
     <main>
-        <h1>Checkout</h1>
-        <section id = 'checkoutRoadMap'>
-                <p id = 'yourInfoLabel'>Your Info</p>
-
-                <div class = 'fillerDiv'></div>
-
-                <p id = 'shippingLabel'>Shipping</p>
-
-                <div class = 'fillerDiv'></div>
-
-                <p id = 'paymentLabel'>Payment</p>
-
-                <div class = 'fillerDiv'></div>
-
-                <p id = 'confirmationLabel'>Confirmation</p>
-
-
-
-                <div id = 'yourInfoDot' class = 'dotLine'>
-                    <div class = 'circle'></div>
-                    <div class = 'shortLine'></div>
-                </div>
-
-                <div id = 'longLine1' class = 'longLineBox'>
-                    <div class = 'longLine'></div>
-                </div>
-
-                <div id = 'shippingDot' class = 'dotLine'>
-                    <div class = 'shortLine'></div>
-                    <div class = 'circle'></div>
-                    <div class = 'shortLine'></div>
-                </div>
-
-                <div id = 'longLine2' class = 'longLineBox'>
-                    <div class = 'longLine'></div>
-                </div>
-
-                <div id = 'paymentDot' class = 'dotLine'>
-                    <div class = 'shortLine'></div>
-                    <div class = 'circle'></div>
-                    <div class = 'shortLine'></div>
-                </div>
-
-                <div id = 'longLine3' class = 'longLineBox'>
-                    <div class = 'longLine'></div>
-                </div>
-
-                <div id = 'confirmationDot' class = 'dotLine'>
-                    <div class = 'shortLine'></div>
-                    <div class = 'circle'></div>
-                </div>
-                
-        </section>
+        <%- include('partials/checkout')%>
 
         <form>
             <h2> Your Info</h2>
