@@ -35,6 +35,10 @@ app.get('/checkout_yourInfo', (req, res) => {
     res.render('checkout_yourInfo');
 })
 
+app.get('/checkout_shipping', (req, res) => {
+    res.render('checkout_shipping');
+})
+
 app.get('/:product', (req, res) => {
     const product = req.params.product;
     console.log(product);
