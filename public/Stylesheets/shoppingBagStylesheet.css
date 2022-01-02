@@ -6,7 +6,7 @@ main{
     justify-content: flex-start;
     align-items: center;
     margin-top: 75px;
-    min-height: calc(100vh - 175px - 75px);
+    min-height: calc(100vh - 175px);
 }
 
 h1{
@@ -128,7 +128,7 @@ option{
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin: 20px 0 0 0;
+    margin: 20px 0 75px 0;
 }
 
 #totalParagraph{

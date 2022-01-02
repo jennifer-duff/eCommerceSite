@@ -9,6 +9,45 @@
     <%- include('partials/header')%>
     <main>
         <h1>Your Bag</h1>
+        
+        
+        <!-- TODO: loop through every item in cart, and create a tile for it -->
+        
+        <div class = 'bagProductTile'>
+            <div class = 'productImg'></div>
+            
+            <h2 class = 'productTitle'><a href = '/product'>The Product Name</a></h2>
+            
+            <div class = 'info'>
+                <div class = 'sizeGroup'>
+                    <label class = 'infoLabel'>Size: </label>
+                    <select name = 'selector'>
+                        <option value = 'XS'>XS</option>
+                        <option value = 'S'>S</option>
+                        <option value = 'M'>M</option>
+                        <option value = 'L'>L</option>
+                        <option value = 'XL'>XL</option>
+                    </select>
+                </div>
+
+                <div class = 'qtyGroup'>
+                    <label class = 'infoLabel'>Quantity: </label>
+                    <select name = 'selector'>
+                        <option value = '1'>1</option>
+                        <option value = '2'>2</option>
+                        <option value = '3'>3</option>
+                        <option value = '4'>4</option>
+                        <option value = '5'>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class = 'priceAndTrash'>
+                <p class = 'price'>$25.99</p>
+                <img src = 'Assets/trashcanIcon.svg' class = 'trashcanIcon'>
+            </div>
+        </div>
+
 
         <div class = 'bagProductTile'>
             <div class = 'productImg'></div>
@@ -45,40 +84,6 @@
             </div>
         </div>
 
-        <div class = 'bagProductTile'>
-            <div class = 'productImg'></div>
-
-            <h2 class = 'productTitle'><a href = '/product'>The Product Name</a></h2>
-
-            <div class = 'info'>
-                <div class = 'sizeGroup'>
-                    <label class = 'infoLabel'>Size: </label>
-                    <select name = 'selector'>
-                        <option value = 'XS'>XS</option>
-                        <option value = 'S'>S</option>
-                        <option value = 'M'>M</option>
-                        <option value = 'L'>L</option>
-                        <option value = 'XL'>XL</option>
-                    </select>
-                </div>
-
-                <div class = 'qtyGroup'>
-                    <label class = 'infoLabel'>Quantity: </label>
-                    <select name = 'selector'>
-                        <option value = '1'>1</option>
-                        <option value = '2'>2</option>
-                        <option value = '3'>3</option>
-                        <option value = '4'>4</option>
-                        <option value = '5'>5</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class = 'priceAndTrash'>
-                <p class = 'price'>$25.99</p>
-                <img src = 'Assets/trashcanIcon.svg' class = 'trashcanIcon'>
-            </div>
-        </div>
 
         <div class = 'bagProductTile'>
             <div class = 'productImg'></div>

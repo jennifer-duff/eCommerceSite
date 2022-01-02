@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = 'Stylesheets/checkoutStylesheet.css'>
+</head>
+
+<body>
+    <%- include('partials/header')%>
+
+    <main>
+        <%- include('partials/checkout')%>
+
+        <form action = 'checkout_review'>
+            <h2>Payment</h2>
+            <div class = 'formDiv'>
+                <label for = 'cardNum'>Card Number: </label>
+                <input type = 'text' name = 'cardNum' id = 'cardNum' required>
+            </div>
+
+            <div class = 'formDiv'>
+                <label for = 'expirationDate'>Expiration Date: </label>
+                <input type = 'month' name = 'expirationDate' id = 'expirationDate' required>
+            </div>
+
+            <div class = 'formDiv'>
+                <label for = 'securityCode'>Security Code: </label>
+                <input type = 'text' name = 'securityCode' id = 'securityCode' required>
+            </div>
+
+            <div id = 'submitDiv'>
+                <a id = 'backLink' href = '/checkout_shipping'><img src = 'Assets/roundedArrow.svg' id = 'backArrow' class = 'arrow'>Back</a>
+                <button id = 'submitBtn'>Next<img src = 'Assets/roundedArrow.svg' id = 'nextArrow' class = 'arrow'></button>
+            </div>
+        </form>
+
+    </main>
+
+    <%- include('partials/footer')%> 
+</body>
+</html>

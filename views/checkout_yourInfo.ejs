@@ -11,7 +11,7 @@
     <main>
         <%- include('partials/checkout')%>
 
-        <form>
+        <form action = '/checkout_shipping'>
             <h2> Your Info</h2>
             <div class = 'formDiv'>
                 <label for = 'firstName'>First Name: </label>
@@ -34,13 +34,14 @@
             </div>
 
             <div id = 'submitDiv'>
-                <submit>Next<img src = 'Assets/roundedArrow.svg' id = 'arrow'></submit>
+                <div id = 'submitFiller'></div>
+                <button id = 'submitBtn'>Next<img src = 'Assets/roundedArrow.svg' id = 'nextArrow' class = 'arrow'></button>
             </div>
             
         </form>
 
     </main>
 
-    <%- include('partials/footer')%> 
+    <%- include('partials/footer')%>
 </body>
 </html>

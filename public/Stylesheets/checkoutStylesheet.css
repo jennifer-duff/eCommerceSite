@@ -1,6 +1,6 @@
 main{
     margin-top: 75px;
-    min-height: calc(100vh - 175px - 75px);
+    min-height: calc(100vh - 175px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,32 +196,66 @@ form input{
 #submitDiv{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     text-align: right;
 }
 
-submit{
+#orderBtn, #submitBtn, #backLink{
+    appearance: none;
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
     cursor: pointer;
-    font-weight: 500;
     font-size: 16pt;
-    color: var(--brandLightPink);
     line-height: 100%;
     transition: background-color 0.2s ease-in-out;
-    background-color: var(--brandLightPurple);
     box-sizing: border-box;
-    padding: 6px 7px 9px 10px;
     border-radius: 7px;
+    font-family: var(--sansSerifFonts);
 }
 
-submit:hover{
+#submitBtn, #backLink{
+    background-color: var(--brandLightPurple);
+    color: var(--brandLightPink);
+    font-weight: 500;
+}
+
+#submitBtn{
+    padding: 6px 7px 9px 10px;
+}
+
+#orderBtn{
+    padding: 7px 9px;
+    background-color: var(--brandDarkPink);
+    color: black;
+    border: 2px solid var(--brandPurple);
+    font-weight: 700;
+}
+
+#orderBtn:hover,
+#submitBtn:hover,
+#backLink:hover{
     background-color: var(--brandPurple)
 }
 
-#arrow{
-    transform: rotate(90deg);
+.arrow{
     height: 8px;
     position: relative;
     bottom: 3px;
+}
+
+#nextArrow{
+    transform: rotate(90deg);
     margin-left: 6px;
+}
+
+#backLink{
+    text-decoration: none;
+    padding: 6px 10px 9px 7px;
+}
+
+#backArrow{
+    transform: rotate(270deg);
+    margin-right: 6px;
 }

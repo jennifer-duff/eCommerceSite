@@ -11,7 +11,7 @@
     <main>
         <%- include('partials/checkout')%>
 
-        <form>
+        <form action = '/checkout_payment'>
             <h2>Shipping</h2>
             <div class = 'formDiv'>
                 <label for = 'Address'>Address: </label>
@@ -34,8 +34,8 @@
             </div>
 
             <div id = 'submitDiv'>
-                <a>Back <img src = 'Assets/roundedArrow.svg' id = 'backArrow'> </a>
-                <submit>Next<img src = 'Assets/roundedArrow.svg' id = 'nextArrow'></submit>
+                <a id = 'backLink' href = '/checkout_yourInfo'><img src = 'Assets/roundedArrow.svg' id = 'backArrow' class = 'arrow'>Back</a>
+                <button id = 'submitBtn'>Next<img src = 'Assets/roundedArrow.svg' id = 'nextArrow' class = 'arrow'></button>
             </div>
             
         </form>

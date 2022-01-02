@@ -39,6 +39,18 @@ app.get('/checkout_shipping', (req, res) => {
     res.render('checkout_shipping');
 })
 
+app.get('/checkout_payment', (req, res) => {
+    res.render('checkout_payment');
+})
+
+app.get('/checkout_review', (req, res) => {
+    res.render('checkout_review');
+})
+
+app.get('/checkout_thankyou', (req, res) => {
+    res.render('checkout_thankyou');
+})
+
 app.get('/:product', (req, res) => {
     const product = req.params.product;
     console.log(product);

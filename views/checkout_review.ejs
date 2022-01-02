@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = 'Stylesheets/checkoutStylesheet.css'>
+</head>
+
+<body>
+    <%- include('partials/header')%>
+
+    <main>
+        <%- include('partials/checkout')%>
+
+        <form action = 'checkout_thankyou'>
+            <h2>Review</h2>
+            <div class = 'formDiv'>
+                This section will have order info
+            </div>
+
+            <div id = 'submitDiv'>
+                <a id = 'backLink' href = '/checkout_shipping'><img src = 'Assets/roundedArrow.svg' id = 'backArrow' class = 'arrow'>Back</a>
+                <button id = 'orderBtn'>Submit Order</button>
+            </div>
+        </form>
+
+    </main>
+
+    <%- include('partials/footer')%> 
+</body>
+</html>
