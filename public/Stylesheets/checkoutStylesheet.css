@@ -36,9 +36,9 @@ h1{
     text-align: center;
 }
 
-#checkoutRoadMap p:nth-of-type(1){
+/* #checkoutRoadMap p:nth-of-type(1){
     font-weight: 600;
-}
+} */
 
 #yourInfoLabel{
     grid-area: 'yourInfo';
@@ -121,9 +121,9 @@ h1{
     resize: none;
 }
 
-.circle:nth-of-type(1){
+/* .circle:nth-of-type(1){
     background-color: var(--brandPurple);
-}
+} */
 
 .shortLine{
     background-color: var(--brandPurple);
