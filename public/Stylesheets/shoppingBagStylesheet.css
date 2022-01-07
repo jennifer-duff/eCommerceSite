@@ -7,21 +7,23 @@ main{
     align-items: center;
     margin-top: 75px;
     min-height: calc(100vh - 175px);
+    background-color: var(--brandLightPink);
 }
 
 h1{
     padding: 0;
     font-size: 65pt;
-    margin: 75px 0 30px 0;
+    margin: 75px 0 60px 0;
     height: 65pt;
 }
 
 .bagProductTile{
     box-sizing: border-box;
     height: 210px;
-    background-color: var(--brandDarkPink);
+    background-color: var(--white);
     border-radius: 30px;
     padding: 30px;
+    margin: 0 0 40px 0;
     display: grid;
     grid-template-areas:
         'pic title'
@@ -29,8 +31,8 @@ h1{
         'pic price';
     grid-template-columns: 200px 1fr;
     grid-column-gap: 40px;
-    box-shadow: 5px 5px 10px rgb(192, 192, 192);
-    margin: 0 0 40px 0;
+    border: 1px solid var(--shadowColor);
+    box-shadow: 0px 0px 20px var(--brandDarkPink);
 }
 
 .bagProductTile, #checkOutBox{
@@ -87,20 +89,20 @@ h1{
 
 select{
     box-sizing: border-box;
-    border: 1px solid var(--brandPurple);
+    border: 1px solid var(--shadowColor);
     border-radius: 5px;    
     font-family: var(--sansSerifFonts);
     line-height: 100%;
     font-weight: 300;
     font-size: 10pt;
     padding: 0px 1px 3px 3px;
-    background-color: var(--brandLightPink);
+    background-color: var(--white);
     cursor: pointer;
 }
 
 option{
     appearance: none;
-    background-color: var(--brandLightPink);
+    background-color: var(--white);
 }
 
 .sizeGroup{

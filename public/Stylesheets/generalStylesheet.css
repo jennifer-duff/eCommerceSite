@@ -4,8 +4,13 @@
     --sansSerifFonts: synthese;
     --brandPurple: #8C5074;
     --brandLightPurple: #af7096;
-    --brandLightPink: #fff7f5;
-    --brandDarkPink: #f8dede;
+    --brandLightPink: #FFF3F0;
+    /* --brandLightPink: #fff7f5; */
+    /* --brandDarkPink: #FFE5E0; */
+    --brandDarkPink: #FCE3DE;
+    --white: #FFFDFC;
+    --shadowColor: #D1BCC9;
+    --gray: #6B6A6A;
 }
 
 html{

@@ -10,11 +10,12 @@ header{
     align-items: center;
     padding: 20px;
     box-shadow: -20px -20px 40px var(--brandPurple);
+    box-shadow: 0px 0px 10px var(--shadowColor);
     margin: 0;
     position: fixed;
     top: 0;
     z-index: 1;
-    background-color: white;
+    background-color: var(--white);
 }
 
 #headerLogoLink{
@@ -59,6 +60,7 @@ header nav a:hover{
     margin-left: 5px;
     border-radius: 10px;
     border: 1.5px solid var(--brandPurple);
+    background-color: var(--white);
 }
 
 #searchBar:focus{

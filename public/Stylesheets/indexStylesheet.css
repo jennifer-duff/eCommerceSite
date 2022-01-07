@@ -1,4 +1,8 @@
 /* --------- MAIN ---------*/
+main{
+    background-color: var(--white);
+}
+
 h1{
     display: flex;
     justify-content: center;
@@ -41,5 +45,5 @@ h1{
     width: 325px;
     height:325px;
     transform: translate(-10px, -10px);
-    box-shadow: 5px 5px 15px var(--brandPurple);
+    box-shadow: 10px 10px 15px var(--shadowColor);
 }
