@@ -21,9 +21,9 @@ h1{
     box-sizing: border-box;
     padding: 40px;
     border-radius: 15px;
-    border: 2px solid var(--brandPurple);
-    background-color: vra(--brandLightPink);
-    box-shadow: 0px 0px 20px var(--brandLightPurple);
+    border: 1px solid var(--shadowColor);
+    background-color: var(--white);
+    box-shadow: 0px 0px 20px var(--shadowColor);
 }
 
 p{
