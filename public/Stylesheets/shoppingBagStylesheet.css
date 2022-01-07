@@ -156,7 +156,7 @@ option{
     appearance: none;
     cursor: pointer;
     box-sizing: border-box;
-    background-color: var(--brandLightPurple);
+    background-color: var(--brandPurple);
     color: var(--brandLightPink);
     border: none;
     font-family: var(--sansSerifFonts);
@@ -170,5 +170,5 @@ option{
 }
 
 #checkOutBtn:hover{
-    background-color: var(--brandPurple);
+    background-color: var(--brandLightPurple);
 }
