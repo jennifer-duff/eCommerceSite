@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
     <%- include('partials/head')%>
-    <link rel = 'stylesheet' href = 'Stylesheets/productPageStylesheet.css'>
+    <link rel = 'stylesheet' href = '/Stylesheets/productPageStylesheet.css'>
 </head>
 <body>
     
     <%- include('partials/header')%>
 
     <main>
-        <h1> <%= product %> </h1>
+        <h1> <%= product.name %> </h1>
         <div id = 'productBox'>
 
-            <!-- <div id = 'productImg'></div> -->
-            <img id = 'productImg' src = 'Assets/productImgs/oversizedBlazer/oversizedBlazer1.jpg'>
+            <div id = carouselBox>
+                <img class = 'scrollArrow' src = '/Assets/arrow.svg'>
 
+                <div id = 'carousel'>
+                    <img class = 'productImg' src = '/Assets/productImgs/oversizedBlazer/oversizedBlazer1.jpg'>
+                    <img class = 'productImg' src = '/Assets/productImgs/oversizedBlazer/oversizedBlazer2.jpg'>
+                    <img class = 'productImg' src = '/Assets/productImgs/oversizedBlazer/oversizedBlazer3.jpg'>
+                </div>
+                <img class = 'scrollArrow' src = '/Assets/arrow.svg'>
+            </div>
+           
+            <p id = 'priceLabel'>$<span id = 'price'> <%= product.price %> </span></p>
+            
             <div id = 'sizeSelectionBox' class = 'selectionBox'>
-                <p id = 'sizeLabel' class = 'productLabel'>Size: </p>
+                <p id = 'sizeLabel'>Size: </p>
                 <label class = 'sizeLabels' for = 'XS'>XS</label>
                 <input type = 'radio' id = 'XS' value = 'XS' name = 'size' class = 'sizeBtn'>
                 
@@ -40,6 +50,6 @@
     </main>
 
     <%- include('partials/footer')%>
-    
+    <script src = '/JavaScript/productPage.js'></script>
 </body>
 </html>

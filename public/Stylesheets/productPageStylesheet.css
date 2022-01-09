@@ -1,5 +1,5 @@
 main{
-    padding: 0 20vw;
+    padding: 0 75px;
     background-color: var(--white);
 }
 
@@ -13,45 +13,105 @@ h1{
 
 #productBox{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    width: 550px;
+    width: 525px;
     margin: 0 auto;
-}
-
-#productImg{
-    /* height: 550px; */
-    width: 550px;
-    /* background-color: var(--brandPurple); */
-    margin-bottom: 20px;
-}
-
-.selectionBox{
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: flex-start;
+    overflow: visible;
+    justify-content: center;
     align-items: center;
 }
 
-.productLabel{
+.scrollArrow{
+    width: 20px;
+    cursor: pointer;
+}
+
+.scrollArrow:first-of-type{
+    transform: rotate(270deg);
+    margin-right: 30px;
+}
+
+.scrollArrow:last-of-type{
+    transform: rotate(90deg);
+    margin-left: 30px;
+}
+
+#carouselBox{
+    display: flex;
+    flex-wrap: none;
+    width: 100%;
+
+}
+
+#carousel{
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin: 0;
+    direction: ltr;
+    position: relative;
+}
+
+#carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.productImg{
+    min-width: 100%;
+    /* background-color: var(--brandPurple); */
+    margin-bottom: 0px;
+}
+
+#priceLabel{
+    box-sizing: border-box;
+    width: 100px;
+    /* height: 52px; */
+    font-family: var(--sansSerifFonts);
+    font-size: 14pt;
+    font-weight: 300;
+    margin: 0 0 -20px 0;
+    padding: 7px 17px 9px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--gray);
+    color: var(--brandLightPink);
+    align-self: flex-end;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.selectionBox{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(100% - 100px);
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0 40px 0;
+
+}
+
+#sizeLabel{
     font-family: var(--sansSerifFonts);
     font-size: 14pt;
     font-weight: 600;
     line-height: 100%;
-    margin: 20px 0;
 }
 
 .sizeBtn{
     appearance: none;
     box-sizing: border-box;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     background-color: rgb(221, 221, 221);
     border-radius: 50%;
     transition: background-color 0.2s ease-in-out;
     border: none;
     cursor: pointer;
-    margin-left: -20px;
+    margin-left: -10px;
 }
 
 /* .sizeBtn:first-of-type{
@@ -67,7 +127,7 @@ h1{
 }
 
 .sizeLabels{
-    margin: 0;
+    margin: 0 0 0 22px;
     text-align: center;
     line-height: 100%;
     width: 40px;
@@ -80,18 +140,9 @@ h1{
     pointer-events: none;
 }
 
-
-/* .sizeBtn{
-    appearance: none;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(221, 221, 221);
-} */
-
 #addToBag{
     cursor: pointer;
-    margin: 20px 0 40px 0;
+    margin: 0px 0 60px 0;
     padding: 7px 15px 9px 15px;
     font-family: var(--sansSerifFonts);
     font-weight: 500;
@@ -101,6 +152,7 @@ h1{
     background-color: var(--brandLightPurple);
     color: var(--brandLightPink);
     transition: background-color 0.2s ease-in-out;
+    width: calc(100% - 100px);
 }
 
 #addToBag:hover

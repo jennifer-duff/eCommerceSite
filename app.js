@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const Product = require('./product');
 // const methodOverride = require('method-override');
 
-mongoose.connect(`mongodb://localhost:27017/eCommerceApp`, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
@@ -82,9 +82,10 @@ app.get('/checkout_thankyou', (req, res) => {
     res.render('checkout_thankyou');
 })
 
-app.get('/:product', (req, res) => {
-    const product = req.params.product;
+app.get('/products/:product', async (req, res) => {
+    const productName = req.params.product;
+    const product = await Product.findOne({name: productName});
+    // const productInfo = await Product.findById('61db3019aa6e779397cda57e');
     console.log(product);
     res.render('productPage', {product});
 })
-
