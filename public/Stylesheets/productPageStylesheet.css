@@ -19,9 +19,9 @@ h1{
 }
 
 #productImg{
-    height: 550px;
+    /* height: 550px; */
     width: 550px;
-    background-color: var(--brandPurple);
+    /* background-color: var(--brandPurple); */
     margin-bottom: 20px;
 }
 

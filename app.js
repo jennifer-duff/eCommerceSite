@@ -1,7 +1,38 @@
 // Express set-up
-const express = require("express");
+const express = require('express');
 const app = express();
 const path = require('path');
+const port = 8080;
+
+// Monogoose setup
+const mongoose = require('mongoose');
+const Product = require('./product');
+// const methodOverride = require('method-override');
+
+mongoose.connect(`mongodb://localhost:27017/eCommerceApp`, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("MONGO CONNECTION OPEN!!!")
+    })
+    .catch(error => {
+        console.log("OH NO MONGO CONNECTION ERROR!!!!")
+        console.log(error)
+    })
+;
+
+// const productSchema = new mongoose.Schema({
+//     name: String,
+//     category: String,
+//     imgSrc: String
+// });
+// const Product = mongoose.model('Product', productSchema);
+
+// const testProduct = new Product({
+//     name: 'NEW test Product',
+//     category: 'Tops',
+//     imgSrc: 'Asets/luma_fullLogo.svg'
+// });
+// testProduct.save();
+
 
 // static assets
 app.use(express.static('public'));
@@ -12,8 +43,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 // set up port listening
-app.listen(8080, () => {
-    console.log("Listening on port 8080!")
+app.listen(port, () => {
+    console.log(`Listening on port ${port}!`)
 })
 
 // routes
