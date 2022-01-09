@@ -18,67 +18,114 @@ const allProducts = [
         name: 'The Black Blazer',
         price: 55.99,
         category: 'Outwear',
-        imgSrc: "/Assets/productImgs/blackBlazer"
+        imgs: {
+            img1: "/Assets/productImgs/blackBlazer/blackBlazer1.jpg",
+            img2: "/Assets/productImgs/blackBlazer/blackBlazer2.jpg",
+            img2: "/Assets/productImgs/blackBlazer/blackBlazer3.jpg"
+        }
     },
     {
         name: 'The Blue Peacoat',
         price: 85.99,
         category: 'Outwear',
-        imgSrc: "/Assets/productImgs/bluePeacoat"
+        imgs: {
+            img1: "/Assets/productImgs/bluePeacoat/bluePeacoat1.jpg",
+            img2: "/Assets/productImgs/bluePeacoat/bluePeacoat2.jpg",
+            img3: "/Assets/productImgs/bluePeacoat/bluePeacoat3.jpg"
+        }
     },
     {
         name: 'The Oversized Blazer',
         price: 65.99,
         category: 'Outwear',
-        imgSrc: "/Assets/productImgs/oversizedBlazer"
+        imgs: {
+            img1: "/Assets/productImgs/oversizedBlazer/oversizedBlazer1.jpg",
+            img2: "/Assets/productImgs/oversizedBlazer/oversizedBlazer2.jpg",
+            img3: "/Assets/productImgs/oversizedBlazer/oversizedBlazer3.jpg"
+        }
     },
     {
         name: 'The Black Pumps',
         price: 50.99,
         category: 'Shoes',
-        imgSrc: "/Assets/productImgs/blackPumps"
+        imgs: {
+            img1: "/Assets/productImgs/blackPumps/blackPumps1.jpg",
+            img2: "/Assets/productImgs/blackPumps/blackPumps2.jpg",
+            img3: "/Assets/productImgs/blackPumps/blackPumps3.jpg",
+
+        }
     },
     {
         name: 'The Block-Heeled Booties',
         price: 53.99,
         category: 'Shoes',
-        imgSrc: "/Assets/productImgs/heeledBooties"
+        imgs: {
+            img1: "/Assets/productImgs/heeledBooties/heeledBooties1.jpg",
+            img2: "/Assets/productImgs/heeledBooties/heeledBooties2.jpg",
+            img3: "/Assets/productImgs/heeledBooties/heeledBooties3.jpg",
+
+        }
     },
     {
         name: 'The Graphic T',
         price: 37.99,
         category: 'Tops',
-        imgSrc: "/Assets/productImgs/graphicT"
+        imgs: {
+            img1: "/Assets/productImgs/graphicT/graphicT1.jpg",
+            img2: "/Assets/productImgs/graphicT/graphicT2.jpg",
+            img3: "/Assets/productImgs/graphicT/graphicT3.jpg",
+
+        }
     },
     {
         name: 'The Lace Cami',
         price: 39.99,
         category: 'Tops',
-        imgSrc: "/Assets/productImgs/laceCami"
+        imgs: {
+            img1: "/Assets/productImgs/laceCami/laceCami1.jpg",
+            img2: "/Assets/productImgs/laceCami/laceCami2.jpg",
+            img3: "/Assets/productImgs/laceCami/laceCami3.jpg",
+
+        }
     },
     {
         name: 'The Bowtie Blouse',
         price: 46.99,
         category: 'Tops',
-        imgSrc: "/Assets/productImgs/graphicT"
+        imgs: {
+            img1: "/Assets/productImgs/laceCami/laceCami1.jpg",
+            img2: "/Assets/productImgs/laceCami/laceCami2.jpg",
+            img3: "/Assets/productImgs/laceCami/laceCami3.jpg",
+
+        }
     },
     {
         name: 'The Tailored Trousers',
         price: 65.99,
         category: 'Pants & Dresses',
-        imgSrc: "/Assets/productImgs/tailoredTrousers"
+        imgs: {
+            img1: "/Assets/productImgs/tailoredTrousers/tailoredTrousers1.jpg",
+            img2: "/Assets/productImgs/tailoredTrousers/tailoredTrousers2.jpg",
+            img3: "/Assets/productImgs/tailoredTrousers/tailoredTrousers3.jpg",
+
+        }
     },
     {
         name: 'The Checked Dress',
         price: 52.99,
         category: 'Pants & Dresses',
-        imgSrc: "/Assets/productImgs/checkedDress"
+        imgs: {
+            img1: "/Assets/productImgs/tailoredTrousers/checkedDress1.jpg",
+            img2: "/Assets/productImgs/tailoredTrousers/checkedDress2.jpg",
+            img3: "/Assets/productImgs/tailoredTrousers/checkedDress3.jpg",
+
+        }
     },
 ];
 
-// Product.remove({}, async (res) => {
-//     console.log(res)
-// });
+Product.remove({}, async (res) => {
+    console.log(res)
+});
 
 Product.insertMany(allProducts)
     .then(res => {

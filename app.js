@@ -1,3 +1,5 @@
+// const fs = require('fs');
+
 // Express set-up
 const express = require('express');
 const app = express();
@@ -82,10 +84,16 @@ app.get('/checkout_thankyou', (req, res) => {
     res.render('checkout_thankyou');
 })
 
+// app.get('/products/:product', async (req, res) => {
+//     const productName = req.params.product;
+//     const product = await Product.findOne({name: productName});
+//     console.log(product);
+//     res.render('productPage', {product});
+// })
+
 app.get('/products/:product', async (req, res) => {
     const productName = req.params.product;
     const product = await Product.findOne({name: productName});
-    // const productInfo = await Product.findById('61db3019aa6e779397cda57e');
     console.log(product);
     res.render('productPage', {product});
 })
