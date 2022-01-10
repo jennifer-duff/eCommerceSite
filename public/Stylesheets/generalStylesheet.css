@@ -28,6 +28,7 @@ main{
     box-sizing: border-box;
     margin-top: 75px;
     min-height: calc(100vh - 175px);
+    /* padding-bottom: 50px; */
 }
 
 a{

@@ -91,9 +91,23 @@ app.get('/checkout_thankyou', (req, res) => {
 //     res.render('productPage', {product});
 // })
 
+app.get('/products/:searchedCategory', async (req, res) => {
+    const searchedCategory = req.params.product;
+    const filteredProducts = await Product.find({category: searchedCategory});
+    console.log(filteredProducts);
+    res.render('categoryPage', {searchedCategory, filteredProducts});
+})
+
+app.get('/products', async (req, res) => {
+    const allProducts = await Product.find({});
+    // console.log(allProducts);
+    res.render('allProducts', {allProducts});
+})
+
+
 app.get('/products/:product', async (req, res) => {
     const productName = req.params.product;
     const product = await Product.findOne({name: productName});
-    console.log(product);
+    // console.log(product);
     res.render('productPage', {product});
 })

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = '/Stylesheets/allProductsStylesheet.css'>
+</head>
+<body>
+    
+    <%- include('partials/header')%>
+
+    <main>
+       <h1>All Clothing</h1>
+
+       <div id = 'filterBox'>
+            <label id = 'filterLabel' for='categoryFilter'>Filter By Category:</label>
+            <select name = 'categoryFilter' id = 'categoryFilter'>
+                <option value = 'allClothing'>All Clothing</option>
+                <option value = 'tops'>Tops</option>
+                <option value = 'pantsAndDresses'>Pants & Dresses</option>
+                <option value = 'outerwear'>Outerwear</option>
+                <option value = 'shoes'>Shoes</option>
+            </select>
+       </div>
+
+       <div id = 'allProductsBox'>
+           <% for (let product of allProducts) { %>
+                <a class = 'productBox' href = 'products/<%= product.name%>'>
+                    <img class = 'productImgs' src =<%= product.imgs.img1 %> >
+                    <p class = 'productLabels'> <%= product.name %> </p>
+                </a>
+           <% } %>
+       </div>
+    </main>
+
+    <%- include('partials/footer')%>
+    <script src = '/JavaScript/productPage.js'></script>
+</body>
+</html>

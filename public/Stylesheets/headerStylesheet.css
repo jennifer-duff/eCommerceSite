@@ -27,7 +27,7 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 75%;
+    width: 85%;
     font-family: var(--sansSerifFonts);
     font-weight: 500;
     font-size: 12pt;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = '/Stylesheets/allProductsStylesheet.css'>
+</head>
+<body>
+    
+    <%- include('partials/header')%>
+
+    <main>
+       <h1><%= searchedCategory %></h1>
+
+       <div id = 'filteredBox'>
+           <% for (let product of filteredProducts) { %>
+                <a class = 'productBox' href = 'products/<%= product.name%>'>
+                    <img class = 'productImgs' src =<%= product.imgs.img1 %> >
+                    <p class = 'productLabels'> <%= product.name %> </p>
+                </a>
+           <% } %>
+       </div>
+    </main>
+
+    <%- include('partials/footer')%>
+    <script src = '/JavaScript/productPage.js'></script>
+</body>
+</html>
