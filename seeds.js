@@ -21,7 +21,7 @@ const allProducts = [
         imgs: {
             img1: "/Assets/productImgs/blackBlazer/blackBlazer1.jpg",
             img2: "/Assets/productImgs/blackBlazer/blackBlazer2.jpg",
-            img2: "/Assets/productImgs/blackBlazer/blackBlazer3.jpg"
+            img3: "/Assets/productImgs/blackBlazer/blackBlazer3.jpg"
         }
     },
     {
@@ -93,9 +93,9 @@ const allProducts = [
         price: 46.99,
         category: 'Tops',
         imgs: {
-            img1: "/Assets/productImgs/laceCami/laceCami1.jpg",
-            img2: "/Assets/productImgs/laceCami/laceCami2.jpg",
-            img3: "/Assets/productImgs/laceCami/laceCami3.jpg",
+            img1: "/Assets/productImgs/bowtieBlouse/bowtieBlouse1.jpg",
+            img2: "/Assets/productImgs/bowtieBlouse/bowtieBlouse2.jpg",
+            img3: "/Assets/productImgs/bowtieBlouse/bowtieBlouse3.jpg",
 
         }
     },
@@ -115,9 +115,9 @@ const allProducts = [
         price: 52.99,
         category: 'Pants & Dresses',
         imgs: {
-            img1: "/Assets/productImgs/tailoredTrousers/checkedDress1.jpg",
-            img2: "/Assets/productImgs/tailoredTrousers/checkedDress2.jpg",
-            img3: "/Assets/productImgs/tailoredTrousers/checkedDress3.jpg",
+            img1: "/Assets/productImgs/checkedDress/checkedDress1.jpg",
+            img2: "/Assets/productImgs/checkedDress/checkedDress2.jpg",
+            img3: "/Assets/productImgs/checkedDress/checkedDress3.jpg",
 
         }
     },

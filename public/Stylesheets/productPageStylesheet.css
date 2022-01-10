@@ -23,7 +23,9 @@ h1{
 }
 
 .scrollArrow{
-    width: 20px;
+    /* width: 20px; */
+    height: 25px;
+    margin: auto;
     cursor: pointer;
 }
 
@@ -41,7 +43,7 @@ h1{
     display: flex;
     flex-wrap: none;
     width: 100%;
-
+    height: auto;
 }
 
 #carousel{
@@ -53,6 +55,8 @@ h1{
     margin: 0;
     direction: ltr;
     position: relative;
+    height: auto;
+    object-fit: scale-down;
 }
 
 #carousel::-webkit-scrollbar{
@@ -60,15 +64,16 @@ h1{
 }
 
 .productImg{
-    min-width: 100%;
-    /* background-color: var(--brandPurple); */
+    width: 100%;
+    height: auto;
     margin-bottom: 0px;
+    object-fit: contain;
 }
 
 #priceLabel{
     box-sizing: border-box;
     width: 100px;
-    /* height: 52px; */
+    height: auto;
     font-family: var(--sansSerifFonts);
     font-size: 14pt;
     font-weight: 300;
