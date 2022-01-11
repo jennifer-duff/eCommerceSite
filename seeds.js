@@ -17,7 +17,7 @@ const allProducts = [
     {
         name: 'The Black Blazer',
         price: 55.99,
-        category: 'Outwear',
+        category: 'outerwear',
         imgs: {
             img1: "/Assets/productImgs/blackBlazer/blackBlazer1.jpg",
             img2: "/Assets/productImgs/blackBlazer/blackBlazer2.jpg",
@@ -27,7 +27,7 @@ const allProducts = [
     {
         name: 'The Blue Peacoat',
         price: 85.99,
-        category: 'Outwear',
+        category: 'outerwear',
         imgs: {
             img1: "/Assets/productImgs/bluePeacoat/bluePeacoat1.jpg",
             img2: "/Assets/productImgs/bluePeacoat/bluePeacoat2.jpg",
@@ -37,7 +37,7 @@ const allProducts = [
     {
         name: 'The Oversized Blazer',
         price: 65.99,
-        category: 'Outwear',
+        category: 'outerwear',
         imgs: {
             img1: "/Assets/productImgs/oversizedBlazer/oversizedBlazer1.jpg",
             img2: "/Assets/productImgs/oversizedBlazer/oversizedBlazer2.jpg",
@@ -47,7 +47,7 @@ const allProducts = [
     {
         name: 'The Black Pumps',
         price: 50.99,
-        category: 'Shoes',
+        category: 'shoes',
         imgs: {
             img1: "/Assets/productImgs/blackPumps/blackPumps1.jpg",
             img2: "/Assets/productImgs/blackPumps/blackPumps2.jpg",
@@ -58,7 +58,7 @@ const allProducts = [
     {
         name: 'The Block-Heeled Booties',
         price: 53.99,
-        category: 'Shoes',
+        category: 'shoes',
         imgs: {
             img1: "/Assets/productImgs/heeledBooties/heeledBooties1.jpg",
             img2: "/Assets/productImgs/heeledBooties/heeledBooties2.jpg",
@@ -69,7 +69,7 @@ const allProducts = [
     {
         name: 'The Graphic T',
         price: 37.99,
-        category: 'Tops',
+        category: 'tops',
         imgs: {
             img1: "/Assets/productImgs/graphicT/graphicT1.jpg",
             img2: "/Assets/productImgs/graphicT/graphicT2.jpg",
@@ -80,7 +80,7 @@ const allProducts = [
     {
         name: 'The Lace Cami',
         price: 39.99,
-        category: 'Tops',
+        category: 'tops',
         imgs: {
             img1: "/Assets/productImgs/laceCami/laceCami1.jpg",
             img2: "/Assets/productImgs/laceCami/laceCami2.jpg",
@@ -91,7 +91,7 @@ const allProducts = [
     {
         name: 'The Bowtie Blouse',
         price: 46.99,
-        category: 'Tops',
+        category: 'tops',
         imgs: {
             img1: "/Assets/productImgs/bowtieBlouse/bowtieBlouse1.jpg",
             img2: "/Assets/productImgs/bowtieBlouse/bowtieBlouse2.jpg",
@@ -102,7 +102,7 @@ const allProducts = [
     {
         name: 'The Tailored Trousers',
         price: 65.99,
-        category: 'Pants & Dresses',
+        category: 'pantsAndDresses',
         imgs: {
             img1: "/Assets/productImgs/tailoredTrousers/tailoredTrousers1.jpg",
             img2: "/Assets/productImgs/tailoredTrousers/tailoredTrousers2.jpg",
@@ -113,7 +113,7 @@ const allProducts = [
     {
         name: 'The Checked Dress',
         price: 52.99,
-        category: 'Pants & Dresses',
+        category: 'pantsAndDresses',
         imgs: {
             img1: "/Assets/productImgs/checkedDress/checkedDress1.jpg",
             img2: "/Assets/productImgs/checkedDress/checkedDress2.jpg",

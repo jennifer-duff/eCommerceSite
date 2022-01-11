@@ -24,7 +24,7 @@
 
        <div id = 'allProductsBox'>
            <% for (let product of allProducts) { %>
-                <a class = 'productBox' href = 'products/<%= product.name%>'>
+                <a class = 'productBox <%= product.category%>' href = 'products/<%= product.name%>'>
                     <img class = 'productImgs' src =<%= product.imgs.img1 %> >
                     <p class = 'productLabels'> <%= product.name %> </p>
                 </a>
@@ -33,6 +33,6 @@
     </main>
 
     <%- include('partials/footer')%>
-    <script src = '/JavaScript/productPage.js'></script>
+    <script src = '/JavaScript/filtering.js'></script>
 </body>
 </html>
