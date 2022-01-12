@@ -9,12 +9,16 @@
     <%- include('partials/header')%>
 
     <main>
-        <p id = 'breadcrumbs'>All Clothing > <%= pageTitle %></p> </p>
+        <p id = 'breadcrumbs'>
+            <a href = '/allProducts'>All Clothing &nbsp;</a>
+            >&nbsp; <%= pageTitle %>
+        </p>
+
         <h1><%= pageTitle %></h1>
 
         <div id = 'filteredBox'>
             <% for (let product of filteredProducts) { %>
-                    <a class = 'productBox' href = 'products/<%= product.name%>'>
+                    <a class = 'productBox' href = '/products/<%= product.name%>'>
                         <img class = 'productImgs' src =<%= product.imgs.img1 %> >
                         <p class = 'productLabels'> <%= product.name %> </p>
                     </a>
