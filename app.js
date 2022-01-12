@@ -91,12 +91,19 @@ app.get('/checkout_thankyou', (req, res) => {
 //     res.render('productPage', {product});
 // })
 
-// app.get('/products/:searchedCategory', async (req, res) => {
-//     const searchedCategory = req.params.product;
-//     const filteredProducts = await Product.find({category: searchedCategory});
-//     console.log(filteredProducts);
-//     res.render('categoryPage', {searchedCategory, filteredProducts});
-// })
+app.get('/category/:productCategory', async (req, res) => {
+    const searchedCategory = req.params.productCategory;
+    const filteredProducts = await Product.find({category: searchedCategory});
+    pageTitle = searchedCategory;
+    if (pageTitle === 'pantsAndDresses'){
+        pageTitle = 'Pants & Dresses'
+    }
+    else{
+        pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+    }
+    console.log(pageTitle);
+    res.render('categoryPage', {pageTitle, filteredProducts});
+})
 
 app.get('/products', async (req, res) => {
     const allProducts = await Product.find({});

@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <%- include('partials/head')%>
-    <link rel = 'stylesheet' href = '/Stylesheets/allProductsStylesheet.css'>
+    <link rel = 'stylesheet' href = '/Stylesheets/categoryPageStylesheet.css'>
 </head>
 <body>
     
     <%- include('partials/header')%>
 
     <main>
-       <h1><%= searchedCategory %></h1>
+        <p id = 'breadcrumbs'>All Clothing > <%= pageTitle %></p> </p>
+        <h1><%= pageTitle %></h1>
 
-       <div id = 'filteredBox'>
-           <% for (let product of filteredProducts) { %>
-                <a class = 'productBox' href = 'products/<%= product.name%>'>
-                    <img class = 'productImgs' src =<%= product.imgs.img1 %> >
-                    <p class = 'productLabels'> <%= product.name %> </p>
-                </a>
-           <% } %>
-       </div>
+        <div id = 'filteredBox'>
+            <% for (let product of filteredProducts) { %>
+                    <a class = 'productBox' href = 'products/<%= product.name%>'>
+                        <img class = 'productImgs' src =<%= product.imgs.img1 %> >
+                        <p class = 'productLabels'> <%= product.name %> </p>
+                    </a>
+            <% } %>
+        </div>
     </main>
 
     <%- include('partials/footer')%>
-    <script src = '/JavaScript/productPage.js'></script>
+    <!-- <script src = '/JavaScript/productPage.js'></script> -->
 </body>
 </html>
