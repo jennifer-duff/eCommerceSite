@@ -126,3 +126,7 @@ app.get('/about', async (req, res) => {
 app.get('/contact', async (req, res) => {
     res.render('contactPage');
 })
+
+app.get('/contact_thankyou', async (req, res) => {
+    res.render('contact_thankyou');
+})

@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Luma | Checkout</title>
+    <title>Luma | Contact</title>
     <%- include('partials/head')%>
-    <link rel = 'stylesheet' href = 'Stylesheets/checkoutStylesheet.css'>
+    <link rel = 'stylesheet' href = '/Stylesheets/contactStylesheet.css'>
 </head>
-
 <body>
+    
     <%- include('partials/header')%>
 
     <main>
-        <%- include('partials/checkout')%>
-
-        <form action = '/checkout_shipping'>
-            <h2> Your Info</h2>
+        <h1>Let's get in touch</h1>
+        <form action = '/contact_thankyou'>
             <div class = 'formDiv'>
                 <label for = 'firstName'>First Name: </label>
                 <input type = 'text' name = 'firstName' id = 'firstName' required>
@@ -28,23 +26,19 @@
                 <label for = 'email'>Email: </label>
                 <input type = 'email' name = 'email' id = 'email' required>
             </div>
-            
+
             <div class = 'formDiv'>
-                <label for = 'phone'>Phone Number: </label>
-                <input type = 'tel' name = 'phone' id = 'phone' required>  
+                <label>Tell us what's up:</label>
+                <textarea></textarea>
             </div>
 
-            <div id = 'submitDiv'>
-                <div id = 'submitFiller'></div>
-                <button id = 'submitBtn'>Next<img src = 'Assets/roundedArrow.svg' id = 'nextArrow' class = 'arrow'></button>
+            <div class = 'formDiv'>
+                <button id = 'submit'>Submit</button>
             </div>
-            
         </form>
 
     </main>
 
     <%- include('partials/footer')%>
-    <script src = '/JavaScript/checkout.js'></script>
-
 </body>
 </html>
