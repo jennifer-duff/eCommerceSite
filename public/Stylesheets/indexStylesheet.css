@@ -30,6 +30,7 @@ h1{
     grid-template-rows: 300px 300px;
     grid-template-columns: 300px 300px 300px;
     grid-gap: 50px;
+    
     margin: 0;
 }
 
