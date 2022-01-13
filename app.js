@@ -118,3 +118,11 @@ app.get('/products/:product', async (req, res) => {
     // console.log(product);
     res.render('productPage', {product});
 })
+
+app.get('/about', async (req, res) => {
+    res.render('aboutPage');
+})
+
+app.get('/contact', async (req, res) => {
+    res.render('contactPage');
+})

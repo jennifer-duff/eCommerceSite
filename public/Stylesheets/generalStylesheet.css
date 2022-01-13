@@ -28,7 +28,14 @@ main{
     box-sizing: border-box;
     margin-top: 75px;
     min-height: calc(100vh - 175px);
-    /* padding-bottom: 50px; */
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 75px 0 20px 0;
+    font-size: 65pt;
+    margin: 75px 0 0 0;
 }
 
 a{
