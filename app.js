@@ -50,8 +50,7 @@ app.listen(port, () => {
 })
 
 // routes
-app.get('/', (req, res) => {
-    console.log('Home page request');
+app.get('/',  (req, res) => {
     res.render('index');
 })
 
