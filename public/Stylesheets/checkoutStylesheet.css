@@ -12,17 +12,17 @@ main{
 }
 
 #backToBagLink{
-    /* position: absolute;
-    top: calc(75px + 70px); 
-    left: 30%; */
     position: relative;
     right: 250px;
     bottom: 40px;
     font-family: var(--sansSerifFonts);
     text-decoration: none;
-    color: var(--brandLightPurple);
+    color: var(--brandPurple);
     height: 23px;
-    transition: color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 12pt;
+    padding: 5px 7px;
+    border-radius: 5px;
 }
 
 #backToBagArrow{
@@ -32,7 +32,7 @@ main{
 }
 
 #backToBagLink:hover{
-    color: var(--brandPurple);
+    background-color: var(--brandDarkPink);
 }
 
 h1{
@@ -268,21 +268,20 @@ form input{
 
 #orderBtn{
     padding: 8px 14px 10px 14px;
-    background-color: var(--brandPurple);
-    color: var(--brandLightPink);
-    border: 1px solid var(--brandPurple);
+    background-color: var(--brandDarkPink);
+    color: var(--brandPurple);
+    border: 1px solid var(--brandDarkPink);
     font-weight: 500;
     transition: background-color 0.2s ease-in-out;
 }
 
-/* #orderBtn:hover{
-    background-color: var(--brandLightPurple)
-} */
+#orderBtn:hover{
+    background-color: var(--brandLightPink)
+}
 
-#orderBtn:hover,
 #submitBtn:hover,
 #backLink:hover{
-    background-color: var(--brandLightPurple)
+    background-color: var(--brandPurple)
 }
 
 .arrow{

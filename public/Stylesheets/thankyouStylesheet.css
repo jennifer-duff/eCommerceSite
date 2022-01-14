@@ -21,9 +21,9 @@ h1{
     box-sizing: border-box;
     padding: 40px;
     border-radius: 15px;
-    border: 1px solid var(--shadowColor);
+    border: 1px solid var(--brandDarkPink);
     background-color: var(--white);
-    box-shadow: 0px 0px 20px var(--shadowColor);
+    box-shadow: 0px 0px 20px var(--brandDarkPink);
 }
 
 p{
@@ -48,7 +48,7 @@ p:last-of-type{
     border: none;
     box-sizing: border-box;
     font-family: var(--sansSerifFonts);
-    font-weight: 500;
+    font-weight: 300;
     font-size: 14pt;
     text-align: center;
     background-color: var(--gray);
@@ -67,6 +67,6 @@ p:last-of-type{
 
 #arrow{
     transform: rotate(270deg);
-    height: 8px;
-    margin: 0 4px 2px 0px;
+    height: 6px;
+    margin: 0 5px 3px 0px;
 }

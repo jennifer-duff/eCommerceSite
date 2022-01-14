@@ -7,13 +7,12 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    box-shadow: -20px -20px 40px var(--brandPurple);
     box-shadow: 0px 0px 10px var(--shadowColor);
     margin: 0;
     position: fixed;
     top: 0;
     z-index: 1;
-    background-color: var(--white);
+    background-color: var(--brandLightPink);
 }
 
 #headerLogoLink{
@@ -33,7 +32,7 @@ header nav{
 }
 
 header nav a{
-    text-decoration: underline solid white 2px;
+    text-decoration: underline solid var(--brandLightPink) 2px;
     transition: text-decoration-color 0.3s ease-in-out;
     color: black;
 }
@@ -46,7 +45,7 @@ header nav a:hover{
 #searchContainer{
     display: flex;
     align-items: center;
-    color: var(--brandPurple);
+    color: black;
 }
 
 #searchBar{
@@ -57,8 +56,8 @@ header nav a:hover{
     padding: 3px 7px 5px 7px;
     margin-left: 5px;
     border-radius: 10px;
-    border: 1.5px solid var(--brandPurple);
-    background-color: var(--white);
+    border: 1.5px solid var(--gray);
+    background-color: var(--brandLightPink);
 }
 
 #searchBar:focus{
@@ -94,5 +93,5 @@ header nav a:hover{
     position: relative;
     top: 12px;
     font-size: 10pt;
-    font-weight: 600;
+    font-weight: 300;
 }

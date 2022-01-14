@@ -3,14 +3,64 @@ main{
     background-color: var(--white);
 }
 
-h1{
+/* h1{
     display: flex;
     justify-content: center;
     padding: 100px 0;
     font-size: 75pt;
     margin: 75px 0 0 0;
     background-color: var(--brandDarkPink);
+} */
+
+#splashbox{
+    height: 80vh;
+    background-image: url('/Assets/productImgs/bowtieBlouse/bowtieBlouse1.jpg');
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
+
+#splashbox a{
+    text-decoration: none;
+}
+
+#textBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    transition: transform 0.4s ease-in-out;
+}
+
+#textBox:hover {
+    transform: scale(1.05);
+}
+
+h1{
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: var(--brandDarkPink);
+    font-size: 65pt;
+    transition: transform 0.3s ease-in-out
+}
+
+#caption{
+    font-family: var(--sansSerifFonts);
+    font-size: 16pt;
+    margin: 0;
+    color: var(--brandLightPink);
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
 
 #trendingSection{
     display: flex;
@@ -23,6 +73,9 @@ h1{
     font-size: 40pt;
     margin-bottom: 30px;
     width: calc(300px*3 + 50px*2);
+    background-color: var(--brandLightPink);
+    padding: 16px 10px 6px 10px;
+    border-radius: 10px;
 }
 
 #trendingGrid{
@@ -51,7 +104,7 @@ h1{
     width: 325px;
     height:325px;
     transform: translate(-10px, -10px);
-    box-shadow: 10px 10px 15px var(--shadowColor);
+    box-shadow: 5px 5px 10px var(--shadowColor);
 }
 
 #bluePeacoatDiv{

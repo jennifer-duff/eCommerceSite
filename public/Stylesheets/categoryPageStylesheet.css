@@ -22,6 +22,11 @@ main{
 #breadcrumbs a{
     text-decoration: none;
     color: var(--gray);
+    transition: color 0.1s ease-in-out;
+}
+
+#breadcrumbs a:hover{
+    color: var(--brandPurple);
 }
 
 h1{

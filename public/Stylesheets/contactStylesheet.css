@@ -15,7 +15,7 @@ form{
     padding: 40px;
     width: 400px;
     border-radius: 10px;
-    background-color: var(--brandDarkPink);
+    background-color: var(--white);
     box-shadow: 0px 0px 10px var(--shadowColor);  
     border: 1px solid var(--shadowColor);
 }
@@ -41,7 +41,7 @@ form{
 input, textarea{
     appearance: none;
     border: 1px solid var(--shadowColor);
-    background-color: var(--brandLightPink);
+    background-color: var(--white);
     border-radius: 5px;
     font-family: var(--sansSerifFonts);
     font-weight: 300;
@@ -63,8 +63,8 @@ textarea{
     cursor: pointer;
     border: none;
     font-family: var(--sansSerifFonts);
-    font-weight: 500;
-    font-size: 14pt;
+    font-weight: 300;
+    font-size: 12pt;
     text-align: center;
     background-color: var(--gray);
     color: var(--brandLightPink);
