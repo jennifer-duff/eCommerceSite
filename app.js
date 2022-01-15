@@ -136,3 +136,12 @@ app.get('/contact', async (req, res) => {
 app.get('/contact_thankyou', async (req, res) => {
     res.render('contact_thankyou');
 })
+
+app.get('/search/q=:query', async (req, res) => {
+    const query = req.params.query;
+    const regEx = new RegExp(`.*${query}.*`, 'i')
+    const allResults = await Product.find({
+        $or: [{name: regEx}, {category: regEx}]
+    });
+    res.render('searchResults', {query, allResults});
+})

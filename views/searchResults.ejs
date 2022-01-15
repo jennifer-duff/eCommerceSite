@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Luma | Search Results</title>
+    <%- include('partials/head')%>
+    <link rel = 'stylesheet' href = '/Stylesheets/resultStylesheet.css'>
+</head>
+<body>
+    
+    <%- include('partials/header')%>
+
+    <main>
+        <h1>Results for:&nbsp;<span id = 'query'><%=query%></span></h1>
+        
+        <div id = 'resultsBox'>
+            <% for (let product of allResults) { %>
+                 <a class = 'productBox <%= product.category%>' href = 'products/<%= product.name%>'>
+                     <img class = 'productImgs' src =<%= product.imgs.img1 %> >
+                     <p class = 'productLabels'> <%= product.name %> </p>
+                 </a>
+            <% } %>
+        </div>
+
+    </main>
+
+    <%- include('partials/footer')%>
+</body>
+</html>

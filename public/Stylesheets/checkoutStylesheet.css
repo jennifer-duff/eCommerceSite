@@ -4,7 +4,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--brandLightPink);
+    background-color: var(--white);
 }
 
 #headingDiv{
@@ -16,10 +16,10 @@ main{
     right: 250px;
     bottom: 40px;
     font-family: var(--sansSerifFonts);
-    text-decoration: none;
+    text-decoration: underline solid var(--white) 3px;
     color: var(--gray);
     height: 23px;
-    transition: background-color 0.2s ease-in-out;
+    transition: text-decoration-color 0.2s ease-in-out;
     font-size: 12pt;
     padding: 5px 7px;
     border-radius: 5px;
@@ -32,7 +32,8 @@ main{
 }
 
 #backToBagLink:hover{
-    background-color: var(--brandDarkPink);
+    text-decoration: underline solid var(--brandDarkPink) 3px;
+    /* background-color: var(--brandDarkPink); */
 }
 
 h1{
@@ -214,7 +215,7 @@ form input{
     font-weight: 300;
     font-family: var(--sansSerifFonts);
     font-size: 10pt;
-    border: 1.5px solid var(--shadowColor);
+    border: 1px solid var(--shadowColor);
     border-radius: 7px;
     padding: 2px 5px 4px 5px;
     line-height: 100%;
@@ -237,52 +238,36 @@ form input{
     appearance: none;
     border: none;
     cursor: pointer;
-    font-size: 12pt;
+    font-weight: 500;
+    font-size: 11pt;
     line-height: 100%;
     transition: background-color 0.2s ease-in-out;
-    border-radius: 7px;
+    border-radius: 5px;
     font-family: var(--sansSerifFonts);
+    text-align: center;
+    height: 40px;
 }
 
 #submitBtn, #backLink{
-    background-color: var(--gray);
-    color: var(--brandLightPink);
-    font-weight: 300;
-}
-
-#submitBtn{
-    /* padding: 6px 7px 9px 10px; */
-    padding: 8px 11px 11px 14px;
-}
-
-#backLink{
-    text-decoration: none;
-    padding: 6px 10px 9px 7px;
-    padding: 8px 14px 11px 11px;
-}
-
-#backArrow{
-    transform: rotate(270deg);
-    margin-right: 6px;
-}
-
-#orderBtn{
-    padding: 9px 14px 11px 14px;
-    background-color: var(--brandMediumPink);
-    color: var(--gray);
-    /* border: 1px solid var(--brandLightPink); */
-    font-weight: 500;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-#orderBtn:hover{
     background-color: var(--brandDarkPink);
-    color: var(--brandLightPink);
+    color: var(--white);
+    width: 125px;
+    /* font-weight: 300; */
 }
 
 #submitBtn:hover,
 #backLink:hover{
     background-color: var(--brandPurple)
+}
+
+#submitBtn{
+    /* padding: 6px 7px 9px 10px; */
+    padding: 10px 9px 13px 16px;
+}
+
+#backLink{
+    text-decoration: none;
+    padding: 12px 16px 13px 9px;
 }
 
 .arrow{
@@ -294,4 +279,25 @@ form input{
 #nextArrow{
     transform: rotate(90deg);
     margin-left: 6px;
+}
+
+#backArrow{
+    transform: rotate(270deg);
+    margin-right: 6px;
+}
+
+#orderBtn{
+    padding: 11px 14px 13px 14px;
+    background-color: var(--gray);
+    color: var(--white);
+    /* border: 1px solid var(--brandDarkPink); */
+    font-weight: 500;
+    width: 150px;
+    text-decoration: 1px solid var(--brandPurple);
+    transition: text-decoration 0.3s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#orderBtn:hover{
+    background-color: var(--brandPurple);
+    color: var(--brandLightPink);
 }

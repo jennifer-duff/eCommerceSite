@@ -17,52 +17,17 @@ h1{
     margin: 0 0 0 0;
 }
 
-#filterBox{
-    font-family: var(--sansSerifFonts);
-    margin-bottom: 15px;
-    font-weight: 300;
+#query{
+    color: var(--brandPurple);
 }
 
-#filterLabel{
-    margin-right: 5px;
-}
-
-#categoryFilter{
-    font-family: var(--sansSerifFonts);
-    font-weight: 300;
-    border: 1px solid var(--shadowColor);
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#categoryFilter option{
-    font-family: var(--sansSerifFonts);
-    font-weight: 300;
-    cursor: pointer;
-}
-
-#categoryFilter:focus{
-    outline: 1px solid var(--shadowColor);
-}
-
-#allProductsBox{
+#resultsBox{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* display: grid;
-    grid-auto-flow: row dense;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 50px;
-    width: calc(350px * 4 + 50px * 4); */
 }
-/* 
-#allProductsBox::after{
-    content: '';
-    flex: auto;
-} */
 
 
 .productBox{

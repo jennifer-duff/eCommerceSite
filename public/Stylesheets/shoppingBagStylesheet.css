@@ -31,12 +31,12 @@ h1{
         'pic price';
     grid-template-columns: 200px 1fr;
     grid-column-gap: 40px;
-    border: 1px solid var(--shadowColor);
-    box-shadow: 5px 5px 10px var(--shadowColor);
+    
 }
 
-.bagProductTile, #checkOutBox, #totalParagraph{
-    /* min-width: 615px; */
+.bagProductTile, #checkOutBox{
+    border: 1px solid var(--shadowColor);
+    box-shadow: 5px 5px 10px var(--brandDarkPink);
     width: 750px;
 }
 
@@ -54,11 +54,10 @@ h1{
 
 .productTitle{
     grid-area: title;
-    font-size: 25pt;
-    margin: 0;
+    margin: 0 0 20px 0;
     font-family: var(--sansSerifFonts);
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 25pt;
 }
 
 .productTitle a{
@@ -81,7 +80,7 @@ h1{
     font-size: 12pt;
     margin: 0 5px 0 0 ;
     font-family: var(--sansSerifFonts);
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .infoSelected{
@@ -105,6 +104,7 @@ select{
 option{
     appearance: none;
     background-color: var(--white);
+    font-weight: 300;
 }
 
 .sizeGroup{
@@ -123,7 +123,7 @@ option{
     margin: 0 13px 0 0;
     font-family: var(--sansSerifFonts);
     font-size: 20pt;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .trashcanIcon{
@@ -144,15 +144,13 @@ option{
     margin: 0px 0 100px 0;
     border-radius: 20px;
     padding: 25px;
-    box-shadow: 5px 5px 10px var(--shadowColor);
     background-color: var(--brandLightPink);
-    border: 1px solid var(--shadowColor);
 }
 
 #totalParagraph{
     box-sizing: border-box;
     font-family: var(--sansSerifFonts);
-    font-size: 25pt;
+    font-size: 23pt;
     font-weight: 500;
     line-height: 100%;
     margin: 0;
@@ -177,13 +175,13 @@ option{
     /* border: 1px solid var(--gray); */
     font-family: var(--sansSerifFonts);
     font-size: 14pt;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 100%;
     border-radius: 10px;
     padding: 15px 20px 16px 20px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     text-decoration: none;
-    width: 300px;
+    width: 200px;
     text-align: center;
 }
 

@@ -111,7 +111,7 @@ h1{
     width: 325px;
     height:325px;
     transform: translate(-10px, -10px);
-    box-shadow: 5px 5px 10px var(--shadowColor);
+    box-shadow: 5px 5px 10px var(--brandDarkPink);
 }
 
 #bluePeacoatDiv{
