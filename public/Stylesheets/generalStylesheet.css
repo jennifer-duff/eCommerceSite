@@ -3,13 +3,14 @@
     --serifFonts: operetta-18;
     --sansSerifFonts: synthese;
     /* --brandPurple: #8C5074; */
-    --brandPurple: #573047;
+    /* --brandPurple: #573047; */
+    --brandPurple: #543447;
     --brandLightPurple: #af7096;
     --brandLightPink: #FFF3F0;
-    /* --brandLightPink: #fff7f5; */
-    /* --brandDarkPink: #FFE5E0; */
-    /* --brandDarkPink: #FCE3DE; */
-    --brandDarkPink: #F5CAC1;
+    --brandMediumPink: #FCDFD9;
+    /* --brandDarkPink: #F5CAC1; */
+    /* --brandDarkPink: #E3B7B1; */
+    --brandDarkPink: #E2B4A6;
     --white: #FFFDFC;
     --shadowColor: #b8a7aa;
     --gray: #5c5b5b;

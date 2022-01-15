@@ -10,6 +10,14 @@
     <%- include('partials/header')%>
 
     <main>
+        <p id = 'breadcrumbs'>
+            <a href = '/products'>All Clothing</a>
+            &nbsp;>&nbsp;
+            <a href = '/category/<%= product.category %>'><%= pageTitle %></a>
+            &nbsp;>&nbsp;
+            <span id = 'currLocation'><%= product.name %></span>
+        </p>
+
         <h1> <%= product.name %> </h1>
         <div id = 'productBox'>
 

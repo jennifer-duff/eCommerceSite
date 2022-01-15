@@ -3,12 +3,44 @@ main{
     background-color: var(--white);
 }
 
+#breadcrumbs{
+    font-family: var(--sansSerifFonts);
+    font-size: 10pt;
+    text-align: left;
+    color: var(--gray);
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    font-weight: 300;
+}
+
+#breadcrumbs a{
+    text-decoration: 2px solid var(--white);
+    color: var(--gray);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+#currLocation{
+    font-weight: 500;
+    padding: 1px 4px;
+}
+
+#breadcrumbs a:hover{
+    /* text-decoration: 2px solid var(--gray); */
+    /* color: var(--brandPurple); */
+    background-color: var(--brandDarkPink);
+    color: var(--white);
+}
+
+
 h1{
     display: flex;
     justify-content: center;
     padding: 75px 0 20px 0;
     font-size: 65pt;
-    margin: 75px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
 #productBox{

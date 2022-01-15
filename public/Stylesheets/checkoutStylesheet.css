@@ -17,7 +17,7 @@ main{
     bottom: 40px;
     font-family: var(--sansSerifFonts);
     text-decoration: none;
-    color: var(--brandPurple);
+    color: var(--gray);
     height: 23px;
     transition: background-color 0.2s ease-in-out;
     font-size: 12pt;
@@ -179,14 +179,14 @@ form{
     width: 400px;
     padding: 30px;
     background-color: var(--white);
-    border: 1px solid var(--shadowColor);
     border-radius: 10px;
     margin: 50px 0 75px 0;
     font-family: var(--sansSerifFonts);
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
-    box-shadow: 0px 0px 20px var(--brandDarkPink);
+    border: 1px solid var(--gray);
+    box-shadow: 5px 5px 10px var(--brandDarkPink);
 }
 
 h2{
@@ -267,16 +267,17 @@ form input{
 }
 
 #orderBtn{
-    padding: 8px 14px 10px 14px;
-    background-color: var(--brandDarkPink);
-    color: var(--brandPurple);
-    border: 1px solid var(--brandDarkPink);
+    padding: 9px 14px 11px 14px;
+    background-color: var(--brandMediumPink);
+    color: var(--gray);
+    /* border: 1px solid var(--brandLightPink); */
     font-weight: 500;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 #orderBtn:hover{
-    background-color: var(--brandLightPink)
+    background-color: var(--brandDarkPink);
+    color: var(--brandLightPink);
 }
 
 #submitBtn:hover,

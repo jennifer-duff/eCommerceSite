@@ -17,16 +17,27 @@ main{
     position: absolute;
     top: 100px;
     left: 100px;
+    font-weight: 300;
 }
 
 #breadcrumbs a{
-    text-decoration: none;
+    text-decoration: 2px solid var(--white);
     color: var(--gray);
-    transition: color 0.1s ease-in-out;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+#currLocation{
+    font-weight: 500;
+    padding: 1px 4px;
 }
 
 #breadcrumbs a:hover{
-    color: var(--brandPurple);
+    /* text-decoration: 2px solid var(--gray); */
+    /* color: var(--brandPurple); */
+    background-color: var(--brandDarkPink);
+    color: var(--white);
 }
 
 h1{

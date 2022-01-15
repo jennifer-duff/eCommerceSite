@@ -7,13 +7,13 @@ main{
     align-items: center;
     margin-top: 75px;
     min-height: calc(100vh - 175px);
-    background-color: var(--brandLightPink);
+    background-color: var(--white);
 }
 
 h1{
     padding: 0;
     font-size: 65pt;
-    margin: 75px 0 60px 0;
+    margin: 100px 0 60px 0;
     height: 65pt;
 }
 
@@ -32,10 +32,10 @@ h1{
     grid-template-columns: 200px 1fr;
     grid-column-gap: 40px;
     border: 1px solid var(--shadowColor);
-    box-shadow: 0px 0px 20px var(--brandDarkPink);
+    box-shadow: 5px 5px 10px var(--shadowColor);
 }
 
-.bagProductTile, #checkOutBox{
+.bagProductTile, #checkOutBox, #totalParagraph{
     /* min-width: 615px; */
     width: 750px;
 }
@@ -45,17 +45,19 @@ h1{
     grid-area: pic;
     height: calc(210px - 60px);
     width: 200px;
+    object-fit: cover;
     background-color: var(--brandPurple);
     margin: auto;
+    border: 1px solid var(--shadowColor);
+    border-radius: 5px;
 }
 
 .productTitle{
     grid-area: title;
     font-size: 25pt;
-    font-weight: 600;
     margin: 0;
     font-family: var(--sansSerifFonts);
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -133,19 +135,32 @@ option{
 
 
 #checkOutBox{
+    box-sizing: border-box;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin: 20px 0 75px 0;
+    margin: 0px 0 100px 0;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 5px 5px 10px var(--shadowColor);
+    background-color: var(--brandLightPink);
+    border: 1px solid var(--shadowColor);
 }
 
 #totalParagraph{
+    box-sizing: border-box;
     font-family: var(--sansSerifFonts);
     font-size: 25pt;
     font-weight: 500;
     line-height: 100%;
     margin: 0;
+    text-align: right;
+    /* border-radius: 20px;
+    padding: 25px;
+    box-shadow: 5px 5px 10px var(--shadowColor);
+    background-color: var(--brandLightPink); */
 }
 
 #totalSum{
@@ -156,19 +171,24 @@ option{
     appearance: none;
     cursor: pointer;
     box-sizing: border-box;
-    background-color: var(--brandPurple);
+    background-color: var(--brandDarkPink);
     color: var(--white);
-    border: none;
+    /* outline: 1px solid var(--brandPurple); */
+    /* border: 1px solid var(--gray); */
     font-family: var(--sansSerifFonts);
-    font-size: 20pt;
-    font-weight: 500;
+    font-size: 14pt;
+    font-weight: 300;
     line-height: 100%;
     border-radius: 10px;
-    padding: 11px 16px 12px 16px;
-    transition: background-color 0.2s ease-in-out;
+    padding: 15px 20px 16px 20px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     text-decoration: none;
+    width: 300px;
+    text-align: center;
 }
 
 #checkOutBtn:hover{
-    background-color: var(--gray);
+    background-color: var(--brandPurple);
+    color: var(--brandLightPink);
+    /* border: 0.5px solid var(--brandPurple); */
 }

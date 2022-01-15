@@ -114,8 +114,15 @@ app.get('/products', async (req, res) => {
 app.get('/products/:product', async (req, res) => {
     const productName = req.params.product;
     const product = await Product.findOne({name: productName});
+    pageTitle = product.category;
+    if (pageTitle === 'pantsAndDresses'){
+        pageTitle = 'Pants & Dresses'
+    }
+    else{
+        pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+    }
     // console.log(product);
-    res.render('productPage', {product});
+    res.render('productPage', {product, pageTitle});
 })
 
 app.get('/about', async (req, res) => {

@@ -26,11 +26,11 @@ footer{
 }
 
 footer nav a{
-    color: var(--brandDarkPink);
+    color: var(--brandMediumPink);
     text-decoration: underline solid var(--brandPurple) 2px;
     transition: text-decoration-color 0.3s ease-in-out;
 }
 
 footer nav a:hover{
-    text-decoration: underline solid var(--brandDarkPink) 2px;   
+    text-decoration: underline solid var(--brandMediumPink) 2px;   
 }

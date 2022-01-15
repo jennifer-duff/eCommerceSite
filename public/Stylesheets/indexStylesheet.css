@@ -36,6 +36,7 @@ main{
     background-color: rgba(0, 0, 0, 0.4);
     padding: 50px;
     transition: transform 0.4s ease-in-out;
+    border-radius: 10px;
 }
 
 #textBox:hover {
@@ -45,7 +46,7 @@ main{
 h1{
     margin: 0 0 20px 0;
     padding: 0;
-    color: var(--brandDarkPink);
+    color: var(--brandMediumPink);
     font-size: 65pt;
     transition: transform 0.3s ease-in-out
 }
@@ -70,12 +71,18 @@ h1{
 }
 
 #trendingHeader{
-    font-size: 40pt;
+    box-sizing: border-box;
+    font-size: 45pt;
+    /* font-family: var(--sansSerifFonts); */
+    font-weight: 600;
+    letter-spacing: 1.75px;
+
     margin-bottom: 30px;
     width: calc(300px*3 + 50px*2);
-    background-color: var(--brandLightPink);
-    padding: 16px 10px 6px 10px;
+    background-color: var(--brandMediumPink);
+    padding: 20px 20px 10px 20px;
     border-radius: 10px;
+    color: var(--black);
 }
 
 #trendingGrid{
@@ -131,29 +138,29 @@ h1{
 #graphicTdiv{
     grid-area: b;
     background-color: none;
-    background-image: url( '/Assets/productImgs/graphicT/graphicT1.jpg');
+    background-image: url( '/Assets/productImgs/blackPumps/blackPumps1.jpg');
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: top -30px left 0px;
+    background-position: top -50px left 0px;
 }
 
 #oversizedBlazerDiv{
     grid-area: c;
     background-color: none;
-    background-image: url( '/Assets/productImgs/oversizedBlazer/oversizedBlazer1.jpg');
+    background-image: url( '/Assets/productImgs/laceCami/laceCami3.jpg');
     width: 100%;
     height: 100%;
-    background-size: fill;
-    background-position: top -80px left -70px;
+    background-size: cover;
+    background-position: top -80px;
 }
 
 
 .caption{
     box-sizing: border-box;
-    font-family: var(--sansSerifFonts);
+    /* font-family: var(--sansSerifFonts); */
     text-decoration: none;
-    font-size: 55px;
+    font-size: 65px;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -168,4 +175,5 @@ h1{
 .trendingDiv:hover .caption{
     color: var(--white);
     background-color: rgba(0, 0, 0, 0.35);
+
 }

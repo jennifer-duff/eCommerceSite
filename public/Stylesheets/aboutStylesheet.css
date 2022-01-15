@@ -2,6 +2,10 @@ main{
     padding: 0 25%;
 }
 
+h1{
+    margin-top: 100px;
+}
+
 p{
     font-family: var(--sansSerifFonts);
     font-weight: 300;
@@ -18,7 +22,7 @@ p a{
 }
 
 p a:hover{
-    background-color: var(--brandDarkPink);
+    background-color: var(--brandMediumPink);
     border-radius: 4px;
 }
 
