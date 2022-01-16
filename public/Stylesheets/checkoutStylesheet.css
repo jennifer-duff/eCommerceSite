@@ -174,8 +174,8 @@ h1{
     height: 5px;
 }
 
-/* ------ form -------*/
-form{
+/* ------ #checkoutForm -------*/
+#checkoutForm{
     box-sizing: border-box;
     width: 400px;
     padding: 30px;
@@ -204,12 +204,12 @@ h2{
     width: 100%;
 }
 
-form label{
+#checkoutForm label{
     /* color: rgb(77, 76, 76); */
     color: var(--gray);
 }
 
-form input{
+#checkoutForm input{
     appearance: none;
     box-sizing: border-box;
     font-weight: 300;

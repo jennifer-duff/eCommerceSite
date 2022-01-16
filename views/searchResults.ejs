@@ -14,7 +14,7 @@
         
         <div id = 'resultsBox'>
             <% for (let product of allResults) { %>
-                 <a class = 'productBox <%= product.category%>' href = 'products/<%= product.name%>'>
+                 <a class = 'productBox <%= product.category%>' href = '/products/<%= product.name%>'>
                      <img class = 'productImgs' src =<%= product.imgs.img1 %> >
                      <p class = 'productLabels'> <%= product.name %> </p>
                  </a>

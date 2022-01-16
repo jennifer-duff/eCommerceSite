@@ -22,7 +22,7 @@ const allProducts = [
             img1: "/Assets/productImgs/blackBlazer/blackBlazer1.jpg",
             img2: "/Assets/productImgs/blackBlazer/blackBlazer2.jpg",
             img3: "/Assets/productImgs/blackBlazer/blackBlazer3.jpg"
-        }
+        }, 
     },
     {
         name: 'The Blue Peacoat',
