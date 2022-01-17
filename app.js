@@ -147,6 +147,8 @@ app.get('/search/q=:query', async (req, res) => {
         $or: [{name: regEx}, {keywords: regEx}]
     });
 
+    console.log(allResults);
+
     res.render('searchResults', {query, allResults});
 })
 

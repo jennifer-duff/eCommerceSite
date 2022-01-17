@@ -23,7 +23,7 @@ const allProducts = [
             img2: "/Assets/productImgs/blackBlazer/blackBlazer2.jpg",
             img3: "/Assets/productImgs/blackBlazer/blackBlazer3.jpg"
         },
-        keywords: ['outerwear', 'jacket', 'coat', 'office', 'professional'] 
+        keywords: ['outerwear', 'jackets', 'coats', 'office', 'professional'] 
     },
     {
         name: 'The Blue Peacoat',
@@ -34,7 +34,7 @@ const allProducts = [
             img2: "/Assets/productImgs/bluePeacoat/bluePeacoat2.jpg",
             img3: "/Assets/productImgs/bluePeacoat/bluePeacoat3.jpg"
         },
-        keywords: ['outerwear', 'jacket', 'coat'] 
+        keywords: ['outerwear', 'jackets', 'coats'] 
     },
     {
         name: 'The Oversized Blazer',
@@ -45,7 +45,7 @@ const allProducts = [
             img2: "/Assets/productImgs/oversizedBlazer/oversizedBlazer2.jpg",
             img3: "/Assets/productImgs/oversizedBlazer/oversizedBlazer3.jpg"
         },
-        keywords: ['outerwear', 'jacket', 'coat', 'office', 'professional'] 
+        keywords: ['outerwear', 'jackets', 'coats', 'office', 'professional'] 
     },
     {
         name: 'The Black Pumps',
