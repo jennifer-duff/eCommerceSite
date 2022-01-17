@@ -141,71 +141,11 @@ app.get('/contact_thankyou', async (req, res) => {
 app.get('/search/q=:query', async (req, res) => {
     let query = req.params.query;
     query = query.trim();
-    console.log(query);
-
-    // let cleanedQuery = query;
-    // let regEx = undefined;
-    // let allResults = undefined;
-
-    // if (query.includes(' & ')){
-    //     cleanedQuery = query.slice(0, query.indexOf('&')) + 'and' + query.slice(query.indexOf('&') + 1);
-    // }
-
-    // if (query.toLowerCase() === "pants and dresses" || cleanedQuery.toLowerCase() === "pants and dresses"){
-    //     cleanedQuery = 'pantsAndDresses';
-    // }
-
-    // const outwearAlts = ['jacket', 'jackets', 'coat', 'coats'];
-    // const topsAlts = ['shirt', 'shirts'];
-    //     const tshirtAlts = ['t shirt', 't shirts', 't-shirt', 't-shirts'];
-    // const pantsAlts = ['pant', 'pants', 'trousers', 'slacks'];
-    // const dressALts = ['skirt', 'skirts', 'dress', 'dresses', 'gown', 'gowns'];
-    // const shoeAlts = ['heels', 'high heels'];
-
-    // if (outwearAlts.includes(query.toLowerCase())){
-    //     cleanedQuery = 'outerwear';
-    // }
-
-    // if (tshirtAlts.includes(query.toLowerCase())){
-    //     cleanedQuery = 'graphic T';
-    //     regEx = new RegExp(`.*${cleanedQuery}.*`, 'i')
-    //     allResults = await Product.find({name: regEx});
-    //     res.render('searchResults', {query, allResults});
-    // }
-
-    // if (topsAlts.includes(query.toLowerCase())){
-    //     cleanedQuery = 'tops';
-    // }
-
-    // if (pantsAlts.includes(query.toLowerCase())){
-    //     cleanedQuery = 'trousers';
-    //     regEx = new RegExp(`.*${cleanedQuery}.*`, 'i')
-    //     allResults = await Product.find({name: regEx});
-    //     res.render('searchResults', {query, allResults});
-    // }
-
-    // if (dressALts.includes(query.toLowerCase())){
-    //     cleanedQuery = 'dress';
-    //     regEx = new RegExp(`.*${cleanedQuery}.*`, 'i')
-    //     allResults = await Product.find({name: regEx});
-    //     res.render('searchResults', {query, allResults});
-    // }
-
-    // if (shoeAlts.includes(query.toLowerCase())){
-    //     cleanedQuery = 'shoes';
-    // }
-
-    // regEx = new RegExp(`.*${cleanedQuery}.*`, 'i')
-    // allResults = await Product.find({
-    //     $or: [{name: regEx}, {category: regEx}]
-    // });
 
     regEx = new RegExp(`.*${query}.*`, 'i')
     allResults = await Product.find({
-        $or: [{name: regEx}, {category: regEx}]
+        $or: [{name: regEx}, {keywords: regEx}]
     });
-
-    console.log(allResults);
 
     res.render('searchResults', {query, allResults});
 })
