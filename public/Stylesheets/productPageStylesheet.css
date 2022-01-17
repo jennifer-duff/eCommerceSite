@@ -1,8 +1,3 @@
-main{
-    padding: 0 75px;
-    background-color: var(--white);
-}
-
 #breadcrumbs{
     font-family: var(--sansSerifFonts);
     font-size: 10pt;
@@ -176,7 +171,7 @@ h1{
 
 #addToBag{
     cursor: pointer;
-    margin: 0px 0 60px 0;
+    margin: 0px;
     padding: 7px 15px 9px 15px;
     font-family: var(--sansSerifFonts);
     font-weight: 300;

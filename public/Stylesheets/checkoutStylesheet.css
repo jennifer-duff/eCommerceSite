@@ -1,10 +1,7 @@
 main{
-    margin-top: 75px;
-    min-height: calc(100vh - 175px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--white);
 }
 
 #headingDiv{
@@ -181,7 +178,7 @@ h1{
     padding: 30px;
     background-color: var(--white);
     border-radius: 10px;
-    margin: 50px 0 75px 0;
+    margin: 50px 0 0px 0;
     font-family: var(--sansSerifFonts);
     display: flex;
     flex-wrap: wrap;

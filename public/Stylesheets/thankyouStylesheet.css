@@ -2,7 +2,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--brandLightPink);
 }
 
 h1{
@@ -53,7 +52,7 @@ p:last-of-type{
     text-align: center;
     background-color: var(--brandDarkPink);
     color: var(--white);
-    border-radius: 5px;
+    border-radius: 10px;
     line-height: 100%;
     padding: 15px 17px 18px 14px;
     width: 250px;

@@ -1,17 +1,4 @@
 /* --------- MAIN ---------*/
-main{
-    background-color: var(--white);
-}
-
-/* h1{
-    display: flex;
-    justify-content: center;
-    padding: 100px 0;
-    font-size: 75pt;
-    margin: 75px 0 0 0;
-    background-color: var(--brandDarkPink);
-} */
-
 #splashbox{
     height: 80vh;
     background-image: url('/Assets/productImgs/bowtieBlouse/bowtieBlouse1.jpg');
@@ -76,7 +63,6 @@ h1{
     /* font-family: var(--sansSerifFonts); */
     font-weight: 600;
     letter-spacing: 1.75px;
-
     margin-bottom: 30px;
     width: calc(300px*3 + 50px*2);
     background-color: var(--brandMediumPink);

@@ -1,13 +1,9 @@
 main{
-    /* padding: 0 30vw; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 75px;
-    min-height: calc(100vh - 175px);
-    background-color: var(--white);
 }
 
 h1{
@@ -141,7 +137,7 @@ option{
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin: 0px 0 100px 0;
+    margin: 0px 0 0px 0;
     border-radius: 20px;
     padding: 25px;
     background-color: var(--brandLightPink);
