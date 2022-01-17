@@ -230,6 +230,7 @@ h2{
     justify-content: space-between;
     width: 100%;
     text-align: right;
+    margin-top: 20px;
 }
 
 #orderBtn, #submitBtn, #backLink{
@@ -273,17 +274,17 @@ h2{
 .arrow{
     height: 7.5px;
     position: relative;
-    bottom: 2.5px;
+    bottom: 2px;
 }
 
 #nextArrow{
     transform: rotate(90deg);
-    margin-left: 6px;
+    margin-left: 5px;
 }
 
 #backArrow{
     transform: rotate(270deg);
-    margin-right: 6px;
+    margin-right: 4px;
 }
 
 #orderBtn{

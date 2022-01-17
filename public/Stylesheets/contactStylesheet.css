@@ -64,19 +64,19 @@ h1{
     border: none;
     font-family: var(--sansSerifFonts);
     font-weight: 500;
-    font-size: 11pt;
+    font-size: 12pt;
     text-align: center;
     background-color: var(--brandDarkPink);
-    color: var(--white);
-    border-radius: 5px;
+    color: var(--brandLightPink);
+    border-radius: 7px;
     line-height: 100%;
     padding: 13px 13px 14px 13px;
     width: 150px;
     align-self: flex-end;
     transition: background-color 0.2s ease-in-out;
-    /* letter-spacing: 1.6px; */
+    /* letter-spacing: 1.25px; */
 }
 
 #submit:hover{
-    background-color: var(--gray);
+    background-color: var(--brandPurple);
 }
