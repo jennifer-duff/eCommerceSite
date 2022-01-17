@@ -8,7 +8,8 @@ const productSchema = new mongoose.Schema({
         img1: String,
         img2: String,
         img3: String
-    }
+    },
+    keywords: []
 });
 
 const Product = mongoose.model('Product', productSchema);

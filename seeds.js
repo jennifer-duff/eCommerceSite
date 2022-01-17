@@ -22,7 +22,8 @@ const allProducts = [
             img1: "/Assets/productImgs/blackBlazer/blackBlazer1.jpg",
             img2: "/Assets/productImgs/blackBlazer/blackBlazer2.jpg",
             img3: "/Assets/productImgs/blackBlazer/blackBlazer3.jpg"
-        }, 
+        },
+        keywords: ['outerwear', 'jacket', 'coat', 'office', 'professional'] 
     },
     {
         name: 'The Blue Peacoat',
@@ -32,7 +33,8 @@ const allProducts = [
             img1: "/Assets/productImgs/bluePeacoat/bluePeacoat1.jpg",
             img2: "/Assets/productImgs/bluePeacoat/bluePeacoat2.jpg",
             img3: "/Assets/productImgs/bluePeacoat/bluePeacoat3.jpg"
-        }
+        },
+        keywords: ['outerwear', 'jacket', 'coat'] 
     },
     {
         name: 'The Oversized Blazer',
@@ -42,7 +44,8 @@ const allProducts = [
             img1: "/Assets/productImgs/oversizedBlazer/oversizedBlazer1.jpg",
             img2: "/Assets/productImgs/oversizedBlazer/oversizedBlazer2.jpg",
             img3: "/Assets/productImgs/oversizedBlazer/oversizedBlazer3.jpg"
-        }
+        },
+        keywords: ['outerwear', 'jacket', 'coat', 'office', 'professional'] 
     },
     {
         name: 'The Black Pumps',
@@ -53,7 +56,8 @@ const allProducts = [
             img2: "/Assets/productImgs/blackPumps/blackPumps2.jpg",
             img3: "/Assets/productImgs/blackPumps/blackPumps3.jpg",
 
-        }
+        },
+        keywords: ['shoes', 'heels', 'high heels', 'stilletos']
     },
     {
         name: 'The Block-Heeled Booties',
@@ -64,7 +68,8 @@ const allProducts = [
             img2: "/Assets/productImgs/heeledBooties/heeledBooties2.jpg",
             img3: "/Assets/productImgs/heeledBooties/heeledBooties3.jpg",
 
-        }
+        },
+        keywords: ['shoes', 'heels', 'boots']
     },
     {
         name: 'The Graphic T',
@@ -75,7 +80,8 @@ const allProducts = [
             img2: "/Assets/productImgs/graphicT/graphicT2.jpg",
             img3: "/Assets/productImgs/graphicT/graphicT3.jpg",
 
-        }
+        },
+        keywords: ['tops', 'shirt', 't shirt', 't-shirt', 'tee shirt']
     },
     {
         name: 'The Lace Cami',
@@ -86,7 +92,8 @@ const allProducts = [
             img2: "/Assets/productImgs/laceCami/laceCami2.jpg",
             img3: "/Assets/productImgs/laceCami/laceCami3.jpg",
 
-        }
+        },
+        keywords: ['tops', 'shirt', 'camisole', 'undershirt']
     },
     {
         name: 'The Bowtie Blouse',
@@ -97,7 +104,9 @@ const allProducts = [
             img2: "/Assets/productImgs/bowtieBlouse/bowtieBlouse2.jpg",
             img3: "/Assets/productImgs/bowtieBlouse/bowtieBlouse3.jpg",
 
-        }
+        },
+        keywords: ['tops', 'shirt', 'blouson', 'chemise']
+
     },
     {
         name: 'The Tailored Trousers',
@@ -108,7 +117,8 @@ const allProducts = [
             img2: "/Assets/productImgs/tailoredTrousers/tailoredTrousers2.jpg",
             img3: "/Assets/productImgs/tailoredTrousers/tailoredTrousers3.jpg",
 
-        }
+        },
+        keywords: ['pant', 'pants', 'trousers', 'slacks']
     },
     {
         name: 'The Checked Dress',
@@ -119,7 +129,8 @@ const allProducts = [
             img2: "/Assets/productImgs/checkedDress/checkedDress2.jpg",
             img3: "/Assets/productImgs/checkedDress/checkedDress3.jpg",
 
-        }
+        },
+        keywords: ['dress', 'dresses', 'skirt', 'skirts', 'gown', 'gowns']
     },
 ];
 
