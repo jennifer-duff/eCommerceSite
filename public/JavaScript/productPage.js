@@ -57,12 +57,21 @@ leftArrow.addEventListener('click', scrollToPrev);
 const addToBag = document.querySelector('#addToBag');
 const numBagItems = document.querySelector('#numBagItems');
 const itemName = document.querySelector('#productName').innerText;
+const sizes = document.querySelectorAll('input[name="size"]');
+
 
 addToBag.addEventListener('click', function() {
     let uberCookie = decodeURIComponent(document.cookie);
     let totalItems = 0;
     let updated = false;
+    let itemSize;
 
+    for (let i = 0; i < sizes.length; i++){
+        if (sizes[i].checked){
+            itemSize = sizes[i].value;
+            console.log(itemSize);
+       }
+   }
     // remove whitespace
     const regEx = new RegExp(/\s/g);
     uberCookie = uberCookie.replace(regEx,'');   
@@ -72,14 +81,18 @@ addToBag.addEventListener('click', function() {
     if (allCookies[0] !== ''){
        for (let i = 0; i < allCookies.length; i++){
             let currCookie = allCookies[i];
-            console.log(currCookie);
             let name = currCookie.substring(0, (currCookie.indexOf('=')));
-            let qty = parseInt(currCookie.substring((currCookie.indexOf('=')+1)));
+            let qty = parseInt(currCookie.substring((currCookie.indexOf(':') + 1), currCookie.indexOf('_')));
+            
+            let size = currCookie.substring(currCookie.indexOf('_') + 1, currCookie.indexOf('='));
+            // console.log(sizeSubstring);
+            // let size = sizeSubstring.substring(sizeSubstring.indexOf(':') + 1);
+            // console.log(size);
+            
             if (name === itemName.replace(regEx,'')){
-                // console.log('HIIIII');
+                // console.log('replacing cookie size entry');
                 qty ++;
-                console.log(qty);
-                document.cookie = `${itemName}=${qty}; path=/`;
+                document.cookie = `${itemName}_${itemSize}=qty:${qty}; path=/`;
                 updated = true;
             }
             totalItems += qty;            
@@ -87,7 +100,7 @@ addToBag.addEventListener('click', function() {
     }
     
     if (updated === false){
-        document.cookie = `${itemName}=1; path=/`;
+        document.cookie = `${itemName}_${itemSize}=qty:${qty}; path=/`;
         totalItems++;
     }
 

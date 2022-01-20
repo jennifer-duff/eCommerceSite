@@ -33,7 +33,7 @@ window.addEventListener('load', function(){
     uberCookie = uberCookie.replace(regEx,'');   
 
     let allCookies = uberCookie.split(';');
-    console.log(allCookies);
+    // console.log(allCookies);
     
     if (allCookies[0] === ''){
         numBagItems.innerText = ' ';
@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
     else{
         for (let i = 0; i < allCookies.length; i++){
             let currCookie = allCookies[i];
-            let qty = parseInt(currCookie.substring((currCookie.indexOf('=')+1)));
+            let qty = parseInt(currCookie.substring((currCookie.indexOf(':')+1), currCookie.indexOf('_')));
             totalItems += qty;            
         }
         numBagItems.innerText = totalItems;
