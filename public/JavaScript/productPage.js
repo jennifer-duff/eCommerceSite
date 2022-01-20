@@ -87,30 +87,9 @@ addToBag.addEventListener('click', function() {
     }
     
     if (updated === false){
-        document.cookie = `${itemName}=1`;
+        document.cookie = `${itemName}=1; path=/`;
         totalItems++;
     }
 
     numBagItems.innerText = totalItems;
 })
-
-// addToBag.addEventListener('click', function() {
-//     let uberCookie = decodeURIComponent(document.cookie);
-//     let numBagItems = 0;
-    
-//     // remove whitespace
-//     const regEx = new RegExp(/\s/g);
-//     uberCookie = uberCookie.replace(regEx,'');   
-
-//     let allCookies = uberCookie.split(';');
-
-//     for (let i = 0; i < allCookies.length; i++){
-//         let currCookie = allCookies[i];
-//         let name = currCookie.substring(0, (currCookie.indexOf('=')));
-//         if (name === 'numBagItems')
-//         {
-//             numBagItems = parseInt(currCookie.substring((currCookie.indexOf('=')+1)));
-//         }
-//     }
-    
-// })
