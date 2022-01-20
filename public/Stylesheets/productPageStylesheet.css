@@ -170,6 +170,7 @@ h1{
 }
 
 #addToBag{
+    appearance: none;
     cursor: pointer;
     margin: 0px;
     padding: 7px 15px 9px 15px;
@@ -178,16 +179,14 @@ h1{
     font-size: 14pt;
     border: none;
     border-radius: 10px;
-    background-color: var(--white);
-    outline: 1px solid gray;
-    border: 1px solid var(--brandLightPink);
-    color: var(--gray);
+    background-color: var(--brandDarkPink);
+    color: var(--brandLightPink);
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     width: calc(100% - 100px);
 }
 
 #addToBag:hover
 {
-    background-color: var(--brandLightPink);
-    border: 1px solid var(--gray);
+    background-color: var(--brandPurple);
+    /* border: 1px solid var(--gray); */
 }

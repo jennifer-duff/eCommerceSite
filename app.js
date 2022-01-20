@@ -1,10 +1,12 @@
-// const fs = require('fs');
-
 // Express set-up
 const express = require('express');
 const app = express();
 const path = require('path');
 const port = 8080;
+
+//cookies setup
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
 
 // Monogoose setup
 const mongoose = require('mongoose');
@@ -22,21 +24,6 @@ mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useU
     })
 ;
 
-// const productSchema = new mongoose.Schema({
-//     name: String,
-//     category: String,
-//     imgSrc: String
-// });
-// const Product = mongoose.model('Product', productSchema);
-
-// const testProduct = new Product({
-//     name: 'NEW test Product',
-//     category: 'Tops',
-//     imgSrc: 'Asets/luma_fullLogo.svg'
-// });
-// testProduct.save();
-
-
 // static assets
 app.use(express.static('public'));
 app.use(express.static('Assets'));
@@ -50,15 +37,11 @@ app.listen(port, () => {
     console.log(`Listening on port ${port}!`)
 })
 
+
 // routes
 app.get('/',  (req, res) => {
     res.render('index');
 })
-
-// app.get('/index.ejs', (req, res) => {
-//     console.log('Home page request');
-//     res.render('index');
-// })
 
 app.get('/shoppingBag', (req, res) => {
     res.render('shoppingBag');
@@ -84,13 +67,6 @@ app.get('/checkout_thankyou', (req, res) => {
     res.render('checkout_thankyou');
 })
 
-// app.get('/products/:product', async (req, res) => {
-//     const productName = req.params.product;
-//     const product = await Product.findOne({name: productName});
-//     console.log(product);
-//     res.render('productPage', {product});
-// })
-
 app.get('/category/:productCategory', async (req, res) => {
     const searchedCategory = req.params.productCategory;
     const filteredProducts = await Product.find({category: searchedCategory});
@@ -110,7 +86,6 @@ app.get('/products', async (req, res) => {
     // console.log(allProducts);
     res.render('allProducts', {allProducts});
 })
-
 
 app.get('/products/:product', async (req, res) => {
     const productName = req.params.product;
@@ -147,11 +122,7 @@ app.get('/search/q=:query', async (req, res) => {
         $or: [{name: regEx}, {keywords: regEx}]
     });
 
-    console.log(allResults);
+    // console.log(allResults);
 
     res.render('searchResults', {query, allResults});
 })
-
-// app.get('/search', async (req, res) => {
-//     res.render('searchResults');
-// })

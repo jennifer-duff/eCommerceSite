@@ -1,5 +1,8 @@
 'use strict'
 
+// const { cookie } = require("express/lib/response");
+
+// ------------- CAROUSEL -------------
 let arrows = document.querySelectorAll('.scrollArrow');
 let leftArrow = arrows[0];
 let rightArrow = arrows[1];
@@ -48,3 +51,66 @@ carousel.style.minWidth = carouselLength;
 
 rightArrow.addEventListener('click', scrollToNext);
 leftArrow.addEventListener('click', scrollToPrev);
+
+
+// ------------- ADD TO BAG -------------
+const addToBag = document.querySelector('#addToBag');
+const numBagItems = document.querySelector('#numBagItems');
+const itemName = document.querySelector('#productName').innerText;
+
+addToBag.addEventListener('click', function() {
+    let uberCookie = decodeURIComponent(document.cookie);
+    let totalItems = 0;
+    let updated = false;
+
+    // remove whitespace
+    const regEx = new RegExp(/\s/g);
+    uberCookie = uberCookie.replace(regEx,'');   
+    
+    let allCookies = uberCookie.split(';');
+
+    if (allCookies[0] !== ''){
+       for (let i = 0; i < allCookies.length; i++){
+            let currCookie = allCookies[i];
+            console.log(currCookie);
+            let name = currCookie.substring(0, (currCookie.indexOf('=')));
+            let qty = parseInt(currCookie.substring((currCookie.indexOf('=')+1)));
+            if (name === itemName.replace(regEx,'')){
+                // console.log('HIIIII');
+                qty ++;
+                console.log(qty);
+                document.cookie = `${itemName}=${qty}; path=/`;
+                updated = true;
+            }
+            totalItems += qty;            
+        } 
+    }
+    
+    if (updated === false){
+        document.cookie = `${itemName}=1`;
+        totalItems++;
+    }
+
+    numBagItems.innerText = totalItems;
+})
+
+// addToBag.addEventListener('click', function() {
+//     let uberCookie = decodeURIComponent(document.cookie);
+//     let numBagItems = 0;
+    
+//     // remove whitespace
+//     const regEx = new RegExp(/\s/g);
+//     uberCookie = uberCookie.replace(regEx,'');   
+
+//     let allCookies = uberCookie.split(';');
+
+//     for (let i = 0; i < allCookies.length; i++){
+//         let currCookie = allCookies[i];
+//         let name = currCookie.substring(0, (currCookie.indexOf('=')));
+//         if (name === 'numBagItems')
+//         {
+//             numBagItems = parseInt(currCookie.substring((currCookie.indexOf('=')+1)));
+//         }
+//     }
+    
+// })

@@ -91,7 +91,7 @@ header nav a:hover{
 #shoppingBagLink img{
     width: 30px;
     position: relative;
-    bottom: 15px;
+    bottom: 3px;
 }
 
 #shoppingBagLink p{
@@ -100,8 +100,8 @@ header nav a:hover{
     width: 30px;
     text-align: center;
     line-height: 100%;
-    position: relative;
-    top: 12px;
+    position: absolute;
+    top: 31px;
     font-size: 10pt;
     font-weight: 300;
 }
