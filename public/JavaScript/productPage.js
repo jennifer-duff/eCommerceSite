@@ -66,43 +66,53 @@ addToBag.addEventListener('click', function() {
     let updated = false;
     let itemSize;
 
+    // find which size is selected 
     for (let i = 0; i < sizes.length; i++){
         if (sizes[i].checked){
             itemSize = sizes[i].value;
-            console.log(itemSize);
        }
    }
-    // remove whitespace
+
+    // if no size is selected, prompt the user to pick one
+    if (itemSize === undefined){
+        console.log('Please choose a size');
+        return;
+    }
+
+    // remove whitespace and put cookies into array
     const regEx = new RegExp(/\s/g);
     uberCookie = uberCookie.replace(regEx,'');   
-    
     let allCookies = uberCookie.split(';');
 
+
+    // check if item/size combo already exists as a cookie - if so, update the qty
     if (allCookies[0] !== ''){
        for (let i = 0; i < allCookies.length; i++){
             let currCookie = allCookies[i];
-            let name = currCookie.substring(0, (currCookie.indexOf('=')));
-            let qty = parseInt(currCookie.substring((currCookie.indexOf(':') + 1), currCookie.indexOf('_')));
-            
-            let size = currCookie.substring(currCookie.indexOf('_') + 1, currCookie.indexOf('='));
-            // console.log(sizeSubstring);
-            // let size = sizeSubstring.substring(sizeSubstring.indexOf(':') + 1);
-            // console.log(size);
-            
-            if (name === itemName.replace(regEx,'')){
-                // console.log('replacing cookie size entry');
-                qty ++;
-                document.cookie = `${itemName}_${itemSize}=qty:${qty}; path=/`;
+            let currCookieName = currCookie.substring(0, (currCookie.indexOf('=')));
+            // console.log(currCookieName);
+
+            let currQty = parseInt(currCookie.substring((currCookie.indexOf(':') + 1))); 
+
+            // let currSize = currCookie.substring(currCookie.indexOf('_') + 1, currCookie.indexOf('='));
+            let itemVarName = itemName.replace(regEx,'');
+            let itemNameAndSize = `${itemVarName}_${itemSize}`;
+            // console.log(`currCookieName: ${currCookieName}     itemNameAndSize: ${itemNameAndSize}`);
+            if (currCookieName === itemNameAndSize){
+                currQty ++;
+                document.cookie = `${itemName}_${itemSize}=qty:${currQty}; path=/`;
                 updated = true;
             }
-            totalItems += qty;            
+            totalItems += currQty;            
         } 
     }
     
+    // if item/size combo is new, add a new cookie
     if (updated === false){
-        document.cookie = `${itemName}_${itemSize}=qty:${qty}; path=/`;
+        document.cookie = `${itemName}_${itemSize}=qty:1; path=/`;
         totalItems++;
     }
 
+    // update shopping bag icon w/ new total # of items in bag
     numBagItems.innerText = totalItems;
 })
