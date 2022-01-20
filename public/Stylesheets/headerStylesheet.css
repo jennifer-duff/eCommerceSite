@@ -76,14 +76,12 @@ header nav a:hover{
     margin: 0;
     padding: 0;
     background-color: none;
-    transition: transform 0.3s ease-out;
     color: var(--brandPurple);
 }
 
-#shoppingBagLink:hover{
-    text-decoration: none;
-    background-color: var(--brandLightPink);
-    color: var(--brandPurple);
+#shoppingBagLink:hover img{
+    /* background-color: var(--brandLightPink); */
+    /* color: var(--brandPurple); */
     transform: scale(1.1);
     /* color: var(--brandPurple); */
 }
@@ -92,9 +90,10 @@ header nav a:hover{
     width: 30px;
     position: relative;
     bottom: 3px;
+    transition: transform 0.3s ease-out;
 }
 
-#shoppingBagLink p{
+#numBagItems{
     padding: 0;
     margin: 0;
     width: 30px;
@@ -104,4 +103,5 @@ header nav a:hover{
     top: 31px;
     font-size: 10pt;
     font-weight: 300;
+    text-decoration: none;
 }
