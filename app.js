@@ -52,6 +52,9 @@ app.get('/shoppingBag', async (req, res) => {
     for (let key of Object.keys(uberCookie)){
         let itemName = key.substring(0, key.indexOf('_'));
         let cleanedItemName = itemName.replace(/([A-Z])/g, ' $1').trim();
+        if (cleanedItemName === 'The Block- Heeled Booties'){
+            cleanedItemName = 'The Block-Heeled Booties';
+        }
 
         let productInfo = await Product.findOne({name: cleanedItemName});
 

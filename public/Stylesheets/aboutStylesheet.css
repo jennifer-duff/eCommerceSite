@@ -15,16 +15,15 @@ p{
 
 p a{
     font-weight: 500;
-    text-decoration: none;
-    color: var(--brandPurple);
-    transition: background-color 0.2s ease-in-out;
+    text-decoration: underline solid 2px var(--white);
+    color: var(--brandDarkPink);
+    transition: text-decoration 0.2s ease-in-out;
     padding: 0 3px;
     margin: 0 2px;
 }
 
 p a:hover{
-    background-color: var(--brandMediumPink);
-    border-radius: 4px;
+    text-decoration: underline solid 2px var(--brandDarkPink);
 }
 
 /* p a:last-of-type{

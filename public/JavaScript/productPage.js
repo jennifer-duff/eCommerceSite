@@ -56,10 +56,12 @@ leftArrow.addEventListener('click', scrollToPrev);
 // ------------- ADD TO BAG -------------
 const addToBag = document.querySelector('#addToBag');
 const numBagItems = document.querySelector('#numBagItems');
-const itemName = document.querySelector('#productName').innerText;
 const sizes = document.querySelectorAll('input[name="size"]');
 const errorBox = document.querySelector('#errorBox');
-
+let itemName = document.querySelector('#productName').innerText;
+// if (itemName === 'The Block-Heeled Booties'){
+//     itemName = 'TheBlockHeeledBooties';
+// }
 
 addToBag.addEventListener('click', function() {
     let uberCookie = decodeURIComponent(document.cookie);
