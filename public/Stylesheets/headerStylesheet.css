@@ -104,4 +104,5 @@ header nav a:hover{
     font-size: 10pt;
     font-weight: 300;
     text-decoration: none;
+    transition: content 0.2s ease-in-out;
 }

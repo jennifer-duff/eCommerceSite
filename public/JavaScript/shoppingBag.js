@@ -45,9 +45,34 @@ for (let i = 0; i < qtySelectors.length; i++){
 window.addEventListener('load', qtyUpdateListener());
 
 
+function checkForBagItems(){
+    //console.log('CHECKING FOR BAG ITEMS');
+    let noItemsMsg = document.querySelector('#noItemsMsg');
+    let takeALook = document.querySelector('#takeALook');
+    let checkOutBox = document.querySelector('#checkOutBox');
+
+    let uberCookie = decodeURIComponent(document.cookie);
+    let allCookies = uberCookie.split(';');
+    if (allCookies[0] === ''){
+        checkOutBox.style.display = 'none';
+        takeALook.style.display = 'block';
+        noItemsMsg.style.display = 'block';
+    }
+    else{
+        checkOutBox.style.display = 'flex';
+        takeALook.style.display = 'none';
+        noItemsMsg.style.display = 'none';
+    }
+}
+
+window.addEventListener('load', checkForBagItems);
+
+
+
 
 // --------------- handle deletion of cart items ---------------
 let trashCans = document.querySelectorAll('.trashcanIcon');
+let checkOutBox = document.querySelector('#checkOutBox');
 
 function deleteBagItem(event){
     // get the parent div of the trashcan that was clicked
@@ -68,13 +93,28 @@ function deleteBagItem(event){
     let currTotalItems = parseInt(numBagItems.innerText);
     let itemQty = parseInt(parentDiv.dataset.itemqty);
     let newTotalItems = currTotalItems - itemQty;
-    numBagItems.innerText = `${newTotalItems}`;
+
+    if (numBagItems > 0){
+        numBagItems.innerText = `${newTotalItems}`;
+    }
+    else{
+        numBagItems.innerText = ``;
+    }
+    
 
     // set the cookie to expire in the past (aka, delete the cookie)
     document.cookie = `${cookieName}=0; path=/; expires = 01 Jan 1970 00:00:00 UTC`;
 
     // hide the div with the deleted item's data
     parentDiv.style.display = 'none';
+
+    // if there's no more items in the bag, hide the checkOutBox
+    // let uberCookie = decodeURIComponent(document.cookie);
+    // let allCookies = uberCookie.split(';');
+    // if (allCookies[0] === ''){
+    //     checkOutBox.style.display = 'none';
+    // }
+    checkForBagItems();
 }
 
 for (let i = 0; i < trashCans.length; i++){

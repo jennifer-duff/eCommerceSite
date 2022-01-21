@@ -13,6 +13,33 @@ h1{
     height: 65pt;
 }
 
+#noItemsMsg{
+    font-family: var(--sansSerifFonts);
+    font-weight: 500;
+    font-size: 18pt;
+    margin: 0 0 15px 0;
+    display: none;
+}
+
+#takeALook{
+    font-family: var(--sansSerifFonts);
+    font-weight: 300;
+    font-size: 14pt;
+    margin: 0;
+    display: none;
+}
+
+#takeALook a{
+    font-weight: 500;
+    text-decoration: underline 2px solid var(--white);;
+    color: var(--brandDarkPink);
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+#takeALook a:hover{
+    text-decoration: underline 2px solid var(--brandDarkPink);
+}
+
 .bagProductTile{
     box-sizing: border-box;
     height: 210px;
@@ -152,6 +179,9 @@ option{
     line-height: 100%;
     margin: 0;
     text-align: right;
+    /* width: calc(100% - 200px);
+    position: relative;
+    right: 0; */
     /* border-radius: 20px;
     padding: 25px;
     box-shadow: 5px 5px 10px var(--shadowColor);
@@ -178,7 +208,7 @@ option{
     padding: 15px 20px 16px 20px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     text-decoration: none;
-    width: 200px;
+    min-width: 200px;
     text-align: center;
 }
 

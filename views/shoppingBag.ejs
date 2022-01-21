@@ -10,6 +10,8 @@
     <%- include('partials/header')%>
     <main>
         <h1>Your Bag</h1>
+            <p id = 'noItemsMsg'>Looks like there's nothing here yet!</p>
+            <p id = 'takeALook'>Why don't you <a href = '/products'>take a look around?</a></p>
 
             <% let totalSum = 0;%>
             <% for (let i = 0; i < bagItems.length; i++){ %>
