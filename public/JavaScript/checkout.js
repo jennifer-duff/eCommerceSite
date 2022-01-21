@@ -40,3 +40,15 @@ window.addEventListener('load', () => {
     }
     setMap(pageNum);
 })
+
+orderBtn.addEventListener('click', () => {
+    let uberCookie = decodeURIComponent(document.cookie);
+    const regEx = new RegExp(/\s/g);
+    uberCookie = uberCookie.replace(regEx,'');   
+
+    let allCookies = uberCookie.split(';');
+    for (let i = 0; i < allCookies.length; i++){
+        // TODO: erase all cookies on click;
+    }
+
+})
