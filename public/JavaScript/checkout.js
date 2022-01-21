@@ -41,14 +41,22 @@ window.addEventListener('load', () => {
     setMap(pageNum);
 })
 
+
+// ---------- Delete all cookies once order is submitted --------------
+let numBagItems = document.querySelector('#numBagItems');
+
 orderBtn.addEventListener('click', () => {
+    console.log('HIIIIIII');
     let uberCookie = decodeURIComponent(document.cookie);
     const regEx = new RegExp(/\s/g);
     uberCookie = uberCookie.replace(regEx,'');   
 
     let allCookies = uberCookie.split(';');
     for (let i = 0; i < allCookies.length; i++){
-        // TODO: erase all cookies on click;
+        let currCookie = allCookies[i];
+        let currCookieName = currCookie.substring(0, (currCookie.indexOf('=')));
+        document.cookie = `${currCookieName}=0; path=/; expires = 01 Jan 1970 00:00:00 UTC`;
     }
 
+    numBagItems.innerText = '';
 })
