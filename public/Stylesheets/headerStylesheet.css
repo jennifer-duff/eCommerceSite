@@ -64,7 +64,14 @@ header nav a:hover{
     background-color: var(--brandLightPink);
 }
 
-#searchBar:focus{
+#searchBar:focus,
+#searchBar:-webkit-autofill,
+#searchBar:-webkit-autofill:hover, 
+#searchBar:-webkit-autofill:focus{
+    box-shadow: 0 0 0px 1000px var(--brandLightPink) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--brandLightPink) inset;
+    color: black;
+    -webkit-text-fill-color: black;
     outline: 1.75px solid var(--brandPurple);
 }
 

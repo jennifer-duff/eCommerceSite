@@ -221,6 +221,16 @@ h2{
     flex: 1 1 auto;
 }
 
+#checkoutForm input:focus,
+#checkoutForm input:-webkit-autofill,
+#checkoutForm input:-webkit-autofill:hover, 
+#checkoutForm input:-webkit-autofill:focus{
+    box-shadow: 0 0 0px 1000px var(--white) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
+    color: black;
+    -webkit-text-fill-color: black;
+}
+
 #submitDiv{
     display: flex;
     align-items: center;

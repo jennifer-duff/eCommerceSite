@@ -54,6 +54,20 @@ h1{
     flex: 1 1 auto;
 }
 
+#contactForm input:focus,
+#contactForm input:-webkit-autofill,
+#contactForm input:-webkit-autofill:hover, 
+#contactForm input:-webkit-autofill:focus,
+#contactForm textarea:focus,
+#contactForm textarea:-webkit-autofill,
+#contactForm textarea:-webkit-autofill:hover, 
+#contactForm textarea:-webkit-autofill:focus{
+    box-shadow: 0 0 0px 1000px var(--white) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
+    color: black;
+    -webkit-text-fill-color: black;
+}
+
 #contactForm label{
     margin-right: 6px;
 }

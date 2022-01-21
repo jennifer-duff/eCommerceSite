@@ -21,9 +21,9 @@ main{
 }
 
 #breadcrumbs a{
-    text-decoration: 2px solid var(--white);
+    text-decoration: 2px underline solid var(--white);
     color: var(--gray);
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: text-decoration 0.2s ease-in-out;
     padding: 1px 4px;
     border-radius: 3px;
 }
@@ -34,10 +34,7 @@ main{
 }
 
 #breadcrumbs a:hover{
-    /* text-decoration: 2px solid var(--gray); */
-    /* color: var(--brandPurple); */
-    background-color: var(--brandDarkPink);
-    color: var(--white);
+    text-decoration: underline solid var(--brandDarkPink) 2px;
 }
 
 h1{

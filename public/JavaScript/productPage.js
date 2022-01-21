@@ -73,14 +73,14 @@ addToBag.addEventListener('click', function() {
     for (let i = 0; i < sizes.length; i++){
         if (sizes[i].checked){
             itemSize = sizes[i].value;
-            errorBox.style.color = 'var(--white)';
+            errorBox.style.backgroundColor = 'var(--white)';
        }
    }
 
     // if no size is selected, prompt the user to pick one
     if (itemSize === undefined){
         console.log('Please choose a size');
-        errorBox.style.color = 'var(--brandDarkPink)';
+        errorBox.style.backgroundColor = 'var(--brandDarkPink)';
         return;
     }
 

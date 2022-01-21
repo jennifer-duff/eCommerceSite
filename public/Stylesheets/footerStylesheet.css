@@ -77,6 +77,15 @@ footer nav a:hover{
     color: var(--shadowColor);
 }
 
+#emailInput:-webkit-autofill,
+#emailInput:-webkit-autofill:hover, 
+#emailInput:-webkit-autofill:focus{
+    box-shadow: 0 0 0px 1000px var(--brandPurple) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--brandPurple) inset;
+    color: var(--brandMediumPink);
+    -webkit-text-fill-color: var(--brandMediumPink);
+}
+
 #submitEmailBtn{
     appearance: none;
     border: none;
