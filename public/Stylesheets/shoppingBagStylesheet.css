@@ -76,13 +76,14 @@ h1{
     font-size: 12pt;
     margin: 0 5px 0 0 ;
     font-family: var(--sansSerifFonts);
-    font-weight: 300;
+    font-weight: 500;
 }
 
-.infoSelected{
+#sizeSpan{
     font-weight: 300;
-    font-size: 12pt
+    font-size: 11pt;
 }
+
 
 select{
     box-sizing: border-box;
@@ -157,7 +158,7 @@ option{
     background-color: var(--brandLightPink); */
 }
 
-#totalSum{
+#totalSum, #dollarSign{
     font-weight: 600;
 }
 

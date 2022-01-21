@@ -2,6 +2,7 @@
 
 window.addEventListener('load', function(){
     let uberCookie = decodeURIComponent(document.cookie);
+    let numBagItems = document.querySelector('#numBagItems');
     let totalItems = 0;
 
     // remove whitespace
@@ -17,7 +18,7 @@ window.addEventListener('load', function(){
     else{
         for (let i = 0; i < allCookies.length; i++){
             let currCookie = allCookies[i];
-            let qty = parseInt(currCookie.substring((currCookie.indexOf(':') + 1))); 
+            let qty = parseInt(currCookie.substring((currCookie.indexOf('=') + 1))); 
             totalItems += qty;            
         }
         numBagItems.innerText = totalItems;

@@ -43,8 +43,37 @@ app.get('/',  (req, res) => {
     res.render('index');
 })
 
-app.get('/shoppingBag', (req, res) => {
-    res.render('shoppingBag');
+app.get('/shoppingBag', async (req, res) => {
+    let uberCookie = req.cookies;
+    let i = 1;
+    // let bagItems = {};
+    let bagItems = [];
+
+    for (let key of Object.keys(uberCookie)){
+        let itemName = key.substring(0, key.indexOf('_'));
+        let cleanedItemName = itemName.replace(/([A-Z])/g, ' $1').trim();
+
+        let productInfo = await Product.findOne({name: cleanedItemName});
+
+        let productImgs = productInfo.imgs;
+        let productPrice = productInfo.price;
+        let itemSize = key.substring(key.indexOf('_') + 1);
+        let itemQty = uberCookie[key];
+
+        let tempProduct = {
+            name: cleanedItemName,
+            imgs: productImgs,
+            price: productPrice,
+            size: itemSize,
+            qty: itemQty
+        };
+
+        // bagItems[`item${i}`] = tempProduct;
+        bagItems.push(tempProduct);
+        i++
+    }
+    // console.log(bagItems);
+    res.render('shoppingBag', {bagItems});
 })
 
 app.get('/checkout_yourInfo', (req, res) => {

@@ -86,7 +86,9 @@ addToBag.addEventListener('click', function() {
     const regEx = new RegExp(/\s/g);
     uberCookie = uberCookie.replace(regEx,'');   
     let allCookies = uberCookie.split(';');
+    
 
+    let itemVarName = itemName.replace(regEx,'');
 
     // check if item/size combo already exists as a cookie - if so, update the qty
     if (allCookies[0] !== ''){
@@ -95,15 +97,14 @@ addToBag.addEventListener('click', function() {
             let currCookieName = currCookie.substring(0, (currCookie.indexOf('=')));
             // console.log(currCookieName);
 
-            let currQty = parseInt(currCookie.substring((currCookie.indexOf(':') + 1))); 
+            let currQty = parseInt(currCookie.substring((currCookie.indexOf('=') + 1))); 
 
             // let currSize = currCookie.substring(currCookie.indexOf('_') + 1, currCookie.indexOf('='));
-            let itemVarName = itemName.replace(regEx,'');
             let itemNameAndSize = `${itemVarName}_${itemSize}`;
             // console.log(`currCookieName: ${currCookieName}     itemNameAndSize: ${itemNameAndSize}`);
             if (currCookieName === itemNameAndSize){
                 currQty ++;
-                document.cookie = `${itemName}_${itemSize}=qty:${currQty}; path=/`;
+                document.cookie = `${itemVarName}_${itemSize}=${currQty}; path=/`;
                 updated = true;
             }
             totalItems += currQty;            
@@ -112,7 +113,7 @@ addToBag.addEventListener('click', function() {
     
     // if item/size combo is new, add a new cookie
     if (updated === false){
-        document.cookie = `${itemName}_${itemSize}=qty:1; path=/`;
+        document.cookie = `${itemVarName}_${itemSize}=1; path=/`;
         totalItems++;
     }
 
