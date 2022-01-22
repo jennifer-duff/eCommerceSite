@@ -18,7 +18,14 @@
             <span id = 'currLocation'><%= product.name %></span>
         </p>
 
+        <div id = 'popUp'>
+            <img id = 'bagArrow' src = '/Assets/roundedArrow_white.svg'>
+            <div id = 'thumbnailBox' style = "background-image: url(<%= product.imgs.img1 %>);"></div>
+            <p id = 'popUpText'><span id = 'popUpProductName'><%= product.name %></span> <span id = 'wasWere'>was</span> added to your bag!</p>
+        </div>
+
         <h1 id = 'productName'> <%= product.name %> </h1>
+
         <div id = 'productBox'>
 
             <div id = carouselBox>

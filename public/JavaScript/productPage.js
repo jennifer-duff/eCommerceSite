@@ -59,6 +59,8 @@ const numBagItems = document.querySelector('#numBagItems');
 const sizes = document.querySelectorAll('input[name="size"]');
 const errorBox = document.querySelector('#errorBox');
 let itemName = document.querySelector('#productName').innerText;
+const popUp = document.querySelector('#popUp');
+const wasWere = document.querySelector('#wasWere');
 // if (itemName === 'The Block-Heeled Booties'){
 //     itemName = 'TheBlockHeeledBooties';
 // }
@@ -121,4 +123,18 @@ addToBag.addEventListener('click', function() {
 
     // update shopping bag icon w/ new total # of items in bag
     numBagItems.innerText = totalItems;
+
+    // run pop-up saying item was added to bag
+    popUp.style.opacity = 1;
+    popUp.style.top = '60px';
+    switch(itemName){
+        case 'The Tailored Trousers':
+        case 'The Black Pumps':
+        case 'The Block-Heeled Booties':
+            wasWere.innerText = 'were';
+            break;
+        default:
+            wasWere.innerText = 'was';
+            break;
+    }
 })
