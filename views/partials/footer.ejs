@@ -1,10 +1,10 @@
 <footer>
-    <a href = '/'>
-        <img src = '/Assets/luma_fullLogo_white.svg' id = 'footerLogo'>
-    </a>
+
     <nav id = 'footerNav'>
+        <a href = '/'>
+            <img src = '/Assets/luma_fullLogo_white.svg' id = 'footerLogo'>
+        </a>
         <a href = '/about'>About</a>
-        <!-- <a>FAQ's</a> -->
         <a href = '/contact'>Contact</a>
         <form id = 'emailSignUpDiv'>
             <p id = 'emailP'>Want more from Luma? Sign up to receive exlusive deals and offers straight to your inbox:</p>
@@ -14,6 +14,27 @@
             </div>
             <p id = 'whoops'>Whoops, that's not a valid email!</p>
         </form>   
+    </nav>
+
+
+    <nav id = 'mobileFooterNav'>
+        <form id = 'emailSignUpDiv'>
+            <p id = 'emailP'>Want more from Luma? Sign up to receive exlusive deals and offers straight to your inbox:</p>
+            <div id = 'inputDiv'>
+                <input type = 'email' name = 'emailInput' id = 'emailInput' required placeholder = 'Email address'>
+                <a id = 'submitEmailBtn'><img id = 'arrowImg' src = '/Assets/arrow_pink.svg'></a>
+            </div>
+            <p id = 'whoops'>Whoops, that's not a valid email!</p>
+        </form>
+
+        <div id = 'navLinks'>
+            <a href = '/about'>About</a>
+            <a href = '/contact'>Contact</a>
+        </div>
+
+        <a href = '/'>
+            <img src = '/Assets/luma_fullLogo_white.svg' id = 'footerLogo'>
+        </a>   
     </nav>
     <script src = '/JavaScript/footer.js'></script>
 </footer>
