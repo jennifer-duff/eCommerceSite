@@ -1,7 +1,5 @@
 'use strict'
 
-// const { cookie } = require("express/lib/response");
-
 // ------------- CAROUSEL -------------
 let arrows = document.querySelectorAll('.scrollArrow');
 let leftArrow = arrows[0];
@@ -26,7 +24,6 @@ window.addEventListener('load', function() {
 window.addEventListener('resize', function() {
     imgWidth = parseFloat(window.getComputedStyle(firstImg).width);
     carouselLength = imgWidth * allImgs.length;
-    console.log(carouselLength);
 })
 
 
@@ -61,15 +58,15 @@ const errorBox = document.querySelector('#errorBox');
 let itemName = document.querySelector('#productName').innerText;
 const popUp = document.querySelector('#popUp');
 const wasWere = document.querySelector('#wasWere');
-// if (itemName === 'The Block-Heeled Booties'){
-//     itemName = 'TheBlockHeeledBooties';
-// }
+
 
 addToBag.addEventListener('click', function() {
     let uberCookie = decodeURIComponent(document.cookie);
     let totalItems = 0;
     let updated = false;
     let itemSize;
+    let date = new Date();
+    date.setDate(date.getDate() + 7);
 
     // find which size is selected 
     for (let i = 0; i < sizes.length; i++){
@@ -81,7 +78,6 @@ addToBag.addEventListener('click', function() {
 
     // if no size is selected, prompt the user to pick one
     if (itemSize === undefined){
-        console.log('Please choose a size');
         errorBox.style.backgroundColor = 'var(--brandDarkPink)';
         return;
     }
@@ -91,7 +87,7 @@ addToBag.addEventListener('click', function() {
     uberCookie = uberCookie.replace(regEx,'');   
     let allCookies = uberCookie.split(';');
     
-
+    // variable-ify the product name
     let itemVarName = itemName.replace(regEx,'');
 
     // check if item/size combo already exists as a cookie - if so, update the qty
@@ -99,16 +95,11 @@ addToBag.addEventListener('click', function() {
        for (let i = 0; i < allCookies.length; i++){
             let currCookie = allCookies[i];
             let currCookieName = currCookie.substring(0, (currCookie.indexOf('=')));
-            // console.log(currCookieName);
-
             let currQty = parseInt(currCookie.substring((currCookie.indexOf('=') + 1))); 
-
-            // let currSize = currCookie.substring(currCookie.indexOf('_') + 1, currCookie.indexOf('='));
             let itemNameAndSize = `${itemVarName}_${itemSize}`;
-            // console.log(`currCookieName: ${currCookieName}     itemNameAndSize: ${itemNameAndSize}`);
             if (currCookieName === itemNameAndSize){
                 currQty ++;
-                document.cookie = `${itemVarName}_${itemSize}=${currQty}; path=/`;
+                document.cookie = `${itemVarName}_${itemSize}=${currQty}; path=/; expires=${date}`;
                 updated = true;
             }
             totalItems += currQty;            
@@ -117,7 +108,7 @@ addToBag.addEventListener('click', function() {
     
     // if item/size combo is new, add a new cookie
     if (updated === false){
-        document.cookie = `${itemVarName}_${itemSize}=1; path=/`;
+        document.cookie = `${itemVarName}_${itemSize}=1; path=/; expires=${date}`;
         totalItems++;
     }
 
