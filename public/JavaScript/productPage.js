@@ -60,7 +60,7 @@ const popUp = document.querySelector('#popUp');
 const wasWere = document.querySelector('#wasWere');
 
 
-addToBag.addEventListener('click', function() {
+addToBag.addEventListener('click', async function() {
     let uberCookie = decodeURIComponent(document.cookie);
     let totalItems = 0;
     let updated = false;
@@ -128,4 +128,8 @@ addToBag.addEventListener('click', function() {
             wasWere.innerText = 'was';
             break;
     }
+    await new Promise(resolve => setTimeout(resolve, 3250));
+    popUp.style.opacity = 0;
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    popUp.style.top = '40px';
 })

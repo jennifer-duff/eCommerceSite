@@ -29,7 +29,7 @@
 
 #popUp{
     position: fixed;
-    top: 50px;
+    top: 40px;
     right: 0;
     background: var(--white);
     padding: 20px;
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out, top 1s ease-in-out;
 }
 
 #bagArrow{

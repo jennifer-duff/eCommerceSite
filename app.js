@@ -109,7 +109,6 @@ app.get('/category/:productCategory', async (req, res) => {
     else{
         pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
     }
-    console.log(pageTitle);
     res.render('categoryPage', {pageTitle, filteredProducts});
 })
 
