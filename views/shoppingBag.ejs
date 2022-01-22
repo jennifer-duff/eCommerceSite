@@ -3,7 +3,7 @@
 <head>
     <title>Luma | Your Bag</title>
     <%- include('partials/head')%>
-    <link rel = 'stylesheet' href = 'Stylesheets/shoppingBagStylesheet.css'>
+    <link rel = 'stylesheet' href = 'Stylesheets/shoppingBag.css'>
 </head>
 
 <body>
@@ -11,7 +11,7 @@
     <main>
         <h1>Your Bag</h1>
             <p id = 'noItemsMsg'>Looks like there's nothing here yet!</p>
-            <p id = 'takeALook'>Why don't you <a href = '/products'>take a look around?</a></p>
+            <p id = 'takeALook'>Why don't you <a href = '/allClothing'>take a look around?</a></p>
 
             <% let totalSum = 0;%>
             <% for (let i = 0; i < bagItems.length; i++){ %>

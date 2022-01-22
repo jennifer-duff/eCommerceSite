@@ -113,10 +113,10 @@ app.get('/category/:productCategory', async (req, res) => {
     res.render('categoryPage', {pageTitle, filteredProducts});
 })
 
-app.get('/products', async (req, res) => {
+app.get('/allClothing', async (req, res) => {
     const allProducts = await Product.find({});
     // console.log(allProducts);
-    res.render('allProducts', {allProducts});
+    res.render('allClothing', {allProducts});
 })
 
 app.get('/products/:product', async (req, res) => {
