@@ -15,7 +15,7 @@ header{
     background-color: var(--brandLightPink);
 }
 
-#menuIcon, #searchIcon{
+#menuIcon, #searchIcon, #searchArrow, #mobileNavArrow{
     width: 25px;
     display: none;
 }
@@ -143,10 +143,19 @@ header nav a:hover{
         border: 1px solid var(--shadowColor);
         padding: 10px;
         border-radius: 10px;
+        border-top-right-radius: 0px;
         position: fixed;
-        top: 60px;
-        right: 300px;
-        box-shadow: 5px 5px 5px var(--shadowColor);
+        top: 67px;
+        right: 308px;
+        box-shadow: 2px 2px 5px var(--shadowColor);
+    }
+
+    #mobileNavArrow{
+        display:none;
+        position: fixed;
+        width: 18px;
+        top: 56px;
+        right: 308px;
     }
 
     #menuIcon{
@@ -174,6 +183,21 @@ header nav a:hover{
 @media (max-width: 525px){
     #searchBar{
         display: none;
+        position: fixed;
+        top: 65px;
+        right: 72px;
+        width: 200px;
+        border: 1px solid var(--shadowColor);
+        border-radius: 5px;
+        border-top-right-radius: 0px;
+        box-shadow: 2px 2px 5px var(--shadowColor);
+    }
+
+    #searchArrow{
+        display: none;
+        position: fixed;
+        width: 18px;
+        top: 54px;
     }
 
     #searchContainer{
@@ -185,7 +209,14 @@ header nav a:hover{
     }
 
     header nav{
-        top: 60px;
-        right: 107px;
+        top: 67px;
+        right: 113px;
+    }
+
+    #mobileNavArrow{
+        position: fixed;
+        width: 18px;
+        top: 56px;
+        right: 113px;
     }
 }
