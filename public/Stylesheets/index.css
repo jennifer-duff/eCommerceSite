@@ -1,4 +1,8 @@
 /* --------- MAIN ---------*/
+main{
+    padding: 0 0 100px 0;
+}
+
 #splashbox{
     height: 80vh;
     background-image: url('/Assets/productImgs/bowtieBlouse/bowtieBlouse1.jpg');

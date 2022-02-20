@@ -30,7 +30,7 @@ body{
 main{
     box-sizing: border-box;
     margin-top: 75px;
-    padding-bottom: 100px;
+    padding: 0 10% 100px 10%;
     min-height: calc(100vh - 175px);
     background-color: var(--white);
 }
