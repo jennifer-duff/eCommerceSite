@@ -16,14 +16,14 @@ p{
 p a{
     font-weight: 500;
     text-decoration: underline solid 2px var(--white);
-    color: var(--brandDarkPink);
+    color: var(--brandPrimary);
     transition: text-decoration 0.2s ease-in-out;
     padding: 0 3px;
     margin: 0 2px;
 }
 
 p a:hover{
-    text-decoration: underline solid 2px var(--brandDarkPink);
+    text-decoration: underline solid 2px var(--brandDarkPrimary);
 }
 
 @media (max-width: 1100px) {
