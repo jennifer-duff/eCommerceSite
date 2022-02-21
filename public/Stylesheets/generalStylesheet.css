@@ -2,14 +2,14 @@
 :root{
     --serifFonts: operetta-18;
     --sansSerifFonts: synthese;
-    /* --brandPurple: #8C5074; */
-    /* --brandPurple: #573047; */
+    --brandDarkPrimary: #313E2B;
+    --brandPrimary: #505F43;
     --brandPurple: #543447;
-    --brandLightPurple: #af7096;
-    --brandLightPink: #FFF3F0;
-    --brandMediumPink: #FCDFD9;
-    /* --brandDarkPink: #F5CAC1; */
-    /* --brandDarkPink: #E3B7B1; */
+    /* --brandLightPurple: #af7096; */
+    --brandLightPink: #FFF5F0;
+    /* --brandLightPink: #FFF3F0; */
+    /* --brandMediumPink: #FCDFD9; */
+    --brandMediumPink: #FCE7D9;
     --brandDarkPink: #E2B4A6;
     --white: #FFFDFC;
     --shadowColor: #b8a7aa;

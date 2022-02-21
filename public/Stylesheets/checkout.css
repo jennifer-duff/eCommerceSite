@@ -138,7 +138,7 @@ h1{
 
 .circle{
     box-sizing: border-box;
-    border: 5px solid var(--brandPurple);
+    border: 5px solid var(--brandPrimary);
     width: 20px;
     min-width: 20px;
     height: 20px;
@@ -149,11 +149,11 @@ h1{
 }
 
 /* .circle:nth-of-type(1){
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
 } */
 
 .shortLine{
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     width: 50%;
     height: 5px;
     margin: 0;
@@ -166,7 +166,7 @@ h1{
 }
 
 .longLine{
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     width: 100%;
     height: 5px;
 }
@@ -192,7 +192,7 @@ h2{
     line-height: 100%;
     font-size: 26pt;
     width: 100%;
-    /* color: var(--brandPurple); */
+    /* color: var(--brandPrimary); */
 }
 
 .formDiv{
@@ -265,7 +265,7 @@ h2{
 
 #submitBtn:hover,
 #backLink:hover{
-    background-color: var(--brandPurple)
+    background-color: var(--brandPrimary)
 }
 
 #submitBtn{
@@ -301,11 +301,11 @@ h2{
     /* border: 1px solid var(--brandDarkPink); */
     font-weight: 500;
     width: 150px;
-    text-decoration: 1px solid var(--brandPurple);
+    text-decoration: 1px solid var(--brandPrimary);
     transition: text-decoration 0.3s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 #orderBtn:hover{
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     color: var(--brandLightPink);
 }

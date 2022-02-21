@@ -69,7 +69,7 @@ h1{
     height: calc(210px - 60px);
     width: 200px;
     object-fit: cover;
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     margin: auto;
     border: 1px solid var(--shadowColor);
     border-radius: 5px;
@@ -198,7 +198,7 @@ option{
     box-sizing: border-box;
     background-color: var(--brandDarkPink);
     color: var(--white);
-    /* outline: 1px solid var(--brandPurple); */
+    /* outline: 1px solid var(--brandPrimary); */
     /* border: 1px solid var(--gray); */
     font-family: var(--sansSerifFonts);
     font-size: 13pt;
@@ -213,7 +213,7 @@ option{
 }
 
 #checkOutBtn:hover{
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     color: var(--brandLightPink);
-    /* border: 0.5px solid var(--brandPurple); */
+    /* border: 0.5px solid var(--brandPrimary); */
 }

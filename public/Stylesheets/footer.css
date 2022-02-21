@@ -6,7 +6,7 @@ footer{
     height: 100px;
     width: 100%;
     padding: 20px;
-    background-color: var(--brandPurple);
+    background-color: var(--brandDarkPrimary);
     /* margin-top: 75px; */
 }
 
@@ -28,7 +28,7 @@ footer{
 
 footer nav a{
     color: var(--brandMediumPink);
-    text-decoration: underline solid var(--brandPurple) 2px;
+    text-decoration: underline solid var(--brandDarkPrimary) 2px;
     transition: text-decoration-color 0.3s ease-in-out;
     margin-right: 40px;
 }
@@ -38,7 +38,7 @@ footer nav a:hover{
 }
 
 #footerLogo{
-    width: 150px;
+    width: 175px;
 }
 
 #emailSignUpDiv{
@@ -64,7 +64,7 @@ footer nav a:hover{
 
 #emailInput{
     appearance: none;
-    background-color: var(--brandPurple);
+    background-color: var(--brandDarkPrimary);
     outline: none;
     border-top: none;
     border-left: none;
@@ -84,8 +84,8 @@ footer nav a:hover{
 #emailInput:-webkit-autofill,
 #emailInput:-webkit-autofill:hover, 
 #emailInput:-webkit-autofill:focus{
-    box-shadow: 0 0 0px 1000px var(--brandPurple) inset;
-    -webkit-box-shadow: 0 0 0px 1000px var(--brandPurple) inset;
+    box-shadow: 0 0 0px 1000px var(--brandDarkPrimary) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--brandDarkPrimary) inset;
     color: var(--brandMediumPink);
     -webkit-text-fill-color: var(--brandMediumPink);
 }
@@ -93,7 +93,7 @@ footer nav a:hover{
 #submitEmailBtn{
     appearance: none;
     border: none;
-    background-color: var(--brandPurple);
+    background-color: var(--brandDarkPrimary);
     cursor: pointer;
 }
 
@@ -108,7 +108,7 @@ footer nav a:hover{
     font-weight: 300;
     font-size: 8.5pt;
     margin: 0;
-    color: var(--brandPurple);
+    color: var(--brandDarkPrimary);
     transition: color 0.2s ease-in-out;
 }
 

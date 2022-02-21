@@ -48,7 +48,7 @@
     position: fixed;
     top: 47px;
     right: 25px;
-    /* background-color: var(--brandPurple); */
+    /* background-color: var(--brandPrimary); */
 }
 
 #thumbnailBox{
@@ -250,6 +250,6 @@ h1{
 
 #addToBag:hover
 {
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     /* border: 1px solid var(--gray); */
 }

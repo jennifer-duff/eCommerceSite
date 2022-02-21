@@ -10,7 +10,7 @@ let mapLabels = document.querySelectorAll('.mapLabel');
 function setMap(pageNum){
     for (let i = 0; i < circles.length; i++){
         if (i === pageNum){
-            circles[i].style.backgroundColor = '#573047';
+            circles[i].style.backgroundColor = '#505F43';
             mapLabels[i].style.fontWeight = '600';
         }
         else{
