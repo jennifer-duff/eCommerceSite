@@ -14,7 +14,7 @@ main{
     bottom: 40px;
     font-family: var(--sansSerifFonts);
     text-decoration: underline solid var(--white) 3px;
-    color: var(--gray);
+    color: var(--brandPrimary);
     height: 23px;
     transition: text-decoration-color 0.2s ease-in-out;
     font-size: 12pt;
@@ -183,8 +183,8 @@ h1{
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
-    border: 1px solid var(--gray);
-    box-shadow: 5px 5px 10px var(--brandDarkPink);
+    border: 1px solid var(--shadowColor);
+    box-shadow: var(--boxShadow);
 }
 
 h2{

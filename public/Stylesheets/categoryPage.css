@@ -73,11 +73,16 @@ h1{
     transform: scale(1.1);
 }
 
+.productBox:hover .productImgs{
+    box-shadow: var(--boxShadow);
+}
+
 .productImgs{
     width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .productLabels{

@@ -59,7 +59,7 @@ h1{
 
 .bagProductTile, #checkOutBox{
     border: 1px solid var(--shadowColor);
-    box-shadow: 5px 5px 10px var(--brandDarkPink);
+    box-shadow: var(--boxShadow);
     width: 750px;
 }
 

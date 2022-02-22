@@ -2,19 +2,22 @@
 :root{
     --serifFonts: operetta-18;
     --sansSerifFonts: synthese;
+
     --brandDarkPrimary: #313E2B;
     --brandPrimary: #505F43;
     --brandPurple: #543447;
-    /* --brandLightPurple: #af7096; */
+    --brandDarkPink: #E2B4A6;
+    --brandMediumPink: #FCE7D9;
     --brandLightPink: #FFF5F0;
     /* --brandLightPink: #FFF3F0; */
     /* --brandMediumPink: #FCDFD9; */
-    --brandMediumPink: #FCE7D9;
-    --brandDarkPink: #E2B4A6;
-    --white: #FFFDFC;
     --shadowColor: #b8a7aa;
+    --white: #FFFDFC;
     --gray: #5c5b5b;
+
+    --boxShadow: 5px 5px 10px var(--shadowColor);
 }
+
 
 html{
     box-sizing: border-box;
@@ -29,7 +32,7 @@ body{
 
 main{
     box-sizing: border-box;
-    margin-top: 75px;
+    margin-top: 60px;
     padding: 0 10% 100px 10%;
     min-height: calc(100vh - 175px);
     background-color: var(--white);
@@ -41,6 +44,7 @@ h1{
     padding: 75px 0 20px 0;
     font-size: 65pt;
     margin: 100px 0 0 0;
+    color: var(--brandDarkPrimary);
 }
 
 a{

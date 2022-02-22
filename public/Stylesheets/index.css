@@ -72,7 +72,7 @@ h1{
     background-color: var(--brandMediumPink);
     padding: 20px 20px 10px 20px;
     border-radius: 10px;
-    color: var(--black);
+    color: var(--brandDarkPrimary);
 }
 
 #trendingGrid{
@@ -88,7 +88,7 @@ h1{
 
 .trendingDiv{
     box-sizing: border-box;
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
     width: 300px;
     height: 300px;
     border-radius: 10px;
@@ -101,7 +101,7 @@ h1{
     width: 325px;
     height:325px;
     transform: translate(-10px, -10px);
-    box-shadow: 5px 5px 10px var(--brandDarkPink);
+    box-shadow: var(--boxShadow);
 }
 
 #bluePeacoatDiv{
