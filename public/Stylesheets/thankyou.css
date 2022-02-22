@@ -63,7 +63,7 @@ p:last-of-type{
 }
 
 #returnBtn:hover{
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
 }
 
 #arrow{

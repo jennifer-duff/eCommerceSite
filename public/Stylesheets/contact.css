@@ -97,5 +97,5 @@ h1{
 }
 
 #submit:hover{
-    background-color: var(--brandPurple);
+    background-color: var(--brandPrimary);
 }
