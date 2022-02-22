@@ -16,7 +16,7 @@ h1{
 #noItemsMsg{
     font-family: var(--sansSerifFonts);
     font-weight: 500;
-    font-size: 18pt;
+    font-size: 22pt;
     margin: 0 0 15px 0;
     display: none;
 }
@@ -43,7 +43,7 @@ h1{
 .bagProductTile{
     box-sizing: border-box;
     height: 210px;
-    background-color: var(--white);
+    background-color: var(--brandLightPink);
     border-radius: 30px;
     padding: 30px;
     margin: 0 0 40px 0;
@@ -121,13 +121,17 @@ select{
     font-weight: 300;
     font-size: 10pt;
     padding: 0px 1px 3px 3px;
-    background-color: var(--white);
+    background-color: var(--brandLightPink);
     cursor: pointer;
+}
+
+select:focus{
+    outline: 1px solid var(--brandDarkPink);
 }
 
 option{
     appearance: none;
-    background-color: var(--white);
+    background-color: var(--brandLightPink);
     font-weight: 300;
 }
 

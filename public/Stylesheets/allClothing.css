@@ -11,37 +11,56 @@ h1{
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    padding: 100px 0 50px 0;
+    padding: 100px 0 15px 0;
     font-size: 65pt;
     margin: 0 0 0 0;
 }
 
 #filterBox{
+    box-sizing: border-box;
     font-family: var(--sansSerifFonts);
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     font-weight: 300;
+    background-color: var(--brandDarkPink);
+    padding: 8px 8px 8px 13px;
+    border-radius: 7px;
 }
 
 #filterLabel{
     margin-right: 5px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 #categoryFilter{
+    box-sizing: border-box;
     font-family: var(--sansSerifFonts);
     font-weight: 300;
-    border: 1px solid var(--shadowColor);
+    color: var(--brandPrimary);
+    border: none;
+    /* border: 1px solid var(--shadowColor); */
     border-radius: 5px;
     cursor: pointer;
+    background-color: var(--white);
+    padding: 2px;
 }
 
 #categoryFilter option{
+    appearance: none;
     font-family: var(--sansSerifFonts);
     font-weight: 300;
+    color: black;
+    cursor: pointer;
+}
+
+#categoryFilter option:hover{
+    color: black;
     cursor: pointer;
 }
 
 #categoryFilter:focus{
-    outline: 1px solid var(--shadowColor);
+    outline: 1px solid var(--brandPrimary);
 }
 
 #allProductsBox{
@@ -92,11 +111,12 @@ h1{
     font-family:var(--sansSerifFonts);
     font-size: 16pt;
     font-weight: 300;
-    color: black;
+    color: var(--brandMediumPink);
     border-radius: 0 0 10px 10px;
     padding: 15px;
     line-height: 100%;
-    /* background-color: var(--brandLightPink); */
+    background-color: var(--brandPrimary);
     text-align: center;
     margin: -5px 0 0 0;
+    border-top: 1px solid var(--shadowColor);
 }
