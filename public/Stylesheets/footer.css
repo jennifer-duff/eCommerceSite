@@ -39,6 +39,11 @@ footer nav a:hover{
 
 #footerLogo{
     width: 175px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#footerLogo:hover{
+    transform: scale(1.08);
 }
 
 #emailSignUpDiv{

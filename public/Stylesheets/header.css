@@ -79,10 +79,10 @@ header nav a:hover{
     font-family: var(--sansSerifFonts);
     font-weight: 300;
     font-size: 9.5pt;
-    padding:1px 5px 3px 5px;
+    padding: 1px 30px 3px 5px;
     margin-left: 5px;
-    border-radius: 10px;
-    border: 1.5px solid var(--brandPrimary);
+    border-radius: 7px;
+    border: 1.5px solid var(--shadowColor);
     background-color: var(--brandLightPink);
 }
 
@@ -96,6 +96,13 @@ header nav a:hover{
     color: black;
     -webkit-text-fill-color: black;
     outline: 1.75px solid var(--brandPrimary);
+}
+
+#searchGoArrow{
+    width: 15px;
+    cursor: pointer;
+    position: relative;
+    right: 25px;
 }
 
 #shoppingBagLink{

@@ -12,10 +12,15 @@
     /* --brandLightPink: #FFF3F0; */
     /* --brandMediumPink: #FCDFD9; */
     --shadowColor: #b8a7aa;
-    --white: #FFFDFC;
+    --white: #FFFAF7;
     --gray: #5c5b5b;
 
     --boxShadow: 5px 5px 10px var(--shadowColor);
+
+    /* --tileLabelFontFamily: var(--serifFonts);
+    --tileLabelFontSize: 22pt;
+    --tileLabelFontWeight: 600;
+    --tileLabelFontColor: black; */
 }
 
 

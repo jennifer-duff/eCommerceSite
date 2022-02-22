@@ -16,7 +16,7 @@ h1{
     border-radius: 10px;
     background-color: var(--white);
     border: 1px solid var(--shadowColor);
-    box-shadow: 5px 5px 10px var(--brandDarkPink);
+    box-shadow: var(--boxShadow);
 }
 
 .formDiv{
@@ -86,7 +86,7 @@ h1{
     font-size: 12pt;
     text-align: center;
     background-color: var(--brandDarkPink);
-    color: var(--brandLightPink);
+    color: var(--white);
     border-radius: 7px;
     line-height: 100%;
     padding: 13px 13px 14px 13px;
@@ -98,4 +98,5 @@ h1{
 
 #submit:hover{
     background-color: var(--brandPrimary);
+    color: var(--brandLightPink);
 }
