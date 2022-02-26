@@ -141,7 +141,7 @@ app.get('/products/:product', async (req, res) => {
     else{
         pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
     }
-    // console.log(product);
+    console.log(product.name);
     res.render('productPage', {product, pageTitle});
 })
 

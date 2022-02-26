@@ -40,7 +40,7 @@ main{
     box-sizing: border-box;
     margin-top: 60px;
     padding: 0 10% 100px 10%;
-    min-height: calc(100vh - 175px);
+    min-height: calc(100vh - 160px);
     background-color: var(--white);
 }
 

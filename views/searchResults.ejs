@@ -19,11 +19,7 @@
                 <p id = 'noResults'>Sorry, no results found.</p>
             <% } else{ %>
                 <% for (let product of allResults) { %>
-                    <!-- <a class = 'productBox <%= product.category%>' href = '/products/<%= product.name%>'>
-                        <img class = 'productImgs' src =<%= product.imgs.img1 %> >
-                        <p class = 'productLabels'> <%= product.name %> </p>
-                    </a> -->
-                    <a class = 'productBox <%= product.category%>' href = 'products/<%= product.name%>'>
+                    <a class = 'productBox <%= product.category%>' href = '/products/<%= product.name%>'>
                         <img class = 'productImgs' src =<%= product.imgs.img1 %> >
                         <div class= 'productLabels'>
                             <p class = 'productNames'> <%= product.name %> </p>

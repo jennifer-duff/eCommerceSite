@@ -75,7 +75,7 @@ footer nav a:hover{
     border-left: none;
     border-right: none;
     border-bottom: 2px solid var(--brandMediumPink);
-    width: 100%;
+    width: calc(110%);
     color: var(--brandMediumPink);
     font-family: var(--sansSerifFonts);
     font-weight: 300;
@@ -105,7 +105,7 @@ footer nav a:hover{
 #arrowImg{
     width: 20px;
     position: relative;
-    right: 20px;
+    /* right: 20px; */
     bottom: 2px;
 }
 
