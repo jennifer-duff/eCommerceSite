@@ -8,13 +8,15 @@ const port = 8080;
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
+
 // Monogoose setup
 const mongoose = require('mongoose');
 const Product = require('./product');
 const { all } = require('express/lib/application');
 // const methodOverride = require('method-override');
 
-mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
+//Production database
+mongoose.connect(`mongodb+srv://tonkers:Luma4moi@ecommercecluster.5bz57.mongodb.net/Luma?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
@@ -23,6 +25,17 @@ mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useU
         console.log(error)
     })
 ;
+
+//Development database
+// mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => {
+//         console.log("MONGO CONNECTION OPEN!!!")
+//     })
+//     .catch(error => {
+//         console.log("OH NO MONGO CONNECTION ERROR!!!!")
+//         console.log(error)
+//     })
+// ;
 
 // static assets
 app.use(express.static('public'));

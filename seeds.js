@@ -2,8 +2,19 @@ const mongoose = require('mongoose');
 const { db } = require('./product');
 const Product = require('./product');
 
+//DEVELOPMENT DB:
+// mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => {
+//         console.log("MONGO CONNECTION OPEN!!!")
+//     })
+//     .catch(error => {
+//         console.log("OH NO MONGO CONNECTION ERROR!!!!")
+//         console.log(error)
+//     })
+// ;
 
-mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
+//PRODUCTION DB:
+mongoose.connect(`mongodb+srv://tonkers:Luma4moi@ecommercecluster.5bz57.mongodb.net/Luma?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
