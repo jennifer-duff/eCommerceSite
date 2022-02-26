@@ -48,9 +48,14 @@ h1{
     display: flex;
     justify-content: center;
     padding: 75px 0 20px 0;
-    font-size: 65pt;
+    font-family: var(--serifFonts);
+    font-weight: 800;
+    font-size: 75pt;
     margin: 100px 0 0 0;
     color: var(--brandDarkPrimary);
+    /* text-shadow: 3px 3px 0px var(--brandDarkPink); */
+    /* text-decoration: 6px solid underline var(--brandDarkPink);
+    text-underline-offset: 6px; */
 }
 
 a{

@@ -4,6 +4,8 @@
     <title>Luma | All Clothing</title>
     <%- include('partials/head')%>
     <link rel = 'stylesheet' href = '/Stylesheets/allClothing.css'>
+    <link rel = 'stylesheet' href = '/Stylesheets/productBox.css'>
+
 </head>
 <body>
     
@@ -27,7 +29,10 @@
            <% for (let product of allProducts) { %>
                 <a class = 'productBox <%= product.category%>' href = 'products/<%= product.name%>'>
                     <img class = 'productImgs' src =<%= product.imgs.img1 %> >
-                    <p class = 'productLabels'> <%= product.name %> </p>
+                    <div class= 'productLabels'>
+                        <p class = 'productNames'> <%= product.name %> </p>
+                        <p class = 'priceLabels'> $<%= product.price %> </p>
+                    </div>
                 </a>
            <% } %>
        </div>
