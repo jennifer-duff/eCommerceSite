@@ -16,7 +16,8 @@ const { all } = require('express/lib/application');
 // const methodOverride = require('method-override');
 
 //Production database
-mongoose.connect(`mongodb+srv://tonkers:Luma4moi@ecommercecluster.5bz57.mongodb.net/Luma?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })
+// mongodb+srv://tonkers:Luma4moi@ecommercecluster.5bz57.mongodb.net/Luma?retryWrites=true&w=majority
+mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
