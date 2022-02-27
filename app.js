@@ -13,6 +13,7 @@ app.use(cookieParser());
 const mongoose = require('mongoose');
 const Product = require('./product');
 const { all } = require('express/lib/application');
+const DB_URL = process.env.DB_URL;
 // const methodOverride = require('method-override');
 
 //Production database
