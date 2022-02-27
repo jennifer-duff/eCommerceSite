@@ -106,8 +106,8 @@ header nav a:hover{
 }
 
 #shoppingBagLink{
-    width: 30px;
-    height: 35px;
+    width: 28px;
+    /* height: 35px; */
     text-decoration: none;
     transition: color 0.2s ease-in-out;
     margin: 0;
@@ -121,20 +121,20 @@ header nav a:hover{
 }
 
 #shoppingBagLink img{
-    width: 28px;
+    width: 25px;
     position: relative;
-    bottom: 1px;
+    bottom: 0px;
     transition: transform 0.3s ease-out;
 }
 
 #numBagItems{
     padding: 0;
-    margin: 0 10px 0 0;
-    width: 28px;
+    margin: 0;
+    width: 25px;
     text-align: center;
     line-height: 100%;
     position: absolute;
-    top: 24px;
+    top: 23.5px;
     font-family: var(--sansSerifFonts);
     font-size: 9.5pt;
     font-weight: 300;
@@ -142,16 +142,49 @@ header nav a:hover{
     transition: content 0.2s ease-in-out;
 }
 
+@media (max-width: 1130px){
+    header{
+        padding: 15px 25px 15px 25px;
+    }
 
+    /* #mobileNav{
+        width: auto;
+    } */
+
+    #headerLogoLink{
+        width: 100px;
+    }
+
+    #searchBarLabel{
+        display: none;
+    }
+
+    #searchIcon{
+        display: inline-block;
+        width: 20px;
+    }
+
+    #searchContainer{
+        margin: 0 20px;
+    }
+    
+    #shoppingBagLink{
+        margin: 0;
+    }
+}
 
 @media (max-width: 950px){
+    #headerLogoLink{
+        width: 100px;
+    }
+    
     header nav{
         /* display: flex; */
         display: none;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
-        font-size: 12pt;
+        font-size: 10pt;
         line-height: 100%;
         text-align: left;
         width: auto;
@@ -161,8 +194,8 @@ header nav a:hover{
         border-radius: 10px;
         border-top-right-radius: 0px;
         position: fixed;
-        top: 67px;
-        right: 308px;
+        top: 57px;
+        right: 346px;
         box-shadow: 2px 2px 5px var(--shadowColor);
     }
 
@@ -170,8 +203,8 @@ header nav a:hover{
         display: none;
         position: fixed;
         width: 18px;
-        top: 56px;
-        right: 308px;
+        top: 46px;
+        right: 346px;
     }
 
     #menuIcon{
@@ -196,7 +229,7 @@ header nav a:hover{
     }
 }
 
-@media (max-width: 525px){
+@media (max-width: 570px){
     #searchBar{
         display: none;
         /* position: fixed;
@@ -207,6 +240,10 @@ header nav a:hover{
         border-radius: 5px;
         border-top-right-radius: 0px;
         box-shadow: 2px 2px 5px var(--shadowColor); */
+    }
+
+    #searchGoArrow{
+        display: none;
     }
 
     #mobileSearchBar{
@@ -220,8 +257,8 @@ header nav a:hover{
         background-color: var(--brandLightPink);
 
         position: fixed;
-        top: 65px;
-        right: 72px;
+        top: 55px;
+        right: 73px;
         width: 200px;
         border: 1px solid var(--shadowColor);
         border-radius: 5px;
@@ -239,14 +276,12 @@ header nav a:hover{
         -webkit-text-fill-color: black;
         outline: 1.75px solid var(--brandPrimary);
     }
-    
-
 
     #searchArrow{
         display: none;
         position: fixed;
         width: 18px;
-        top: 54px;
+        top: 45px;
     }
 
     #searchContainer{
@@ -258,14 +293,28 @@ header nav a:hover{
     }
 
     header nav{
-        top: 67px;
-        right: 113px;
+        top: 56px;
+        right: 116px;
+        font-size: 10pt;
     }
 
     #mobileNavArrow{
         position: fixed;
         width: 18px;
-        top: 56px;
-        right: 113px;
+        top: 45px;
+        right: 116px;
+    }
+}
+
+@media (max-width: 400px){
+
+    header{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 23px 15px 15px;
+    }
+
+    #headerLogoLink{
+       width: 100px; 
     }
 }

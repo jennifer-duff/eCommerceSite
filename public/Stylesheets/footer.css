@@ -125,6 +125,21 @@ footer nav a:hover{
     }
 }
 
+@media (max-width: 875px){
+    #footerLogo{
+        width: 125px;
+    }
+
+    #footerNav{
+        font-size: 10pt;
+    }
+
+    #emailP{
+        font-size: 9.5pt; 
+        margin-bottom: 3px;
+    }
+}
+
 @media (max-width: 750px){
     footer{
         height: 200px;
@@ -137,16 +152,29 @@ footer nav a:hover{
         margin: 0;
     }
 
+    #emailP{
+        margin-bottom: 7px;
+    }
+
     #emailSignUpDiv{
         position: absolute;
         bottom: 63px;
         min-width: 100%;
     }
 
-    #arrowImg{
+    #inputDiv{
+        width: 100%;
+    }
+
+    #emailInput{
+        width: 100%;
+    }
+
+    #submitEmailBtn{
         position: absolute;
         right: 0px;
         bottom: 25px;
+        margin: 0;
     }
 }
 
@@ -177,21 +205,29 @@ footer nav a:hover{
     #emailSignUpDiv{
         position: static;
         margin: 0;
+        width: 100%;
     }
 
-    #inputDiv{
+    #submitEmailBtn{
+        position: absolute;
+        right: 30px;
+        bottom: 210px;
+        margin: 0;
+    }
+
+    /* #inputDiv{
         width: calc(100% + 20px);
     }
 
     #emailInput{
         width: calc(100% + 20px);
-    }
+    } */
 
-    #arrowImg{
+    /* #arrowImg{
         position: relative;
         right: 20px;
         bottom: 3px;
-    }
+    } */
 
     #navLinks{
         display: flex;
@@ -207,4 +243,34 @@ footer nav a:hover{
         margin-top: 17px;
     }
 
+}
+
+@media (max-width: 349px){
+    #submitEmailBtn{
+        background-color: none;
+        position: absolute;
+        right: 30px;
+        bottom: 195px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 349px){
+    #submitEmailBtn{
+        background-color: none;
+        position: absolute;
+        right: 30px;
+        bottom: 195px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 251px){
+    #submitEmailBtn{
+        background-color: none;
+        position: absolute;
+        right: 30px;
+        bottom: 180px;
+        margin: 0;
+    }
 }

@@ -3,9 +3,11 @@ main{
     padding: 0 0 100px 0;
 }
 
+
 #splashbox{
     height: 80vh;
     background-image: url('/Assets/productImgs/bowtieBlouse/bowtieBlouse1.jpg');
+    background-position: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -38,8 +40,12 @@ h1{
     margin: 0 0 20px 0;
     padding: 0;
     color: var(--brandMediumPink);
-    font-size: 65pt;
+    font-size: 60pt;
     transition: transform 0.3s ease-in-out
+}
+
+#mobileMeet{
+    display: none;
 }
 
 #caption{
@@ -61,28 +67,36 @@ h1{
     margin: 50px 13vw;
 }
 
-#trendingHeader{
-    box-sizing: border-box;
-    font-size: 45pt;
-    /* font-family: var(--sansSerifFonts); */
-    font-weight: 600;
-    letter-spacing: 1.75px;
-    margin-bottom: 30px;
-    width: calc(300px*3 + 50px*2);
-    background-color: var(--brandMediumPink);
-    padding: 20px 20px 10px 20px;
-    border-radius: 10px;
-    color: var(--brandDarkPrimary);
-}
+
 
 #trendingGrid{
     display: grid;
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 100px 300px 300px;
     grid-template-columns: 300px 300px 300px;
     grid-gap: 50px;
     grid-template-areas: 
+        'e e e'
         'a b c'
         'a d d';
+    margin: 0;
+}
+
+#trendingHeader{
+    grid-area: e;
+    box-sizing: border-box;
+    font-size: 45pt;
+    font-weight: 800;
+    letter-spacing: 1.75px;
+    /* margin-bottom: 30px; */
+    /* width: calc(300px*3 + 50px*2); */
+    width: 100%;
+    height: 100px;
+    background-color: var(--brandMediumPink);
+    padding: 10px 25px 0 25px;
+    border-radius: 10px;
+    color: var(--brandDarkPrimary);
+    display: flex;
+    align-items: center;
     margin: 0;
 }
 
@@ -108,24 +122,14 @@ h1{
     grid-area: a;
     background-color: none;
     background-image: url( '/Assets/productImgs/bluePeacoat/bluePeacoat1.jpg');
-    width: 300px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     background-position: top -140px left -175px;
 
 }
 
-#heelsDiv{
-    grid-area: d;
-    background-color: none;
-    background-image: url( '/Assets/productImgs/heeledBooties/heeledBooties2.jpg');
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: top -400px left 0px;
-}
-
-#graphicTdiv{
+#blackPumpsDiv{
     grid-area: b;
     background-color: none;
     background-image: url( '/Assets/productImgs/blackPumps/blackPumps1.jpg');
@@ -135,7 +139,7 @@ h1{
     background-position: top -50px left 0px;
 }
 
-#oversizedBlazerDiv{
+#laceCamiDiv{
     grid-area: c;
     background-color: none;
     background-image: url( '/Assets/productImgs/laceCami/laceCami3.jpg');
@@ -145,6 +149,15 @@ h1{
     background-position: top -80px;
 }
 
+#bootiesDiv{
+    grid-area: d;
+    background-color: none;
+    background-image: url( '/Assets/productImgs/heeledBooties/heeledBooties2.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top -400px left 0px;
+}
 
 .caption{
     box-sizing: border-box;
@@ -165,5 +178,217 @@ h1{
 .trendingDiv:hover .caption{
     color: var(--white);
     background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+/* @media (max-width: 1280) {
+   
+} */
+
+
+@media (max-width: 1110px) {
+    main{
+        padding-bottom: 25px;
+    }
+
+    #splashbox{
+        background-position: center;
+    }
+    
+    h1{
+        font-size: 50pt;
+    }
+
+    #caption{
+        font-size: 14pt;
+    }
+
+    
+    #trendingGrid{
+        grid-template-rows: 75px 200px 200px;
+        grid-template-columns: 200px 200px 200px;
+        grid-gap: 25px;
+    }
+
+    #trendingHeader{
+        font-size: 35pt;
+        height: 75px;
+        padding: 10px 20px 0 20px;
+    }
+
+    .trendingDiv{
+        width: 200px;
+        height: 200px;
+    }
+
+    .caption{
+        font-size: 33pt;
+    }
+
+    #bootiesDiv{
+        background-position: top -260px left 0px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #splashbox{
+        background-size: cover;
+        background-position: 0 25%;
+    }
+
+    #textBox{
+        padding: 35px;
+    }
+
+    h1{
+        font-size: 7.15vw;
+        margin-bottom: 10px;
+    }
+
+    #caption{
+        font-size: 13pt;
+    }
+}
+
+@media (max-width: 760px) {
+    #trendingGrid{
+        grid-template-rows: 75px 200px 200px;
+        grid-template-columns: 1.5fr 1.5fr;
+        grid-gap: 25px;
+        grid-template-areas: 
+        'e e'
+        'b c'
+        'd d';
+    }
+
+    #trendingHeader{
+        font-size: 6vw;
+        letter-spacing: 0px;
+    }
+
+    .caption{
+        font-size: 6.25vw
+    }
+
+    #bluePeacoatDiv{
+        display: none;
+    }
+
+    #blackPumpsDiv{
+        background-position: top -90px left 0px;
+    }
+
+    #laceCamiDiv{
+        background-size: cover;
+        background-position: top -100px left 0px;
+    }
+
+    #bootiesDiv{
+        background-position: top -325px left 0px;
+    }
+}
+
+@media (max-width: 650px) {
+    #trendingGrid{
+        grid-template-rows: 50px 250px 250px;
+        grid-template-columns: 1.5fr 1.5fr;
+        grid-gap: 25px;
+        grid-template-areas: 
+        'e e'
+        'b c'
+        'd d';
+    }
+
+    #trendingHeader{
+        height: 50px;
+        font-size: 6vw;
+    }
+
+    .caption{
+        font-size: 10vw
+    }
+
+    #blackPumpsDiv{
+        background-size: cover no-repeat;
+        background-position: top 40% left 0px;
+        /* background-position: top -25px left 0px; */
+    }
+
+    #laceCamiDiv{
+        background-size: cover no-repeat;
+        background-position: top 0px left 0px;
+    }
+
+    #bootiesDiv{
+        background-size: cover no-repeat;
+        background-position: top 70% left 0px;
+    }
+}
+
+@media (max-width: 465px) {
+
+    #textBox{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    h1{
+        font-size: 20vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #caption{
+        font-size: 4.5vw;
+    }
+
+    #mobileMeet{
+        display: block;
+        font-weight: 500;
+        font-size: 8vw;
+        width: 100%;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        font-style: oblique;
+    }
+        
+    #normalMeet{
+        display: none;
+    }
+}
+
+@media (max-width: 413px) {
+
+    #splashbox{
+        background-size: cover;
+        background-position: center;
+    }
+
+    #trendingGrid{
+        grid-template-rows: 120px 200px 200px 200px;
+        grid-template-columns: 1.5fr;
+        grid-gap: 25px;
+        grid-template-areas: 
+        'e'
+        'b'
+        'c'
+        'd';
+    }
+
+    #trendingHeader{
+        height: 100%;
+        font-size: 10vw;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .caption{
+        font-size: 12vw;
+    }
+
+    #laceCamiDiv{
+        background-size: cover no-repeat;
+        background-position: top 90% left 0px;
+    }
 
 }

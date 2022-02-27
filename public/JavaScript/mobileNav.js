@@ -39,16 +39,21 @@ window.addEventListener('click', (event) =>{
 
 
 window.addEventListener('click', (event) =>{
-    if((windowWidth <= 525) && (event.target === searchIcon || event.target === searchContainer)){
+    if((windowWidth <= 570) && (event.target === searchIcon || event.target === searchContainer || event.target === mobileSearchBar)){
         console.log('search icon clicked')
         mobileSearchBar.style.display = 'inline-block';
         searchArrow.style.display = 'inline-block';
     }
-    else if((windowWidth <= 525) && (!event.target === searchIcon || !event.target === searchContainer)){
+    else{
         console.log('clicked elsewhere')
         mobileSearchBar.style.display = 'none';
         searchArrow.style.display = 'none';
     }
+    // else if((windowWidth <= 570) && (!event.target === searchIcon || !event.target === searchContainer)){
+    //     console.log('clicked elsewhere')
+    //     mobileSearchBar.style.display = 'none';
+    //     searchArrow.style.display = 'none';
+    // }
 })
 
 

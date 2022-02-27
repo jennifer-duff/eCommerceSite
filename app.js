@@ -13,10 +13,10 @@ app.use(cookieParser());
 const mongoose = require('mongoose');
 const Product = require('./product');
 const { all } = require('express/lib/application');
-const DB_URL = process.env.DB_URL;
+const DB_URL = process.env.DB_URL || `mongodb://localhost:27017/Luma`;
 // const methodOverride = require('method-override');
 
-//Production database
+// Database connection
 // mongodb+srv://tonkers:Luma4moi@ecommercecluster.5bz57.mongodb.net/Luma?retryWrites=true&w=majority
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -28,16 +28,6 @@ mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     })
 ;
 
-//Development database
-// mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => {
-//         console.log("MONGO CONNECTION OPEN!!!")
-//     })
-//     .catch(error => {
-//         console.log("OH NO MONGO CONNECTION ERROR!!!!")
-//         console.log(error)
-//     })
-// ;
 
 // static assets
 app.use(express.static('public'));
@@ -61,7 +51,6 @@ app.get('/',  (req, res) => {
 app.get('/shoppingBag', async (req, res) => {
     let uberCookie = req.cookies;
     let i = 1;
-    // let bagItems = {};
     let bagItems = [];
 
     for (let key of Object.keys(uberCookie)){
@@ -86,7 +75,6 @@ app.get('/shoppingBag', async (req, res) => {
             qty: itemQty
         };
 
-        // bagItems[`item${i}`] = tempProduct;
         bagItems.push(tempProduct);
         i++
     }
@@ -143,7 +131,7 @@ app.get('/products/:product', async (req, res) => {
     else{
         pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
     }
-    console.log(product.name);
+    // console.log(product.name);
     res.render('productPage', {product, pageTitle});
 })
 
@@ -167,8 +155,6 @@ app.get('/search/q=:query', async (req, res) => {
     allResults = await Product.find({
         $or: [{name: regEx}, {keywords: regEx}]
     });
-
-    console.log(allResults);
-
+    // console.log(allResults);
     res.render('searchResults', {query, allResults});
 })

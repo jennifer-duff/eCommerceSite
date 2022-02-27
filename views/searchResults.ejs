@@ -12,6 +12,12 @@
     <%- include('partials/header')%>
 
     <main>
+        <p id = 'breadcrumbs'>
+            <a href = '/allClothing'>All Clothing</a>
+            &nbsp;>&nbsp;
+            <span id = 'currLocation'>Search Results</span>
+        </p>
+
         <h1>Results for:&nbsp;<span id = 'query'><%=query%></span></h1>
         
         <div id = 'resultsBox'>

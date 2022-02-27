@@ -74,8 +74,8 @@
 h1{
     display: flex;
     justify-content: center;
-    padding: 75px 0 20px 0;
-    font-size: 65pt;
+    padding: 75px 0 40px 0;
+    /* font-size: 65pt; */
     margin: 100px 0 0 0;
 }
 
@@ -140,13 +140,13 @@ h1{
 
 #priceLabel{
     box-sizing: border-box;
-    width: 100px;
+    width: auto;
     height: auto;
     font-family: var(--sansSerifFonts);
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: 300;
     margin: 0 0 -20px 0;
-    padding: 7px 17px 9px 15px;
+    padding: 7px 15px 9px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: var(--gray);
@@ -154,7 +154,9 @@ h1{
     align-self: flex-end;
     text-align: center;
     margin-right: 50px;
+    letter-spacing: 3px;
 }
+
 #errorBoxBox{
     width: calc(100% - 100px);
     margin: 10px 0 0 0;
