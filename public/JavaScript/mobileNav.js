@@ -11,7 +11,7 @@ const mobileSearchBar = document.querySelector('#mobileSearchBar');
 const searchContainer = document.querySelector('#searchContainer');
 // const searchBarLabel = document.querySelector('#searchBarLabel');
 let windowWidth = window.innerWidth;
-console.log(windowWidth);
+// console.log(windowWidth);
 
 window.addEventListener('resize', () => {
     windowWidth = window.innerWidth;
@@ -40,12 +40,12 @@ window.addEventListener('click', (event) =>{
 
 window.addEventListener('click', (event) =>{
     if((windowWidth <= 570) && (event.target === searchIcon || event.target === searchContainer || event.target === mobileSearchBar)){
-        console.log('search icon clicked')
+        // console.log('search icon clicked')
         mobileSearchBar.style.display = 'inline-block';
         searchArrow.style.display = 'inline-block';
     }
     else{
-        console.log('clicked elsewhere')
+        // console.log('clicked elsewhere')
         mobileSearchBar.style.display = 'none';
         searchArrow.style.display = 'none';
     }

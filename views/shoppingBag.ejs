@@ -15,7 +15,7 @@
 
             <% let totalSum = 0;%>
             <% for (let i = 0; i < bagItems.length; i++){ %>
-            <div class = 'bagProductTile' data-itemname = '<%=bagItems[i].name%>' data-itemsize = '<%=bagItems[i].size%>' data-itemqty = '<%=bagItems[i].qty%>'>
+            <div class = 'bagProductTile' data-itemname = '<%=bagItems[i].name%>' data-itemsize = '<%=bagItems[i].size%>' data-itemqty = '<%=bagItems[i].qty%>' data-baseprice = '<%=bagItems[i].price%>'>
                 <img class = 'productImg' src = <%= bagItems[i].imgs.img1 %>>
                 
                 <h2 class = 'productTitle'><a href = '/products/<%=bagItems[i].name%>'><%= bagItems[i].name %></a></h2>
@@ -39,7 +39,7 @@
                 
                 <div class = 'priceAndTrash'>
                     <p class = 'price' data-baseprice = <%=bagItems[i].price%> >$<span class = 'priceLabel'><%=bagItems[i].price * bagItems[i].qty%></span></p>
-                    <img src = 'Assets/trashcanIcon.svg' class = 'trashcanIcon'>
+                    <img src = 'Assets/icons/trashcanIcon.svg' class = 'trashcanIcon'>
                 </div>
             </div>
         <% } %>

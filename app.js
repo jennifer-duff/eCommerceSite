@@ -66,6 +66,7 @@ app.get('/shoppingBag', async (req, res) => {
         let productPrice = productInfo.price;
         let itemSize = key.substring(key.indexOf('_') + 1);
         let itemQty = uberCookie[key];
+        // console.log(`from app.js: itemQty = ${itemQty}`);
 
         let tempProduct = {
             name: cleanedItemName,

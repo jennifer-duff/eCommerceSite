@@ -19,7 +19,7 @@
         </p>
 
         <div id = 'popUp'>
-            <img id = 'bagArrow' src = '/Assets/roundedArrow_white.svg'>
+            <img id = 'bagArrow' src = '/Assets/icons/roundedArrow_white.svg'>
             <div id = 'thumbnailBox' style = "background-image: url('<%= product.imgs.img1 %>');"></div>
             <p id = 'popUpText'><span id = 'popUpProductName'><%= product.name %></span> <span id = 'wasWere'>was</span> added to your bag!</p>
         </div>
@@ -29,14 +29,14 @@
         <div id = 'productBox'>
 
             <div id = carouselBox>
-                <img class = 'scrollArrow' src = '/Assets/arrow.svg'>
+                <img class = 'scrollArrow' src = '/Assets/icons/mediumArrow_gray.svg'>
 
                 <div id = 'carousel'>
                     <img class = 'productImg' src = <%= product.imgs.img1 %>>
                     <img class = 'productImg' src = <%= product.imgs.img2 %>>
                     <img class = 'productImg' src = <%= product.imgs.img3 %>>
                 </div>
-                <img class = 'scrollArrow' src = '/Assets/arrow.svg'>
+                <img class = 'scrollArrow' src = '/Assets/icons/mediumArrow_gray.svg'>
             </div>
            
             <p id = 'priceLabel'>$<span id = 'price'><%= product.price %></span></p>

@@ -30,7 +30,7 @@ function qtyUpdateListener(){
         itemName = itemName.replace(regEx,'');
         let itemSize = sizeSpans[i].innerText;
         let cookieName = `${itemName}_${itemSize}`;
-        console.log(cookieName);
+        // console.log(cookieName);
         document.cookie = `${cookieName}=${itmQty}; path=/`;
     }
     totalSum = totalSum.toFixed(2);
@@ -39,9 +39,8 @@ function qtyUpdateListener(){
 }
 
 for (let i = 0; i < qtySelectors.length; i++){
-    qtySelectors[i].addEventListener('input', qtyUpdateListener);
+    qtySelectors[i].addEventListener('change', qtyUpdateListener);
 }
-
 window.addEventListener('load', qtyUpdateListener());
 
 
@@ -66,11 +65,12 @@ function checkForBagItems(){
 }
 
 window.addEventListener('load', checkForBagItems);
+console.log(decodeURIComponent(document.cookie));
 
 
 
 
-// --------------- handle deletion of cart items ---------------
+// --------------- handle deletion of bag items ---------------
 let trashCans = document.querySelectorAll('.trashcanIcon');
 let checkOutBox = document.querySelector('#checkOutBox');
 
@@ -79,7 +79,7 @@ function deleteBagItem(event){
     let target = event.target;
     let parentDiv = target.closest('.bagProductTile');
 
-    // get the item name to be deleted and stip whitespace
+    // get the item name to be deleted and strip whitespace
     let itemName = parentDiv.dataset.itemname;
     itemName = itemName.replace(regEx,'');   
 
@@ -94,26 +94,30 @@ function deleteBagItem(event){
     let itemQty = parseInt(parentDiv.dataset.itemqty);
     let newTotalItems = currTotalItems - itemQty;
 
-    if (numBagItems > 0){
+    if (newTotalItems > 0){
         numBagItems.innerText = `${newTotalItems}`;
     }
     else{
         numBagItems.innerText = ``;
     }
-    
+
+    // get the item baseprice + qty, then decrement/update Total Price
+    let baseprice = parentDiv.dataset.baseprice;
+    let itmQty = parentDiv.dataset.itemqty;
+    let cost = baseprice * itmQty;
+    let totalSum = parseInt(totalSumField.innerText);
+    totalSum = totalSum - cost;
+    totalSumField.innerText = totalSum.toFixed(2);
 
     // set the cookie to expire in the past (aka, delete the cookie)
     document.cookie = `${cookieName}=0; path=/; expires = 01 Jan 1970 00:00:00 UTC`;
+    // console.log(decodeURIComponent(document.cookie));
+
 
     // hide the div with the deleted item's data
     parentDiv.style.display = 'none';
 
     // if there's no more items in the bag, hide the checkOutBox
-    // let uberCookie = decodeURIComponent(document.cookie);
-    // let allCookies = uberCookie.split(';');
-    // if (allCookies[0] === ''){
-    //     checkOutBox.style.display = 'none';
-    // }
     checkForBagItems();
 }
 

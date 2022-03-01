@@ -30,7 +30,7 @@
 #popUp{
     position: fixed;
     top: 40px;
-    right: 0;
+    right: 40px;
     background: var(--white);
     padding: 20px;
     box-shadow: 5px 5px 10px var(--brandDarkPink);
@@ -47,7 +47,7 @@
     width: 20px;
     position: fixed;
     top: 47px;
-    right: 25px;
+    right: 45px;
     /* background-color: var(--brandPrimary); */
 }
 
