@@ -64,7 +64,7 @@ footer nav a:hover{
 #inputDiv{
     display: flex;
     flex-wrap: nowrap;
-    width: calc(100% + 40px);
+    width: calc(100% + 60px);
 }
 
 #emailInput{
@@ -98,15 +98,15 @@ footer nav a:hover{
 #submitEmailBtn{
     appearance: none;
     border: none;
-    background-color: var(--brandDarkPrimary);
+    background-color: none;
     cursor: pointer;
+    position: relative;
+    right: 20px;
+    bottom: 2px;
 }
 
 #arrowImg{
     width: 20px;
-    position: relative;
-    /* right: 20px; */
-    bottom: 2px;
 }
 
 #whoops{
@@ -134,10 +134,26 @@ footer nav a:hover{
         font-size: 10pt;
     }
 
+    #inputDiv{
+        width: 100%;
+    }
+
     #emailP{
         font-size: 9.5pt; 
         margin-bottom: 3px;
     }
+
+    #emailInput{
+        width: 100%;
+    }
+
+    #submitEmailBtn{
+        position: relative;
+        right: 20px;
+        bottom: 0px;
+        margin: 0;
+    }
+    
 }
 
 @media (max-width: 750px){
@@ -180,7 +196,7 @@ footer nav a:hover{
 
 @media (max-width: 415px){
     footer{
-        height: 300px;
+        height: 250px;
         position: absolute;
     }
     
@@ -211,23 +227,9 @@ footer nav a:hover{
     #submitEmailBtn{
         position: absolute;
         right: 30px;
-        bottom: 210px;
+        bottom: 165px;
         margin: 0;
     }
-
-    /* #inputDiv{
-        width: calc(100% + 20px);
-    }
-
-    #emailInput{
-        width: calc(100% + 20px);
-    } */
-
-    /* #arrowImg{
-        position: relative;
-        right: 20px;
-        bottom: 3px;
-    } */
 
     #navLinks{
         display: flex;
@@ -250,17 +252,7 @@ footer nav a:hover{
         background-color: none;
         position: absolute;
         right: 30px;
-        bottom: 195px;
-        margin: 0;
-    }
-}
-
-@media (max-width: 349px){
-    #submitEmailBtn{
-        background-color: none;
-        position: absolute;
-        right: 30px;
-        bottom: 195px;
+        bottom: 145px;
         margin: 0;
     }
 }
@@ -270,7 +262,7 @@ footer nav a:hover{
         background-color: none;
         position: absolute;
         right: 30px;
-        bottom: 180px;
+        bottom: 127px;
         margin: 0;
     }
 }

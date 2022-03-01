@@ -143,8 +143,8 @@ option{
 }
 
 .price{
+    margin: 0 0px 0 13px;
     line-height: 100%;
-    margin: 0 13px 0 0;
     font-family: var(--sansSerifFonts);
     font-size: 16pt;
     font-weight: 500;
@@ -154,7 +154,7 @@ option{
 
 .trashcanIcon{
     position: relative;
-    bottom: 2px;
+    bottom: 1px;
     width: 17px;
     cursor: pointer;
 }
