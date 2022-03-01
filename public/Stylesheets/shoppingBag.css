@@ -44,7 +44,6 @@ h1{
     box-sizing: border-box;
     height: 210px;
     background-color: var(--brandLightPink);
-    border-radius: 30px;
     padding: 30px;
     margin: 0 0 40px 0;
     display: grid;
@@ -59,6 +58,7 @@ h1{
 
 .bagProductTile, #checkOutBox{
     border: 1px solid var(--shadowColor);
+    border-radius: 20px;
     box-shadow: var(--boxShadow);
     width: 750px;
 }
@@ -93,10 +93,6 @@ h1{
     display: flex;
     align-items: flex-start;
 }
-
-/* .info *{
-    margin-right: 20px;
-} */
 
 
 .infoLabel{
@@ -150,8 +146,10 @@ option{
     line-height: 100%;
     margin: 0 13px 0 0;
     font-family: var(--sansSerifFonts);
-    font-size: 20pt;
+    font-size: 16pt;
     font-weight: 500;
+    letter-spacing: 3px;
+    color: gray;
 }
 
 .trashcanIcon{
@@ -178,7 +176,7 @@ option{
 #totalParagraph{
     box-sizing: border-box;
     font-family: var(--sansSerifFonts);
-    font-size: 23pt;
+    font-size: 20pt;
     font-weight: 500;
     line-height: 100%;
     margin: 0;
@@ -194,6 +192,7 @@ option{
 
 #totalSum, #dollarSign{
     font-weight: 600;
+    letter-spacing: 3px;
 }
 
 #checkOutBtn{
