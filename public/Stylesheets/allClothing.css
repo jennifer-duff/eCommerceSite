@@ -8,11 +8,10 @@ main{
 }
 
 h1{
-    margin-top: 100px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     padding: 100px 0 15px 0;
-    font-size: 65pt;
+    font-size: 65pt; */
     margin: 0 0 0 0;
 }
 
@@ -30,7 +29,7 @@ h1{
     margin-right: 5px;
     color: black;
     font-weight: 400;
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
 }
 
 #categoryFilter{
@@ -65,74 +64,44 @@ h1{
     border-color: var(--brandPrimary);
 }
 
-#allProductsBox{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* display: grid;
-    grid-auto-flow: row dense;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 50px;
-    width: calc(350px * 4 + 50px * 4); */
-}
-/* 
-#allProductsBox::after{
-    content: '';
-    flex: auto;
-} */
-
-
-/* .productBox{
-    width: 350px;
-    display: inline-block;
-    margin: 25px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-decoration: none;
-    border-radius: 10px;;
-    border: 0.5px solid var(--shadowColor);
+@media(max-width: 1100px){
+    h1{
+        padding-top: 75px;
+    }
+   
+    #filterBox{
+        margin-bottom: 15px;
+    }
 }
 
-.productBox:hover{
-    transform: scale(1.1);
-    box-shadow: var(--boxShadow);
+
+@media(max-width: 515px){
+    #filterLabel{
+        font-size: 10pt;
+    }
+    
+    #categoryFilter{
+        font-size: 9pt;
+    }
 }
 
-.productImgs{
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+@media(max-width: 400px){
+    h1{
+        padding: 50px 0 10px 0;
+    }
+    
+    #filterBox{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    #filterLabel{
+        font-size: 10pt;
+        margin-bottom: 5px;
+    }
+    
+    #categoryFilter{
+        font-size: 9pt;
+    }
 }
-
-.productLabels{
-    font-family:var(--sansSerifFonts);
-    border-radius: 0 0 10px 10px;
-    padding: 20px 15px;
-    margin: -5px 0 0 0;
-    border-top: 1px solid var(--shadowColor);
-    background-color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.productNames{
-    font-size: 14pt;
-    font-weight: 300;
-    line-height: 100%;
-    margin: 0;
-    color: black;
-}
-
-.priceLabels{
-    line-height: 100%;
-    margin: 0;
-    font-size: 10pt;
-    font-weight: 200;
-    color: gray;
-    letter-spacing: 2px;
-} */

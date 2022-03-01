@@ -19,7 +19,7 @@
 
         <h1><%= pageTitle %></h1>
 
-        <div id = 'filteredBox'>
+        <div id = 'allProductsBox'>
             <% for (let product of filteredProducts) { %>
                 <a class = 'productBox <%= product.category%>' href = '/products/<%= product.name%>'>
                     <img class = 'productImgs' src =<%= product.imgs.img1 %> >
