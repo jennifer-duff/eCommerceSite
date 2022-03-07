@@ -13,8 +13,12 @@ const Product = require('./product');
 //     })
 // ;
 
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(process.env.PROD_DB_CONNECTION);
+
 //PRODUCTION DB:
-mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.PROD_DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
@@ -145,15 +149,15 @@ const allProducts = [
     },
 ];
 
-Product.remove({}, async (res) => {
-    console.log(res)
-});
+// Product.remove({}, async (res) => {
+//     console.log(res)
+// });
 
-Product.insertMany(allProducts)
-    .then(res => {
-        console.log(res)
-    })
-    .catch(e => {
-        console.log(e)
-    })
-;
+// Product.insertMany(allProducts)
+//     .then(res => {
+//         console.log(res)
+//     })
+//     .catch(e => {
+//         console.log(e)
+//     })
+// ;
