@@ -1,34 +1,3 @@
-h1{
-    padding-top: 30px;
-}
-
-#breadcrumbs{
-    width: 100%;
-    font-family: var(--sansSerifFonts);
-    font-size: 10pt;
-    text-align: left;
-    color: var(--gray);
-    font-weight: 300;
-    margin: 50px 0 15px 0;
-}
-
-#breadcrumbs a{
-    text-decoration: 2px underline solid var(--white);
-    color: var(--gray);
-    transition: text-decoration 0.2s ease-in-out;
-    padding: 1px 4px;
-    border-radius: 3px;
-}
-
-#currLocation{
-    font-weight: 500;
-    padding: 1px 4px;
-}
-
-#breadcrumbs a:hover{
-    text-decoration: underline solid var(--brandDarkPink) 2px;
-}
-
 #allProductsBox{
     display: flex;
     flex-wrap: wrap;
@@ -129,8 +98,7 @@ h1{
     }
 }
 
-@media(max-width: 626px){
-
+@media(max-width: 704px){
     #allProductsBox{
         flex-direction: column;
     }

@@ -14,9 +14,6 @@ const mongoose = require('mongoose');
 const Product = require('./product');
 const { all } = require('express/lib/application');
 const DB_URL = process.env.DB_URL || `mongodb://localhost:27017/Luma`;
-// const DB_URL = process.env.DB_URL;
-
-// const methodOverride = require('method-override');
 
 // Database connection
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -166,6 +163,7 @@ app.get('/contact_thankyou', async (req, res) => {
     res.render('contact_thankyou');
 })
 
+// TODO: Prevent Mongo injection attacks
 app.get('/search/q=:query', async (req, res) => {
     let query = req.params.query;
     query = query.trim();

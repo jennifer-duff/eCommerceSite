@@ -1,16 +1,15 @@
-#breadcrumbs{
+/* #breadcrumbs{
+    width: 100%;
     font-family: var(--sansSerifFonts);
     font-size: 10pt;
     text-align: left;
     color: var(--gray);
-    position: absolute;
-    top: 100px;
-    left: 100px;
     font-weight: 300;
+    margin: 50px 0 0px 0;
 }
 
 #breadcrumbs a{
-    text-decoration: underline solid var(--white) 2px;
+    text-decoration: 2px underline solid var(--white);
     color: var(--gray);
     transition: text-decoration 0.2s ease-in-out;
     padding: 1px 4px;
@@ -24,7 +23,7 @@
 
 #breadcrumbs a:hover{
     text-decoration: underline solid var(--brandDarkPink) 2px;
-}
+} */
 
 
 #popUp{
@@ -71,13 +70,12 @@
 }
 
 
-h1{
+/* h1{
     display: flex;
     justify-content: center;
     padding: 75px 0 40px 0;
-    /* font-size: 65pt; */
     margin: 100px 0 0 0;
-}
+} */
 
 #productBox{
     display: flex;
