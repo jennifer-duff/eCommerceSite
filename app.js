@@ -18,15 +18,15 @@ const DB_URL = process.env.DB_URL || `mongodb://localhost:27017/Luma`;
 
 // Database connection
 // mongodb+srv://tonkers:Luma4moi@ecommercecluster.5bz57.mongodb.net/Luma?retryWrites=true&w=majority
-mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("MONGO CONNECTION OPEN!!!")
-    })
-    .catch(error => {
-        console.log("OH NO MONGO CONNECTION ERROR!!!!")
-        console.log(error)
-    })
-;
+// mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => {
+//         console.log("MONGO CONNECTION OPEN!!!")
+//     })
+//     .catch(error => {
+//         console.log("OH NO MONGO CONNECTION ERROR!!!!")
+//         console.log(error)
+//     })
+// ;
 
 try{
     mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
