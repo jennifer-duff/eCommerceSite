@@ -59,6 +59,7 @@ h1{
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
+    line-height: 115%;
     /* text-shadow: 3px 3px 0px var(--brandDarkPink); */
     /* text-decoration: 6px solid underline var(--brandDarkPink);
     text-underline-offset: 6px; */
