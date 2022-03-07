@@ -28,6 +28,27 @@ mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     })
 ;
 
+try{
+    mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("MONGO CONNECTION OPEN!!!")
+    })
+    .catch(error => {
+        console.log("OH NO MONGO CONNECTION ERROR!!!!")
+        console.log(error)
+    });  
+}
+catch{
+    mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("MONGO CONNECTION OPEN!!!")
+    })
+    .catch(error => {
+        console.log("OH NO MONGO CONNECTION ERROR!!!!")
+        console.log(error)
+    });  
+}
+
 
 // static assets
 app.use(express.static('public'));

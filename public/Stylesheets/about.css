@@ -1,10 +1,5 @@
 main{
-    padding-left: 25%;
-    padding-right: 25%;
-}
-
-h1{
-    margin-top: 100px;
+    padding-top: 1px;
 }
 
 p{
@@ -24,11 +19,4 @@ p a{
 
 p a:hover{
     text-decoration: underline solid 2px var(--brandDarkPrimary);
-}
-
-@media (max-width: 1100px) {
-    main{
-        padding-left: 15%;
-        padding-right: 15%;
-    }
 }

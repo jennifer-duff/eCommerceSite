@@ -1,4 +1,4 @@
-main{
+/* main{
     padding-left: 100px;
     padding-right: 100px;
     display: flex;
@@ -9,15 +9,20 @@ main{
     box-sizing: border-box;
 }
 
+h1{
+    padding-top: 30px;
+}
+
 #breadcrumbs{
+    width: 100%;
     font-family: var(--sansSerifFonts);
     font-size: 10pt;
     text-align: left;
     color: var(--gray);
-    position: absolute;
-    top: 100px;
-    left: 100px;
+    position: relative;
+    left: 0px;
     font-weight: 300;
+    margin: 30px 0 30px 0;
 }
 
 #breadcrumbs a{
@@ -35,59 +40,4 @@ main{
 
 #breadcrumbs a:hover{
     text-decoration: underline solid var(--brandDarkPink) 2px;
-}
-
-h1{
-    display: flex;
-    justify-content: center;
-    /* padding: 100px 0 60px 0; */
-    font-size: 65pt;
-    margin: 0 0 0 0;
-}
-
-/* #filteredBox{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 0 auto;
-} */
-
-/* #filteredBox::after{
-    content: '';
-    flex: auto;
-} */
-
-
-/* .productBox{
-    width: 350px;
-    display: inline-block;
-    margin: 25px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-    text-decoration: none;
-}
-
-.productBox:hover{
-    transform: scale(1.1);
-}
-
-.productBox:hover .productImgs{
-    box-shadow: var(--boxShadow);
-}
-
-.productImgs{
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.productLabels{
-    font-family:var(--sansSerifFonts);
-    font-size: 16pt;
-    margin: 5px 0 0 0;
-    color: black;
 } */
