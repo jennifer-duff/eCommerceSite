@@ -28,17 +28,12 @@ const DB_URL = process.env.DB_URL || `mongodb://localhost:27017/Luma`;
 //     })
 // ;
 
-try{
-    mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("MONGO CONNECTION OPEN!!!")
-    })
-    .catch(error => {
-        console.log("OH NO MONGO CONNECTION ERROR!!!!")
-        console.log(error)
-    });  
-}
-catch{
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => {
+    console.log("MONGO CONNECTION OPEN!!!")
+})
+.catch(error => {
+    console.log('Whoops, trying localhost DB connection')
     mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
@@ -46,8 +41,8 @@ catch{
     .catch(error => {
         console.log("OH NO MONGO CONNECTION ERROR!!!!")
         console.log(error)
-    });  
-}
+    });
+});
 
 
 // static assets
