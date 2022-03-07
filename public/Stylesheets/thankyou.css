@@ -1,13 +1,6 @@
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 h1{
-    padding: 0;
-    margin: 100px 0 50px 0;
-    height: 65pt;
+    margin-bottom: 75px;
 }
 
 #thankyouNote{
@@ -27,6 +20,7 @@ h1{
 p{
     font-family: var(--sansSerifFonts);
     margin: 5px 0;
+    text-align: center;
 }
 
 p:first-of-type{
@@ -35,7 +29,6 @@ p:first-of-type{
 }
 
 p:last-of-type{
-    /* color: rgb(71, 71, 71); */
     font-size: 13pt;
     font-weight: 300;
 }
@@ -69,4 +62,41 @@ p:last-of-type{
     transform: rotate(270deg);
     height: 6px;
     margin: 0 5px 3px 0px;
+}
+
+@media(max-width: 700px){
+    h1{
+        margin-bottom: 4vw;
+    }
+
+    p:first-of-type{
+        font-size: 16pt;
+    }
+    
+    p:last-of-type{
+        font-size: 12pt;
+    }
+}
+
+@media(max-width: 530px){
+    /* main{
+        justify-content: space-between;
+    } */
+
+    h1{
+        margin-bottom: 15vw;
+    }
+
+    p:first-of-type{
+        font-size: 14pt;
+    }
+    
+    p:last-of-type{
+        font-size: 10pt;
+    }
+
+    #returnBtn{
+        font-size: 12pt;
+        width: 175px;
+    }
 }
