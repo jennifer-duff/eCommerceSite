@@ -1,43 +1,39 @@
 main{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-h1{
-    padding: 0;
-    font-size: 65pt;
-    margin: 100px 0 60px 0;
-    height: 65pt;
+    padding-bottom: 100px;
 }
 
 #noItemsMsg{
+    text-align: center;
     font-family: var(--sansSerifFonts);
     font-weight: 500;
     font-size: 22pt;
-    margin: 0 0 15px 0;
+    margin: 50px 0 30px 0;
     display: none;
+    line-height: 115%;
 }
 
 #takeALook{
     font-family: var(--sansSerifFonts);
     font-weight: 300;
-    font-size: 14pt;
+    font-size: 12pt;
     margin: 0;
     display: none;
+    text-align: center;
+    color: black;
+    /* background-color: var(--brandLightPink);
+    padding: 7px 14px;
+    border-radius: 5px; */
 }
 
 #takeALook a{
-    font-weight: 500;
-    text-decoration: underline 2px solid var(--white);;
-    color: var(--brandDarkPink);
+    font-weight: 400;
+    text-decoration: underline 2px solid var(--brandDarkPink);;
+    color: black;
     transition: text-decoration 0.3s ease-in-out;
 }
 
 #takeALook a:hover{
-    text-decoration: underline 2px solid var(--brandDarkPink);
+    text-decoration: underline 3px solid var(--brandDarkPink);
 }
 
 .bagProductTile{
@@ -53,8 +49,7 @@ h1{
         'pic price';
     grid-template-columns: 200px 1fr;
     grid-column-gap: 40px;
-    
-}
+    }
 
 .bagProductTile, #checkOutBox{
     border: 1px solid var(--shadowColor);
@@ -81,11 +76,13 @@ h1{
     font-family: var(--sansSerifFonts);
     font-weight: 300;
     font-size: 25pt;
+    color: black;
 }
 
 .productTitle a{
     color: black;
-    text-decoration: none;
+    text-decoration: 3px solid underline var(--brandDarkPink);
+    text-underline-offset: 2px;
 }
 
 .info{
@@ -154,7 +151,6 @@ option{
 
 .trashcanIcon{
     position: relative;
-    bottom: 1px;
     width: 17px;
     cursor: pointer;
 }
@@ -218,5 +214,120 @@ option{
 #checkOutBtn:hover{
     background-color: var(--brandPrimary);
     color: var(--brandLightPink);
-    /* border: 0.5px solid var(--brandPrimary); */
+}
+
+@media(max-width: 940px){
+    .bagProductTile, #checkOutBox{
+        width: 100%;
+    }
+
+    .bagProductTile{
+        grid-template-columns: 150px 1fr;  
+        grid-column-gap: 30px;
+    }
+
+    .productImg{
+        width: 150px;
+    }
+
+    .productTitle{
+        font-size: 3.5vw;
+    }
+}
+
+
+@media(max-width: 700px){
+    #noItemsMsg{
+        margin-top: 50px;
+        font-size: 18pt;
+    }
+
+    #takeALook{
+        font-size: 12pt;
+    }
+
+    .bagProductTile{
+        height: auto;
+        padding: 30px;
+        grid-template-areas:
+            'title title'
+            'pic info'
+            'pic price';
+        grid-template-columns: 150px 1fr;  
+        grid-column-gap: 30px;
+    }
+
+    .productTitle{
+        font-size: 4.5vw;
+        margin-top: -11px;
+    }
+
+    .info{
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .sizeGroup{
+        margin-bottom: 4.5px;
+    }
+
+    #totalParagraph{
+        font-size: 16pt;
+    }
+
+    #checkOutBtn{
+        min-width: auto;
+        width: auto;
+        padding: 15px 20px 16px 20px;
+    }
+}
+
+@media(max-width: 520px){
+    #noItemsMsg{
+        margin-top: 50px;
+        font-size: 15pt;
+    }
+
+    #takeALook{
+        font-size: 11pt;
+    }
+}
+
+@media(max-width: 520px){
+    .bagProductTile{
+        grid-template-areas:
+            'title'
+            'pic'
+            'info'
+            'price';
+        grid-template-columns: 1fr;  
+        grid-row-gap: 20px;
+    }
+
+    .productTitle{
+        margin-top: -9px;
+        margin-bottom: 0;
+    }
+
+    .productImg{
+        width: 100%;
+    }
+
+    .info{
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .infoLabel, .sizeSpan, select{
+        font-size: 11pt;
+    }
+
+    .trashcanIcon{
+        width: 13px;
+    }
+
+    .price{
+        font-size: 14pt;
+    }
 }

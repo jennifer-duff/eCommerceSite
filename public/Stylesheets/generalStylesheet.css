@@ -6,17 +6,19 @@
     --brandDarkPrimary: #313E2B;
     --brandPrimary: #505F43;
     /* --brandDarkPink: #E2B4A6; */
-    --brandDarkPink: #e1b1a3;
+    /* --brandDarkPink: #e1b1a3; */
+    --brandDarkPink: #D9A798;
     /* --brandMediumPink: #FCE7D9; */
     --brandMediumPink: #f7d8cb;
     /* --brandLightPink: #FFF5F0; */
     --brandLightPink: #FFF2ED;
 
-    --shadowColor: #b8a7aa;
-    --white: #FFFAF7;
+    /* --shadowColor: #b8a7aa; */
+    --shadowColor: #DECED0;
+    --white: #FFF9F5;
     --gray: #5c5b5b;
 
-    --boxShadow: 5px 5px 10px var(--shadowColor);
+    --boxShadow: 5px 5px 15px var(--shadowColor);
 }
 
 html{
@@ -83,7 +85,7 @@ a{
 @media(max-width: 700px){
     h1{
         font-size: 15vw;
-        margin-bottom: 1vw;
+        margin-bottom: 3vw;
     }
 }
 
