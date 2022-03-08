@@ -12,25 +12,25 @@
     <main>
         <%- include('partials/checkout')%>
 
-        <form action = '/checkout_shipping' id = 'checkoutForm'>
+        <form class = 'form' action = '/checkout_shipping' id = 'checkoutForm'>
             <h2> Your Info</h2>
             <div class = 'formDiv'>
-                <label for = 'firstName'>First Name: </label>
+                <label for = 'firstName'>First Name </label>
                 <input type = 'text' name = 'firstName' id = 'firstName' required>
             </div>
             
             <div class = 'formDiv'>
-                <label for = 'lastName'>Last Name: </label>
+                <label for = 'lastName'>Last Name </label>
                 <input type = 'text' name = 'lastName' id = 'lastName' required>
             </div>
             
             <div class = 'formDiv'>
-                <label for = 'email'>Email: </label>
+                <label for = 'email'>Email </label>
                 <input type = 'email' name = 'email' id = 'email' required>
             </div>
             
             <div class = 'formDiv'>
-                <label for = 'phone'>Phone Number: </label>
+                <label for = 'phone'>Phone Number </label>
                 <input type = 'tel' name = 'phone' id = 'phone' required>  
             </div>
 

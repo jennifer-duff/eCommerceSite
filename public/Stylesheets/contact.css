@@ -1,4 +1,4 @@
-#contactForm{
+/* #contactForm{
     font-family: var(--sansSerifFonts);
     padding: 40px;
     width: 400px;
@@ -64,7 +64,7 @@
 #contactForm textarea{
     margin-left: 2px;
     resize: vertical;
-}
+} */
 
 #submit{
     appearance: none;
@@ -82,7 +82,6 @@
     width: 150px;
     align-self: flex-end;
     transition: background-color 0.2s ease-in-out;
-    /* letter-spacing: 1.25px; */
 }
 
 #submit:hover{

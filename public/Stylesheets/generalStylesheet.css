@@ -69,6 +69,90 @@ a{
     cursor: pointer;
 }
 
+/* ------------- Form Styling ----------------- */
+
+.form{
+    box-sizing: border-box;
+    font-family: var(--sansSerifFonts);
+    padding: 40px;
+    width: 450px;
+    border-radius: 10px;
+    background-color: var(--white);
+    border: 1px solid var(--shadowColor);
+    box-shadow: var(--boxShadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.formDiv{
+    height: auto;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.formDiv:first-of-type{
+    margin-top: 0;
+}
+
+.formDiv:last-of-type{
+    margin-bottom: 0;
+    justify-content: flex-end;
+}
+
+.form input, .form textarea{
+    appearance: none;
+    border: 1px solid var(--shadowColor);
+    background-color: var(--white);
+    border-radius: 5px;
+    font-family: var(--sansSerifFonts);
+    font-weight: 300;
+    padding: 0 5px 2px 5px;
+    flex: 1 1 auto;
+}
+
+.form input:focus,
+.form input:-webkit-autofill,
+.form input:-webkit-autofill:hover, 
+.form input:-webkit-autofill:focus,
+.form textarea:focus,
+.form textarea:-webkit-autofill,
+.form textarea:-webkit-autofill:hover, 
+.form textarea:-webkit-autofill:focus{
+    box-shadow: 0 0 0px 1000px var(--white) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
+    color: black;
+    -webkit-text-fill-color: black;
+}
+
+.form textarea{
+    resize: vertical;
+}
+
+#submit{
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    font-family: var(--sansSerifFonts);
+    font-weight: 500;
+    font-size: 12pt;
+    text-align: center;
+    background-color: var(--brandDarkPink);
+    color: var(--white);
+    border-radius: 7px;
+    line-height: 100%;
+    padding: 13px 13px 14px 13px;
+    width: 150px;
+    align-self: flex-end;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#submit:hover{
+    background-color: var(--brandPrimary);
+    color: var(--brandLightPink);
+}
+
 
 @media(max-width: 1100px){
     main{
@@ -89,8 +173,43 @@ a{
     }
 }
 
+@media(max-width: 600px){
+    .form{
+        width: 100%;
+    }
+}
+
 @media(max-width: 500px){
     h1{
         margin-top: 50px;
+    }
+
+    .form label{
+        font-size: 10pt;
+    }
+
+    .form input{
+        font-size: 9pt;
+    }
+}
+
+@media(max-width: 400px){
+    .form{
+        padding: 30px;
+    }
+}
+
+@media(max-width: 300px){
+
+    .form{
+        padding: 20px;
+    }
+
+    .form h2{
+        margin-bottom: 30px;
+    }
+
+    .formDiv{
+        margin: 10px 0;
     }
 }
