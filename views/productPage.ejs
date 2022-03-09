@@ -41,20 +41,24 @@
                 <img class = 'scrollArrow' src = '/Assets/icons/mediumArrow_gray.svg'>
             </div>
            
-            <p id = 'priceLabel'>$<span id = 'price'><%= product.price %></span></p>
+            <div id = 'infoBox'>
+                <p id = 'priceLabel'>$<span id = 'price'><%= product.price %></span></p>
 
-            <div id = 'errorBoxBox'><p id = 'errorBox'>Please choose a size!</p></div>
-
-            <div id = 'sizeSelectionBox' class = 'selectionBox'>
-                <p id = 'sizeLabel'>Size: </p>
-                <div id = 'buttonBox'>
-                    <button id = 'XS' value='XS' class = 'sizeBtn' type = 'button'>XS</button>
-                    <button id = 'S' value = 'S' class = 'sizeBtn'  type = 'button'>S</button>
-                    <button id = 'M' value = 'M' class = 'sizeBtn'  type = 'button'>M</button>
-                    <button id = 'L' value = 'L' class = 'sizeBtn'  type = 'button'>L</button>
-                    <button id = 'XL' value = 'XL' class = 'sizeBtn'  type = 'button'>XL</button>
+                <div id = 'errorBoxBox'><p id = 'errorBox'>*Please choose a size!</p></div>
+    
+                <div id = 'sizeSelectionBox' class = 'selectionBox'>
+                    <p id = 'sizeLabel'>Size: </p>
+                    <div id = 'buttonBox'>
+                        <button id = 'XS' value='XS' class = 'sizeBtn' type = 'button'>XS</button>
+                        <button id = 'S' value = 'S' class = 'sizeBtn'  type = 'button'>S</button>
+                        <button id = 'M' value = 'M' class = 'sizeBtn'  type = 'button'>M</button>
+                        <button id = 'L' value = 'L' class = 'sizeBtn'  type = 'button'>L</button>
+                        <button id = 'XL' value = 'XL' class = 'sizeBtn'  type = 'button'>XL</button>
+                    </div>
                 </div>
-                
+                <button id = 'addToBag'  type = 'button'>Add to Bag</button>
+            </div>
+            
                 <!-- <label class = 'sizeLabels' for = 'XS'>XS</label>
                 <input type = 'radio' id = 'XS' value = 'XS' name = 'size' class = 'sizeBtn'>
                 
@@ -70,9 +74,7 @@
                 <label class = 'sizeLabels' for = 'XL'>XL</label>
                 <input type = 'radio' id = 'XL' value = 'XL' name = 'size' class = 'sizeBtn'> -->
                 
-            </div>
             
-            <button id = 'addToBag'  type = 'button'>Add to Bag</button>
 
         </div>
     </main>
