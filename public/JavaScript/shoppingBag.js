@@ -121,11 +121,11 @@ function deleteBagItem(event){
     // get the item baseprice + qty, then decrement/update Total Price
     let baseprice = parentDiv.dataset.baseprice;
     let cost = baseprice * itemQty;
-    console.log(`cost of deleted items = ${cost}`);
+    // console.log(`cost of deleted items = ${cost}`);
     let totalSum = parseFloat(totalSumField.innerText);
-    console.log(`totalSum BEFORE = ${totalSum}`);
+    // console.log(`totalSum BEFORE = ${totalSum}`);
     totalSum = totalSum - cost;
-    console.log(`totalSum AFTER  = ${totalSum}`);
+    // console.log(`totalSum AFTER  = ${totalSum}`);
     totalSumField.innerText = totalSum.toFixed(2);
 
     // set the cookie to expire in the past (aka, delete the cookie)
