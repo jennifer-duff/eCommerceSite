@@ -147,6 +147,8 @@ addToBag.addEventListener('click', async function() {
     numBagItems.innerText = totalItems;
 
     // run pop-up saying item was added to bag
+    popUp.style.display = 'flex';
+    await new Promise(resolve => setTimeout(resolve, 10));
     popUp.style.opacity = 1;
     popUp.style.top = '60px';
     switch(itemName){
@@ -161,6 +163,7 @@ addToBag.addEventListener('click', async function() {
     }
     await new Promise(resolve => setTimeout(resolve, 3250));
     popUp.style.opacity = 0;
-    // await new Promise(resolve => setTimeout(resolve, 1000));
     popUp.style.top = '40px';
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    popUp.style.display = 'none';
 })

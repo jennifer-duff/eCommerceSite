@@ -295,13 +295,13 @@ header nav a:hover{
 
     #searchInputDiv{
         display: none;
+        z-index: 10;
     }
 
     #searchGoArrow{
         top: 65px;
         z-index: 10;
     }
-
 
     #searchBar{
         display: inline-block;
@@ -320,19 +320,8 @@ header nav a:hover{
         border-radius: 5px;
         border-top-right-radius: 0px;
         box-shadow: 2px 2px 5px var(--shadowColor);
-        z-index: 5;
+        z-index: 10;
     }
-
-    /* #mobileSearchBar:focus,
-    #mobileSearchBar:-webkit-autofill,
-    #mobileSearchBar:-webkit-autofill:hover, 
-    #mobileSearchBar:-webkit-autofill:focus{
-        box-shadow: 0 0 0px 1000px var(--brandLightPink) inset;
-        -webkit-box-shadow: 0 0 0px 1000px var(--brandLightPink) inset;
-        color: black;
-        -webkit-text-fill-color: black;
-        outline: 1.75px solid var(--brandPrimary);
-    } */
 
     #searchArrow{
         display: inline-block;
