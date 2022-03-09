@@ -106,40 +106,45 @@ header nav a:hover{
 }
 
 #shoppingBagLink{
-    width: 28px;
-    /* height: 35px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
     margin: 0;
     padding: 0;
     background-color: none;
     color: var(--brandPrimary);
+    background-image: url('/Assets/icons/shoppingBag.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 6px;
 }
 
 #shoppingBagLink:hover img{
     transform: scale(1.1);
 }
 
-#shoppingBagLink img{
+/* #shoppingBagLink img{
     width: 25px;
     position: relative;
     bottom: 0px;
     transition: transform 0.3s ease-out;
-}
+} */
 
 #numBagItems{
     padding: 0;
     margin: 0;
-    width: 25px;
     text-align: center;
     line-height: 100%;
-    position: absolute;
-    top: 23.5px;
     font-family: var(--sansSerifFonts);
     font-size: 9.5pt;
     font-weight: 300;
     text-decoration: none;
     transition: content 0.2s ease-in-out;
+    margin-top: 5px;
 }
 
 @media (max-width: 1130px){
@@ -166,10 +171,6 @@ header nav a:hover{
 
     #searchContainer{
         margin: 0 20px;
-    }
-    
-    #shoppingBagLink{
-        margin: 0;
     }
 }
 
@@ -222,10 +223,6 @@ header nav a:hover{
 
     #searchContainer{
         margin: 0 30px;
-    }
-    
-    #shoppingBagLink{
-        margin: 0;
     }
 }
 
