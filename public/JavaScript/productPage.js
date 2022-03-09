@@ -50,34 +50,65 @@ rightArrow.addEventListener('click', scrollToNext);
 leftArrow.addEventListener('click', scrollToPrev);
 
 
+// ------------- SELECT SIZE -------------
+const sizeBtns = document.querySelectorAll('.sizeBtn');
+let itemSize = "";
+
+for (let i = 0; i < sizeBtns.length; i++){
+    sizeBtns[i].addEventListener('click', (event) => {
+        for (let i = 0; i < sizeBtns.length; i++){
+            if (event.target === sizeBtns[i]){
+                sizeBtns[i].style.backgroundColor = 'rgb(158, 157, 157)';
+                itemSize = sizeBtns[i].value;
+                console.log(itemSize + " WAS SELECTED");
+            }
+            else{
+                sizeBtns[i].style.backgroundColor = 'rgb(221, 221, 221)';
+            }
+        }
+    });
+} 
+
+
 // ------------- ADD TO BAG -------------
 const addToBag = document.querySelector('#addToBag');
 const numBagItems = document.querySelector('#numBagItems');
-const sizes = document.querySelectorAll('input[name="size"]');
+// const sizes = document.querySelectorAll('sizeBtn');
 const errorBox = document.querySelector('#errorBox');
 let itemName = document.querySelector('#productName').innerText;
 const popUp = document.querySelector('#popUp');
 const wasWere = document.querySelector('#wasWere');
+const popUpX = document.querySelector('#popUpX');
 
+// set the popup "X" to be clickable to close the window
+popUpX.addEventListener('click', () => {
+    popUp.style.opacity = 0;
+    popUp.style.top = '40px';
+})
 
 addToBag.addEventListener('click', async function() {
     let uberCookie = decodeURIComponent(document.cookie);
     let totalItems = 0;
     let updated = false;
-    let itemSize;
+    // let itemSize;
     let date = new Date();
     date.setDate(date.getDate() + 7);
 
     // find which size is selected 
-    for (let i = 0; i < sizes.length; i++){
-        if (sizes[i].checked){
-            itemSize = sizes[i].value;
-            errorBox.style.backgroundColor = 'var(--white)';
-       }
-   }
+//     for (let i = 0; i < sizeBtns.length; i++){
+//         if (sizeBtns[i].clicked){
+//             itemSize = sizeBtns[i].value;
+//             console.log(`itemSize = ${itemSize}`);
+//             errorBox.style.backgroundColor = 'var(--white)';
+//        }
+//    }
 
+    if(itemSize !== ""){
+        console.log(`itemSize = ${itemSize}`);
+        errorBox.style.backgroundColor = 'var(--white)';
+    }
     // if no size is selected, prompt the user to pick one
-    if (itemSize === undefined){
+    else{
         errorBox.style.backgroundColor = 'var(--brandDarkPink)';
         return;
     }
@@ -130,6 +161,6 @@ addToBag.addEventListener('click', async function() {
     }
     await new Promise(resolve => setTimeout(resolve, 3250));
     popUp.style.opacity = 0;
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // await new Promise(resolve => setTimeout(resolve, 1000));
     popUp.style.top = '40px';
 })

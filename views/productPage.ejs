@@ -21,6 +21,7 @@
 
         <div id = 'popUp'>
             <img id = 'bagArrow' src = '/Assets/icons/roundedArrow_white.svg'>
+            <img id = 'popUpX' src = '/Assets/icons/X_gray.svg'>
             <div id = 'thumbnailBox' style = "background-image: url('<%= product.imgs.img1 %>');"></div>
             <p id = 'popUpText'><span id = 'popUpProductName'><%= product.name %></span> <span id = 'wasWere'>was</span> added to your bag!</p>
         </div>
@@ -46,7 +47,15 @@
 
             <div id = 'sizeSelectionBox' class = 'selectionBox'>
                 <p id = 'sizeLabel'>Size: </p>
-                <label class = 'sizeLabels' for = 'XS'>XS</label>
+                <div id = 'buttonBox'>
+                    <button id = 'XS' value='XS' class = 'sizeBtn' type = 'button'>XS</button>
+                    <button id = 'S' value = 'S' class = 'sizeBtn'  type = 'button'>S</button>
+                    <button id = 'M' value = 'M' class = 'sizeBtn'  type = 'button'>M</button>
+                    <button id = 'L' value = 'L' class = 'sizeBtn'  type = 'button'>L</button>
+                    <button id = 'XL' value = 'XL' class = 'sizeBtn'  type = 'button'>XL</button>
+                </div>
+                
+                <!-- <label class = 'sizeLabels' for = 'XS'>XS</label>
                 <input type = 'radio' id = 'XS' value = 'XS' name = 'size' class = 'sizeBtn'>
                 
                 <label class = 'sizeLabels' for = 'S'>S</label>
@@ -59,11 +68,11 @@
                 <input type = 'radio' id = 'L' value = 'L' name = 'size' class = 'sizeBtn'>
                 
                 <label class = 'sizeLabels' for = 'XL'>XL</label>
-                <input type = 'radio' id = 'XL' value = 'XL' name = 'size' class = 'sizeBtn'>
+                <input type = 'radio' id = 'XL' value = 'XL' name = 'size' class = 'sizeBtn'> -->
                 
             </div>
             
-            <button id = 'addToBag'>Add to Bag</button>
+            <button id = 'addToBag'  type = 'button'>Add to Bag</button>
 
         </div>
     </main>
