@@ -2,34 +2,45 @@
     <a id = 'headerLogoLink' href = '/'>
         <img src = '/Assets/logos/lumaLogo_full.svg'>
     </a>
-    
-    <nav>
-        <a href = '/category/tops'>Tops</a>
-        <a href = '/category/pantsAndDresses'>Pants & Dresses</a>
-        <a href = '/category/outerwear'>Outerwear</a>
-        <a href = '/category/shoes'>Shoes</a>
-        <a href = '/allClothing'>All Clothing</a>
-    </nav>
 
-    <img id = 'mobileNavArrow' src = '/Assets/icons/roundedArrow_shadowColor.svg'> 
-    <div id = 'mobileNav'>
-        <img id = 'menuIcon' src = '/Assets/icons/menuIcon.svg'>
+        <nav id = 'desktopNavLinks'>
+            <a href = '/category/tops'>Tops</a>
+            <a href = '/category/pantsAndDresses'>Pants & Dresses</a>
+            <a href = '/category/outerwear'>Outerwear</a>
+            <a href = '/category/shoes'>Shoes</a>
+            <a href = '/allClothing'>All Clothing</a>
+        </nav>
+
+   <div id = 'endNav'>
+            <img id = 'menuIcon' src = '/Assets/icons/menuIcon.svg'>
+
+            <img id = 'mobileNavArrow' src = '/Assets/icons/roundedArrow_shadowColor.svg'> 
+            <nav id = 'mobileNavLinks'>
+                <a href = '/category/tops'>Tops</a>
+                <a href = '/category/pantsAndDresses'>Pants & Dresses</a>
+                <a href = '/category/outerwear'>Outerwear</a>
+                <a href = '/category/shoes'>Shoes</a>
+                <a href = '/allClothing'>All Clothing</a>
+            </nav>
 
         <form method = 'GET' id = 'searchContainer' role = 'search'>
-            <img id = 'searchIcon' src = '/Assets/icons/searchIcon.svg'>
-            <img id = 'searchArrow' src = '/Assets/icons/roundedArrow_shadowColor.svg'> 
-            <label for = 'q' id = 'searchBarLabel'>Search</label>
-            <input type = 'search' id = 'searchBar' name = 'query'>
-            <input type = 'search' id = 'mobileSearchBar' name = 'query'>
-            <img id = 'searchGoArrow' src = /Assets/icons/longArrow_primaryBrandColor.svg>
+            <div id = 'searchLabelDiv'>
+                <img id = 'searchIcon' src = '/Assets/icons/searchIcon.svg'>
+                <label for = 'query' id = 'searchBarLabel'>Search</label>
+            </div>
+            <div id = 'searchInputDiv'>
+                <img id = 'searchArrow' src = '/Assets/icons/roundedArrow_shadowColor.svg'>
+                <input type = 'search' id = 'searchBar' name = 'query'> 
+                <img id = 'searchGoArrow' src = /Assets/icons/longArrow_primaryBrandColor.svg>
+            </div>
         </form>
-    
+
+            
         <a id = 'shoppingBagLink' href = '/shoppingBag'>
             <span id = 'numBagItems'>&nbsp;</span>
-            <!-- <img src = '/Assets/icons/shoppingBag.svg'> -->
         </a>
-    </div>
 
+   </div>
 </header>
 
 <script src = '/JavaScript/search.js'></script>

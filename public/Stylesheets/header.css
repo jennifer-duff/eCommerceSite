@@ -20,8 +20,13 @@ header{
     display: none;
 }
 
+#mobileNavLinks, #mobileSearchContainer{
+    display: none;
+}
+
 #headerLogoLink{
     width: 125px;
+    margin-right: 50px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -29,7 +34,33 @@ header{
     transform: scale(1.08);
 }
 
+/* #desktopDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} */
+
+#desktopNavLinks{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+}
+
+#endNav{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* #searchAndBag{
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+} */
+
 header nav{
+    flex: 1 1 auto;
     box-sizing: border-box;
     display: flex;
     justify-content: space-evenly;
@@ -53,24 +84,27 @@ header nav a:hover{
     text-decoration: underline solid var(--brandDarkPink) 3px;
 }
 
-#mobileNav{
+/* #mobileNav{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between; 
-}
+} */
 
 #searchContainer{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
     color: black;
     font-family: var(--sansSerifFonts);
     font-weight: 500;
     font-size: 10pt;
     line-height: 100%;
-    margin-right: 50px;
+    margin: 0 50px;
 }
 
 #searchBarLabel{
+    font-family: var(--sansSerifFonts);
     color: var(--brandPrimary);
 }
 
@@ -101,8 +135,9 @@ header nav a:hover{
 #searchGoArrow{
     width: 15px;
     cursor: pointer;
-    position: relative;
-    right: 25px;
+    position: absolute;
+    right: 130px;
+    top: 27px;
 }
 
 #shoppingBagLink{
@@ -127,13 +162,6 @@ header nav a:hover{
     transform: scale(1.1);
 }
 
-/* #shoppingBagLink img{
-    width: 25px;
-    position: relative;
-    bottom: 0px;
-    transition: transform 0.3s ease-out;
-} */
-
 #numBagItems{
     padding: 0;
     margin: 0;
@@ -152,10 +180,6 @@ header nav a:hover{
         padding: 15px 25px 15px 25px;
     }
 
-    /* #mobileNav{
-        width: auto;
-    } */
-
     #headerLogoLink{
         width: 100px;
     }
@@ -172,6 +196,11 @@ header nav a:hover{
     #searchContainer{
         margin: 0 20px;
     }
+
+    #searchGoArrow{
+        right: 85px;
+    }
+    
 }
 
 @media (max-width: 950px){
@@ -179,8 +208,37 @@ header nav a:hover{
         width: 100px;
     }
     
-    header nav{
-        /* display: flex; */
+    /* #desktopDiv{
+        display: flex;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        font-size: 10pt;
+        line-height: 100%;
+        text-align: left;
+        width: auto;
+        background-color: var(--brandLightPink);
+        border: 1px solid var(--shadowColor);
+        padding: 10px;
+        border-radius: 10px;
+        border-top-right-radius: 0px;
+        position: fixed;
+        top: 57px;
+        right: 346px;
+        box-shadow: 2px 2px 5px var(--shadowColor);
+    } */
+
+    #desktopNavLinks{
+        display: none;
+    }
+
+    #menuIcon{
+        display: inline-block;
+    }
+
+
+    #mobileNavLinks{
         display: none;
         flex-direction: column;
         justify-content: space-evenly;
@@ -208,51 +266,52 @@ header nav a:hover{
         right: 346px;
     }
 
-    #menuIcon{
-        display: inline-block;
+    #searchContainer{
+        margin: 0 20px 0 30px;
     }
 
-    #searchBarLabel{
+    #searchArrow{
         display: none;
     }
 
-    #searchIcon{
-        display: inline-block;
-        width: 20px;
-    }
-
-    #searchContainer{
-        margin: 0 30px;
-    }
 }
 
 @media (max-width: 570px){
-    #searchBar{
+    /* #searchBar{
         display: none;
-        /* position: fixed;
+        position: fixed;
         top: 65px;
         right: 72px;
         width: 200px;
         border: 1px solid var(--shadowColor);
         border-radius: 5px;
         border-top-right-radius: 0px;
-        box-shadow: 2px 2px 5px var(--shadowColor); */
+        box-shadow: 2px 2px 5px var(--shadowColor);
+    } */
+
+    #searchContainer{
+        margin: 0 20px;
+    }
+
+    #searchInputDiv{
+        display: none;
     }
 
     #searchGoArrow{
-        display: none;
+        top: 65px;
+        z-index: 10;
     }
 
-    #mobileSearchBar{
-        /* display: inline-block; */
-        display: none;
+
+    #searchBar{
+        display: inline-block;
+        /* display: none; */
         box-sizing: border-box;
         font-family: var(--sansSerifFonts);
         font-weight: 300;
         font-size: 10pt;
         padding: 3px 7px 5px 7px;
         background-color: var(--brandLightPink);
-
         position: fixed;
         top: 55px;
         right: 73px;
@@ -261,9 +320,10 @@ header nav a:hover{
         border-radius: 5px;
         border-top-right-radius: 0px;
         box-shadow: 2px 2px 5px var(--shadowColor);
+        z-index: 5;
     }
 
-    #mobileSearchBar:focus,
+    /* #mobileSearchBar:focus,
     #mobileSearchBar:-webkit-autofill,
     #mobileSearchBar:-webkit-autofill:hover, 
     #mobileSearchBar:-webkit-autofill:focus{
@@ -272,17 +332,14 @@ header nav a:hover{
         color: black;
         -webkit-text-fill-color: black;
         outline: 1.75px solid var(--brandPrimary);
-    }
+    } */
 
     #searchArrow{
-        display: none;
+        display: inline-block;
         position: fixed;
         width: 18px;
         top: 45px;
-    }
-
-    #searchContainer{
-        margin: 0 20px;
+        right: 75px;
     }
 
     #headerLogoLink{

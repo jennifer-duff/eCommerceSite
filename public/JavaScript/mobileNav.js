@@ -1,64 +1,55 @@
 'use strict'
+const desktopNavLinks = document.querySelector('#desktopNavLinks');
 
 const menuIcon = document.querySelector('#menuIcon');
 const mobileNavArrow = document.querySelector('#mobileNavArrow');
-// const mobileNav = document.querySelector('#mobileNav');
-const nav = document.querySelector('nav');
+const mobileNavLinks = document.querySelector('#mobileNavLinks');
+
 
 const searchIcon = document.querySelector('#searchIcon');
+const mobileSearchIcon = document.querySelector('#mobileSearchIcon');
 const searchArrow = document.querySelector('#searchArrow');
-const mobileSearchBar = document.querySelector('#mobileSearchBar');
+// const mobileSearchBar = document.querySelector('#mobileSearchBar');
 const searchContainer = document.querySelector('#searchContainer');
-// const searchBarLabel = document.querySelector('#searchBarLabel');
+const searchInputDiv = document.querySelector('#searchInputDiv');
+const searchBarLabel = document.querySelector('#searchBarLabel');
 let windowWidth = window.innerWidth;
-// console.log(windowWidth);
 
-window.addEventListener('resize', () => {
-    windowWidth = window.innerWidth;
-    if(windowWidth > 525){
-        mobileSearchBar.style.display = 'none';
-        searchArrow.style.display = 'none';
-    }
-    if(windowWidth > 950){
-        mobileNavArrow. style.display = 'none';
-    }
-})
-
-
-// handle clicks on menu icon
-window.addEventListener('click', (event) =>{
-    if ((windowWidth <= 950) && event.target === menuIcon || event.target === nav){
-        nav.style.display = 'flex';
-        mobileNavArrow.style.display = 'inline-block';
-    }
-    else if((windowWidth <= 950) && !(event.target === menuIcon || event.target === nav)){
-        nav.style.display = 'none';
-        mobileNavArrow. style.display = 'none';
-    }
-})
-
-
-window.addEventListener('click', (event) =>{
-    if((windowWidth <= 570) && (event.target === searchIcon || event.target === searchContainer || event.target === mobileSearchBar)){
-        // console.log('search icon clicked')
-        mobileSearchBar.style.display = 'inline-block';
-        searchArrow.style.display = 'inline-block';
+// handle clicks on menu Icon/mobile nav
+window.addEventListener('click', (event) => {
+    if(event.target === menuIcon || event.target === mobileNavLinks){
+        mobileNavLinks.style.display = 'flex';
+        mobileNavArrow.style.display = 'block'
     }
     else{
-        // console.log('clicked elsewhere')
-        mobileSearchBar.style.display = 'none';
-        searchArrow.style.display = 'none';
+        mobileNavLinks.style.display = 'none';
+        mobileNavArrow.style.display = 'none'
     }
-    // else if((windowWidth <= 570) && (!event.target === searchIcon || !event.target === searchContainer)){
-    //     console.log('clicked elsewhere')
-    //     mobileSearchBar.style.display = 'none';
-    //     searchArrow.style.display = 'none';
-    // }
+})
+
+// hide mobile nav on resize
+window.addEventListener('resize', () => {
+    if(window.innerWidth >= 950){
+        mobileNavLinks.style.display = 'none';
+        mobileNavArrow.style.display = 'none';
+        menuIcon.style.display = 'none'
+    }
+    else{
+        menuIcon.style.display = 'inline';
+    }
+
+})
+
+// handle mobile re-arrangement of search
+window.addEventListener('click', (event) =>{
+    console.log(event.target);
+    if((window.innerWidth <= 570) && (event.target === searchIcon ||event.target === searchContainer || event.target === searchBar)){
+        console.log("SEARCH CLICKED");
+        searchInputDiv.style.display = 'inline-block';
+    }
+    else if((window.innerWidth <= 570) && !(event.target === searchIcon || event.target === searchContainer || event.target === searchBar)){
+        searchInputDiv.style.display = 'none';;
+    }
 })
 
 
-
-// function searchClickListener(){
-//     searchBarInput.style.display = 'inline-block';
-//     searchArrow.style.display = 'inline-block';
-// }
