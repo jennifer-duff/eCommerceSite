@@ -152,13 +152,9 @@
     font-size: 12pt;
     text-align: left;
     margin: 0;
-    color: var(--brandDarkPink);
+    color: var(--white);
     width: 100%;
-    /* width: calc(100% - 100px); */
     align-self: flex-start;
-    /* background-color: var(--brandDarkPink);
-    padding: 6px 10px;
-    border-radius: 7px; */
     transition: background-color 0.2s ease-in-out;
 }
 

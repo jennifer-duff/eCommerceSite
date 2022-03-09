@@ -105,11 +105,11 @@ addToBag.addEventListener('click', async function() {
 
     if(itemSize !== ""){
         console.log(`itemSize = ${itemSize}`);
-        errorBox.style.backgroundColor = 'var(--white)';
+        errorBox.style.color = 'var(--white)';
     }
     // if no size is selected, prompt the user to pick one
     else{
-        errorBox.style.backgroundColor = 'var(--brandDarkPink)';
+        errorBox.style.color = 'var(--brandDarkPink)';
         return;
     }
 
