@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
 
 // handle mobile re-arrangement of search
 window.addEventListener('click', (event) =>{
-    console.log(event.target);
+    // console.log(event.target);
     if((window.innerWidth <= 570) && (event.target === searchIcon ||event.target === searchContainer || event.target === searchBar)){
         console.log("SEARCH CLICKED");
         searchInputDiv.style.display = 'inline-block';
