@@ -10,7 +10,7 @@ Welcome to Luma, a fictional fashion retailer. Check out Luma's custom ecommerce
 <br>
 **Back-End:** Built with Node.js and Express. The site is deployed on a Heroku. *Note: This site uses Heroku's free tier, which means it may take a moment to load up!*
 <br>
-**Front-End:** The front-end was created entirely from scratch using vanilla JavaScript and EJS.
+**Front-End:** The front-end was created entirely from scratch using vanilla JavaScript, CSS3, and EJS.
 
 
 ## Notable Functionalities
