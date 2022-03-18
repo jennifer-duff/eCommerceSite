@@ -300,6 +300,15 @@ h2{
     background-color: var(--brandDarkPrimary);
 }
 
+#dontPayMe{
+    font-weight: 300;
+    margin-top: -10px;
+}
+
+#dontPayMe span{
+    font-weight: 400;
+}
+
 @media(max-width: 1310px){
     #checkoutRoadMap{
         width: 100%;
