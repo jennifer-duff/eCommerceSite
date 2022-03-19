@@ -1,4 +1,6 @@
-![Luma logo](/public/Assets/logos/lumaLogo_mini@150px.png)
+<!-- ![Luma logo](/public/Assets/logos/lumaLogo_mini@150px.png) -->
+<img src = '/public/Assets/logos/lumaLogo_full_pinkBackground.svg' width = "350"/>
+
 # Luma - an Ecommerce Website
 
 Welcome to Luma, a fictional fashion retailer. Check out Luma's custom ecommerce website!
