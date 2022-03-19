@@ -15,7 +15,7 @@
 
     /* --shadowColor: #b8a7aa; */
     --shadowColor: #DECED0;
-    --white: #FFF9F5;
+    --white: #fffaf7;
     --gray: #5c5b5b;
 
     --boxShadow: 5px 5px 15px var(--shadowColor);

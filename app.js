@@ -27,22 +27,6 @@ mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     })
 ;
 
-// mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-// .then(() => {
-//     console.log("MONGO CONNECTION OPEN!!!")
-// })
-// .catch(error => {
-//     console.log('Whoops, trying localhost DB connection')
-//     mongoose.connect(`mongodb://localhost:27017/Luma`, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => {
-//         console.log("MONGO CONNECTION OPEN!!!")
-//     })
-//     .catch(error => {
-//         console.log("OH NO MONGO CONNECTION ERROR!!!!")
-//         console.log(error)
-//     });
-// });
-
 
 // static assets
 app.use(express.static('public'));
@@ -59,10 +43,6 @@ app.listen(port, () => {
 
 
 // routes
-app.get('/',  (req, res) => {
-    res.render('index');
-})
-
 app.get('/shoppingBag', async (req, res) => {
     let uberCookie = req.cookies;
     let i = 1;
@@ -81,7 +61,6 @@ app.get('/shoppingBag', async (req, res) => {
         let productPrice = productInfo.price;
         let itemSize = key.substring(key.indexOf('_') + 1);
         let itemQty = uberCookie[key];
-        // console.log(`from app.js: itemQty = ${itemQty}`);
 
         let tempProduct = {
             name: cleanedItemName,
@@ -94,7 +73,6 @@ app.get('/shoppingBag', async (req, res) => {
         bagItems.push(tempProduct);
         i++
     }
-    // console.log(bagItems);
     res.render('shoppingBag', {bagItems});
 })
 
@@ -166,12 +144,16 @@ app.get('/contact_thankyou', async (req, res) => {
 // TODO: Prevent Mongo injection attacks
 app.get('/search/q=:query', async (req, res) => {
     let query = req.params.query;
+    console.log(query);
     query = query.trim();
 
     regEx = new RegExp(`.*${query}.*`, 'i')
     allResults = await Product.find({
         $or: [{name: regEx}, {keywords: regEx}]
     });
-    // console.log(allResults);
     res.render('searchResults', {query, allResults});
+})
+
+app.get('/',  (req, res) => {
+    res.render('index');
 })

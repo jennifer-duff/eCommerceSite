@@ -1,4 +1,4 @@
-/* --------- HEADER ---------*/
+/* ------------------- HEADER -----------------*/
 header{
     box-sizing: border-box;
     height: 60px;
@@ -34,12 +34,6 @@ header{
     transform: scale(1.08);
 }
 
-/* #desktopDiv{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-} */
-
 #desktopNavLinks{
     display: flex;
     justify-content: space-between;
@@ -51,13 +45,6 @@ header{
     justify-content: space-between;
 }
 
-
-/* #searchAndBag{
-    width: 300px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-} */
 
 header nav{
     flex: 1 1 auto;
@@ -84,12 +71,6 @@ header nav a:hover{
     text-decoration: underline solid var(--brandDarkPink) 3px;
 }
 
-/* #mobileNav{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between; 
-} */
-
 #searchContainer{
     display: flex;
     flex-wrap: nowrap;
@@ -109,6 +90,7 @@ header nav a:hover{
 }
 
 #searchBar{
+    appearance: none;
     box-sizing: border-box;
     font-family: var(--sansSerifFonts);
     font-weight: 300;
@@ -120,7 +102,7 @@ header nav a:hover{
     background-color: var(--brandLightPink);
 }
 
-/* removes /replaces default browser focus + autofill styling */
+/* removes / replaces default browser focus + autofill styling */
 #searchBar:focus,
 #searchBar:-webkit-autofill,
 #searchBar:-webkit-autofill:hover, 
@@ -254,7 +236,7 @@ header nav a:hover{
         border-top-right-radius: 0px;
         position: fixed;
         top: 57px;
-        right: 346px;
+        right: 323px;
         box-shadow: 2px 2px 5px var(--shadowColor);
     }
 
@@ -263,7 +245,7 @@ header nav a:hover{
         position: fixed;
         width: 18px;
         top: 46px;
-        right: 346px;
+        right: 323px;
     }
 
     #searchContainer{
@@ -331,6 +313,10 @@ header nav a:hover{
         right: 75px;
     }
 
+    #searchGoArrow{
+        right: 95px;
+    }
+
     #headerLogoLink{
         margin-right: 20px;
     }
@@ -345,7 +331,11 @@ header nav a:hover{
         position: fixed;
         width: 18px;
         top: 45px;
-        right: 116px;
+        right: 118px;
+    }
+
+    #mobileNavLinks{
+        right: 118px;
     }
 }
 
