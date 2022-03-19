@@ -26,6 +26,14 @@ html{
     background-color: var(--white);
 }
 
+::selection{
+    background: var(--brandDarkPink);
+}
+
+::-moz-selection{
+    background: var(--brandDarkPink);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -72,6 +80,8 @@ a{
 /* ------------- Form Styling ----------------- */
 
 .form{
+    appearance: none;
+    -webkit-appearance: none;
     box-sizing: border-box;
     font-family: var(--sansSerifFonts);
     padding: 40px;
@@ -124,6 +134,8 @@ a{
     -webkit-box-shadow: 0 0 0px 1000px var(--white) inset;
     color: black;
     -webkit-text-fill-color: black;
+    outline: none;
+    border: 1px solid var(--brandPrimary);
 }
 
 .form textarea{

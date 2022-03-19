@@ -47,6 +47,8 @@ footer nav a:hover{
 }
 
 #emailSignUpDiv{
+    appearance: none;
+    -webkit-appearance: none;
     color: var(--brandMediumPink);
     font-weight: 100;
     max-width: 650px;

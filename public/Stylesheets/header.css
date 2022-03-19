@@ -286,6 +286,8 @@ header nav a:hover{
     }
 
     #searchBar{
+        -webkit-appearance: none;
+        appearance: none;
         display: inline-block;
         /* display: none; */
         box-sizing: border-box;
