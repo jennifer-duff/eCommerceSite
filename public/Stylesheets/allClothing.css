@@ -3,19 +3,21 @@
     font-family: var(--sansSerifFonts);
     margin-bottom: 50px;
     font-weight: 300;
-    /* background-color: var(--brandDarkPink); */
     padding: 8px 8px 8px 13px;
     border-radius: 7px;
+    display: flex;
+    flex-direction: row;
 }
 
 #filterLabel{
-    margin-right: 5px;
+    margin-right: 10px;
     color: black;
     font-weight: 400;
-    /* letter-spacing: 0.5px; */
 }
 
 #categoryFilter{
+    -webkit-appearance: none;
+    appearance: none;
     box-sizing: border-box;
     font-family: var(--sansSerifFonts);
     font-weight: 300;
@@ -24,8 +26,9 @@
     border: 1px solid var(--brandDarkPink);
     border-radius: 5px;
     cursor: pointer;
-    background-color: var(--white);
-    padding: 2px;
+    background-color: var(--brandLightPink);
+    padding: 2px 5px;
+    width: 135px;
 }
 
 #categoryFilter option{
@@ -36,11 +39,21 @@
     cursor: pointer;
 }
 
-#categoryFilter option:hover{
+#filterIcon{
+    transform: rotate(180deg);
+    width: 10px;
+    position: relative;
+    right: 23px;
+    bottom: 1px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+/* #categoryFilter option::selection{
     color: black;
     cursor: pointer;
     background-color: var(--brandDarkPink);
-}
+} */
 
 #categoryFilter:focus{
     outline: 1px solid var(--brandPrimary);
@@ -63,6 +76,7 @@
 @media(max-width: 515px){
     #filterLabel{
         font-size: 10pt;
+        margin-top: 2px;
     }
     
     #categoryFilter{
@@ -88,5 +102,15 @@
     
     #categoryFilter{
         font-size: 9pt;
+    }
+
+    #filterIcon{
+        transform: rotate(180deg);
+        width: 10px;
+        position: relative;
+        right: 20px;
+        bottom: 1px;
+        cursor: pointer;
+        pointer-events: none;
     }
 }
